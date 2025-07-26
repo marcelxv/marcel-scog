@@ -39,9 +39,9 @@ export function PortfolioSection({ projects }: PortfolioSectionProps) {
           Featured Work
         </h2>
         <p className="text-lg md:text-xl text-text-600 dark:text-text-400 max-w-3xl mx-auto leading-relaxed">
-          A showcase of projects that demonstrate technical expertise,
-          creative problem-solving, and commitment to delivering exceptional
-          user experiences.
+          A showcase of projects that demonstrate technical expertise, creative
+          problem-solving, and commitment to delivering exceptional user
+          experiences.
         </p>
       </div>
 
@@ -53,10 +53,7 @@ export function PortfolioSection({ projects }: PortfolioSectionProps) {
   );
 
   return (
-    <section
-      id="portfolio"
-      className="py-20 bg-primary-50 dark:bg-neutral-950"
-    >
+    <section id="portfolio" className="py-20 bg-primary-50 dark:bg-neutral-950">
       <div className="container mx-auto px-4">
         {isMobile ? (
           renderContent()
@@ -74,8 +71,8 @@ export function PortfolioSection({ projects }: PortfolioSectionProps) {
               </h2>
               <p className="text-lg md:text-xl text-text-600 dark:text-text-400 max-w-3xl mx-auto leading-relaxed">
                 A showcase of projects that demonstrate technical expertise,
-                creative problem-solving, and commitment to delivering exceptional
-                user experiences.
+                creative problem-solving, and commitment to delivering
+                exceptional user experiences.
               </p>
             </motion.div>
 

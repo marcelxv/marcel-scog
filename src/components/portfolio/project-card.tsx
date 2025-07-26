@@ -29,7 +29,8 @@ export function ProjectCard({
     },
   };
 
-  const cardClasses = 'bg-white dark:bg-neutral-900 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300';
+  const cardClasses =
+    'bg-white dark:bg-neutral-900 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300';
 
   const cardContent = (
     <div className="p-6 h-full flex flex-col">

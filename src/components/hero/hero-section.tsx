@@ -184,7 +184,9 @@ export function HeroSection() {
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
           <div className="flex flex-col items-center text-text-800 dark:text-white">
-            <span className="text-sm font-semibold mb-2 dark:text-white">Scroll to explore</span>
+            <span className="text-sm font-semibold mb-2 dark:text-white">
+              Scroll to explore
+            </span>
             <svg
               className="w-6 h-6"
               fill="none"

@@ -183,8 +183,15 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
             <h4 className="text-xs font-bold text-text-900 dark:text-white mb-2">
               SPECIALIZATIONS
             </h4>
-            <div className={isMobile ? 'flex flex-col gap-1' : 'flex flex-wrap gap-2'}>
-              {(isMobile ? data.badges.slice(0, 2) : data.badges.slice(0, 4)).map((badge, index) => (
+            <div
+              className={
+                isMobile ? 'flex flex-col gap-1' : 'flex flex-wrap gap-2'
+              }
+            >
+              {(isMobile
+                ? data.badges.slice(0, 2)
+                : data.badges.slice(0, 4)
+              ).map((badge, index) => (
                 <div
                   key={index}
                   className={`px-2 py-0.5 rounded-lg ${isMobile ? 'text-[10px] font-normal' : 'text-xs font-medium'} transition-all duration-300 ${!isMobile ? 'hover:scale-105' : ''} ${
