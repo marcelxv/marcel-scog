@@ -1,0 +1,206 @@
+'use client';
+
+import { IDCard } from './id-card';
+import type { IDCardData } from '@/lib/types';
+
+const marcelIDCardData: IDCardData = {
+  personal: {
+    name: 'Marcel Scognamiglio Senra Lourenço',
+    title:
+      'Senior Software Engineer | System Architect | AI & Automation Specialist',
+    location: 'São José dos Campos, SP, Brazil',
+    status: 'open-to-opportunities',
+    avatar: '/images/marcel-scog-alpha.jpeg',
+    qrCode: 'https://marcel-scognamiglio.com/contact',
+  },
+  badges: [
+    { name: 'AI & Automation', level: 'expert', color: '#8aa488' },
+    { name: 'System Architecture', level: 'expert', color: '#40617f' },
+    { name: 'Full-Stack', level: 'expert', color: '#8aa488' },
+    { name: 'DevOps', level: 'advanced', color: '#40617f' },
+  ],
+  contact: {
+    email: 'marcelx@protonmail.com',
+    linkedin: 'https://linkedin.com/in/marcel-scognamiglio',
+    github: 'https://github.com/marcel-scognamiglio',
+  },
+  stats: {
+    experience: '5+',
+    projects: 30,
+    technologies: 20,
+  },
+};
+
+export function HeroSection() {
+  return (
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center bg-accent-50 dark:bg-accent-500 relative overflow-hidden"
+    >
+      {/* Background geometric patterns */}
+      <div className="absolute inset-0 opacity-10 dark:opacity-5">
+        <div className="absolute top-20 left-10 w-32 h-32 border border-primary-300 dark:border-primary-600 rounded-2xl rotate-12 animate-pulse" />
+        <div
+          className="absolute top-40 right-20 w-24 h-24 border border-secondary-300 dark:border-secondary-600 rounded-full animate-pulse"
+          style={{ animationDelay: '1s' }}
+        />
+        <div
+          className="absolute bottom-32 left-20 w-40 h-40 border border-accent-400 dark:border-accent-600 rounded-3xl -rotate-6 animate-pulse"
+          style={{ animationDelay: '2s' }}
+        />
+        <div
+          className="absolute bottom-20 right-10 w-28 h-28 border border-text-300 dark:border-text-600 rounded-xl rotate-45 animate-pulse"
+          style={{ animationDelay: '0.5s' }}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 py-16 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left side - Text content */}
+          <div className="text-center lg:text-left order-2 lg:order-1">
+            <div className="mb-6">
+              <div className="inline-flex items-center px-4 py-2 bg-yellow-100 dark:bg-yellow-200 rounded-full text-sm font-medium text-yellow-800 dark:text-yellow-900 mb-4">
+                <div className="w-2 h-2 bg-yellow-600 rounded-full mr-2 animate-pulse" />
+                Open to new opportunities
+              </div>
+
+              <h1 className="text-4xl md:text-6xl font-bold text-text-900 dark:text-text-900 mb-4 leading-tight">
+                Marcel
+                <span className="block text-primary-700 dark:text-primary-600">
+                  Scognamiglio
+                </span>
+              </h1>
+
+              <p className="text-xl text-text-700 dark:text-text-700 mb-8 max-w-2xl">
+                System Architect and Software Engineer with 5+ years of
+                experience helping companies deliver impactful digital products
+                through automation, AI, and scalable architecture. I build
+                systems to make people&apos;s lives easier.
+              </p>
+            </div>
+
+            {/* Action buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-text-50 font-semibold rounded-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-accent-500"
+              >
+                Download Resume
+                <svg
+                  className="ml-2 w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#portfolio"
+                className="inline-flex items-center justify-center px-8 py-4 bg-neutral-200 dark:bg-neutral-300 hover:bg-neutral-300 dark:hover:bg-neutral-400 text-text-900 dark:text-text-900 font-semibold rounded-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 dark:focus:ring-offset-accent-500"
+              >
+                View Portfolio
+              </a>
+            </div>
+
+            {/* Key Technologies */}
+            <div className="mb-8">
+              <h3 className="text-sm font-semibold text-text-600 dark:text-text-600 mb-3 text-center lg:text-left">
+                CORE TECHNOLOGIES
+              </h3>
+              <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                <span className="px-3 py-1 bg-secondary-200 dark:bg-secondary-300 text-secondary-800 dark:text-secondary-900 rounded-full text-sm font-medium">
+                  JavaScript/TypeScript
+                </span>
+                <span className="px-3 py-1 bg-primary-200 dark:bg-primary-300 text-primary-800 dark:text-primary-900 rounded-full text-sm font-medium">
+                  React/Next.js/Vue
+                </span>
+                <span className="px-3 py-1 bg-neutral-200 dark:bg-neutral-300 text-text-800 dark:text-text-900 rounded-full text-sm font-medium">
+                  AI & Automation
+                </span>
+                <span className="px-3 py-1 bg-neutral-300 dark:bg-neutral-400 text-text-800 dark:text-text-900 rounded-full text-sm font-medium">
+                  AWS/PostgreSQL
+                </span>
+              </div>
+            </div>
+
+            {/* Quick stats */}
+            <div className="grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0">
+              <div className="text-center lg:text-left">
+                <div className="text-2xl font-bold text-primary-700 dark:text-primary-600">
+                  5+
+                </div>
+                <div className="text-sm text-text-600 dark:text-text-600">
+                  Years Experience
+                </div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-2xl font-bold text-secondary-700 dark:text-secondary-600">
+                  30+
+                </div>
+                <div className="text-sm text-text-600 dark:text-text-600">
+                  Projects Delivered
+                </div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-2xl font-bold text-neutral-700 dark:text-neutral-600">
+                  20+
+                </div>
+                <div className="text-sm text-text-600 dark:text-text-600">
+                  Technologies
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right side - ID Card */}
+          <div className="order-1 lg:order-2 flex justify-center">
+            <div className="relative">
+              {/* Glow effect behind card */}
+              <div className="absolute inset-0 bg-primary-500/20 dark:bg-primary-400/10 rounded-3xl blur-2xl scale-110" />
+
+              {/* ID Card */}
+              <div className="relative">
+                <IDCard data={marcelIDCardData} interactive={true} />
+              </div>
+
+              {/* Floating elements around card */}
+              <div className="absolute -top-4 -left-4 w-8 h-8 bg-secondary-500 rounded-lg opacity-80 animate-float" />
+              <div className="absolute -top-2 -right-6 w-6 h-6 bg-primary-500 rounded-full opacity-60 animate-float-delayed" />
+              <div className="absolute -bottom-6 -left-2 w-10 h-10 bg-accent-600 rounded-xl opacity-70 animate-float" />
+              <div className="absolute -bottom-4 -right-4 w-7 h-7 bg-text-400 rounded-lg opacity-50 animate-float-delayed" />
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="flex flex-col items-center text-text-600 dark:text-text-600">
+            <span className="text-sm mb-2">Scroll to explore</span>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

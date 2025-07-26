@@ -1,0 +1,348 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Color palette - Light theme with improved contrast */
+    /* Primary colors - Deep petrol blue */
+    --color-primary-50: 248 251 253;
+    --color-primary-100: 236 245 249;
+    --color-primary-200: 207 226 237;
+    --color-primary-300: 164 200 220;
+    --color-primary-400: 108 166 198;
+    --color-primary-500: 64 97 127;
+    --color-primary-600: 48 73 96;
+    --color-primary-700: 36 55 73;
+    --color-primary-800: 24 37 49;
+    --color-primary-900: 15 23 31;
+
+    /* Secondary colors - Olive green accent */
+    --color-secondary-50: 248 250 248;
+    --color-secondary-100: 240 244 240;
+    --color-secondary-200: 224 232 224;
+    --color-secondary-300: 200 216 200;
+    --color-secondary-400: 168 192 168;
+    --color-secondary-500: 106 132 104;
+    --color-secondary-600: 85 105 83;
+    --color-secondary-700: 64 79 62;
+    --color-secondary-800: 43 53 41;
+    --color-secondary-900: 26 32 25;
+
+    /* Accent colors - Warm beige variations with better contrast */
+    --color-accent-50: 255 253 250;
+    --color-accent-100: 254 250 244;
+    --color-accent-200: 250 242 228;
+    --color-accent-300: 244 232 206;
+    --color-accent-400: 236 218 178;
+    --color-accent-500: 255 248 235;
+    --color-accent-600: 228 204 150;
+    --color-accent-700: 200 176 118;
+    --color-accent-800: 172 148 86;
+    --color-accent-900: 144 120 54;
+
+    /* Text colors - High contrast charcoal variations */
+    --color-text-50: 255 255 255;
+    --color-text-100: 250 250 250;
+    --color-text-200: 229 229 229;
+    --color-text-300: 212 212 212;
+    --color-text-400: 163 163 163;
+    --color-text-500: 115 115 115;
+    --color-text-600: 82 82 82;
+    --color-text-700: 64 64 64;
+    --color-text-800: 38 38 38;
+    --color-text-900: 23 23 23;
+
+    /* Neutral colors with improved contrast */
+    --color-neutral-50: 255 253 250;
+    --color-neutral-100: 250 248 244;
+    --color-neutral-200: 245 240 232;
+    --color-neutral-300: 235 228 216;
+    --color-neutral-400: 212 200 180;
+    --color-neutral-500: 180 164 136;
+    --color-neutral-600: 148 128 92;
+    --color-neutral-700: 116 96 60;
+    --color-neutral-800: 84 68 36;
+    --color-neutral-900: 52 44 24;
+
+    /* Semantic colors with proper contrast */
+    --color-success: 34 139 34;
+    --color-warning: 255 140 0;
+    --color-error: 220 38 127;
+    --color-info: 30 144 255;
+
+    /* Typography variables */
+    --font-family-heading: 'Inter', 'SF Pro Display', system-ui, sans-serif;
+    --font-family-body: 'Inter', 'SF Pro Text', system-ui, sans-serif;
+    --font-family-mono: 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+
+    --line-height-xs: 1rem;
+    --line-height-sm: 1.25rem;
+    --line-height-base: 1.5rem;
+    --line-height-lg: 1.75rem;
+    --line-height-xl: 1.75rem;
+    --line-height-2xl: 2rem;
+    --line-height-3xl: 2.25rem;
+
+    /* Animation variables */
+    --duration-fast: 150ms;
+    --duration-normal: 300ms;
+    --duration-slow: 500ms;
+
+    --easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Spacing variables */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+
+    /* Border radius variables */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-full: 9999px;
+
+    /* Shadow variables */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md:
+      0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg:
+      0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl:
+      0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+
+  .dark {
+    /* Color palette - Dark theme with improved contrast */
+    /* Primary colors - Deep petrol blue (inverted for dark theme) */
+    --color-primary-50: 15 23 31;
+    --color-primary-100: 24 37 49;
+    --color-primary-200: 36 55 73;
+    --color-primary-300: 48 73 96;
+    --color-primary-400: 64 97 127;
+    --color-primary-500: 108 166 198;
+    --color-primary-600: 164 200 220;
+    --color-primary-700: 207 226 237;
+    --color-primary-800: 236 245 249;
+    --color-primary-900: 248 251 253;
+
+    /* Secondary colors - Olive green accent (inverted for dark theme) */
+    --color-secondary-50: 26 32 25;
+    --color-secondary-100: 43 53 41;
+    --color-secondary-200: 64 79 62;
+    --color-secondary-300: 85 105 83;
+    --color-secondary-400: 106 132 104;
+    --color-secondary-500: 168 192 168;
+    --color-secondary-600: 200 216 200;
+    --color-secondary-700: 224 232 224;
+    --color-secondary-800: 240 244 240;
+    --color-secondary-900: 248 250 248;
+
+    /* Accent colors - Warm beige variations (inverted for dark theme) */
+    --color-accent-50: 144 120 54;
+    --color-accent-100: 172 148 86;
+    --color-accent-200: 200 176 118;
+    --color-accent-300: 228 204 150;
+    --color-accent-400: 236 218 178;
+    --color-accent-500: 38 38 38;
+    --color-accent-600: 244 232 206;
+    --color-accent-700: 250 242 228;
+    --color-accent-800: 254 250 244;
+    --color-accent-900: 255 253 250;
+
+    /* Text colors - High contrast (inverted for dark theme) */
+    --color-text-50: 23 23 23;
+    --color-text-100: 38 38 38;
+    --color-text-200: 64 64 64;
+    --color-text-300: 82 82 82;
+    --color-text-400: 115 115 115;
+    --color-text-500: 163 163 163;
+    --color-text-600: 212 212 212;
+    --color-text-700: 229 229 229;
+    --color-text-800: 250 250 250;
+    --color-text-900: 255 255 255;
+
+    /* Neutral colors with improved contrast (inverted for dark theme) */
+    --color-neutral-50: 52 44 24;
+    --color-neutral-100: 84 68 36;
+    --color-neutral-200: 116 96 60;
+    --color-neutral-300: 148 128 92;
+    --color-neutral-400: 180 164 136;
+    --color-neutral-500: 212 200 180;
+    --color-neutral-600: 235 228 216;
+    --color-neutral-700: 245 240 232;
+    --color-neutral-800: 250 248 244;
+    --color-neutral-900: 255 253 250;
+
+    /* Semantic colors with proper contrast for dark theme */
+    --color-success: 72 187 120;
+    --color-warning: 251 191 36;
+    --color-error: 248 113 113;
+    --color-info: 96 165 250;
+
+    /* Dark theme shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow-md:
+      0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+    --shadow-lg:
+      0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+    --shadow-xl:
+      0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.3);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Prevent flash of unstyled content during theme transitions */
+    transition: background-color var(--duration-normal)
+      var(--easing-ease-in-out);
+  }
+
+  body {
+    @apply bg-accent-50 text-text-900;
+    font-family: var(--font-family-body);
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+    /* Smooth theme transitions */
+    transition:
+      background-color var(--duration-normal) var(--easing-ease-in-out),
+      color var(--duration-normal) var(--easing-ease-in-out);
+  }
+
+  .dark body {
+    @apply bg-accent-500 text-text-900;
+  }
+
+  /* Theme transition for all elements */
+  *,
+  *::before,
+  *::after {
+    transition-property:
+      background-color, border-color, color, fill, stroke, opacity, box-shadow,
+      transform;
+    transition-timing-function: var(--easing-ease-in-out);
+    transition-duration: var(--duration-normal);
+  }
+
+  /* Reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 text-text-50 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-600 text-text-50 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-secondary-700 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-text-50 dark:bg-neutral-100 rounded-xl shadow-lg border border-neutral-200 dark:border-neutral-300 transition-all duration-300;
+  }
+
+  .text-primary {
+    @apply text-primary-500;
+  }
+
+  .text-secondary {
+    @apply text-secondary-500;
+  }
+
+  /* 3D Card Flip Effects */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+
+  /* Ensure proper 3D context */
+  .card-container {
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+  }
+
+  .card-front {
+    transform: rotateY(0deg);
+    z-index: 2;
+  }
+
+  .card-back {
+    transform: rotateY(180deg);
+    z-index: 1;
+  }
+
+  /* Custom animations for hero section */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+  }
+
+  /* Hover effects for interactive elements */
+  .hover-lift {
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark .hover-lift:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+}
