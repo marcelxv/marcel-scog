@@ -66,7 +66,7 @@ function TimelineItem({
       {/* Content */}
       <div className="ml-16 pb-12">
         <div
-          className="card p-6 cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+          className="card p-6 bg-white dark:bg-neutral-900 cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           onClick={onToggle}
           role="button"
           tabIndex={0}
@@ -90,13 +90,13 @@ function TimelineItem({
               </div>
 
               <div>
-                <h3 className="text-lg font-bold text-text-900 dark:text-accent-500">
+                <h3 className="text-lg font-bold text-text-900 dark:text-white">
                   {experience.position}
                 </h3>
-                <p className="text-primary-600 dark:text-primary-400 font-medium">
+                <p className="text-primary-600 dark:text-primary-300 font-medium">
                   {experience.company}
                 </p>
-                <div className="flex items-center space-x-2 text-sm text-text-600 dark:text-text-400 mt-1">
+                <div className="flex items-center space-x-2 text-sm text-text-700 dark:text-text-200 mt-1">
                   <span>
                     {formatDate(experience.startDate)} -{' '}
                     {experience.endDate
@@ -182,7 +182,7 @@ function TimelineItem({
 
           {/* Expand hint */}
           {!isExpanded && (
-            <div className="text-xs text-text-500 dark:text-text-400 mt-2 flex items-center">
+            <div className="text-sm text-text-800 dark:text-text-100 mt-4 flex items-center">
               <svg
                 className="w-3 h-3 mr-1"
                 fill="none"

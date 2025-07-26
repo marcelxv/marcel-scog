@@ -87,7 +87,7 @@ const marcelExperiences: Experience[] = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-secondary-50 dark:bg-secondary-900">
+    <section id="about" className="py-20 bg-secondary-50 dark:bg-neutral-950">
       <div className="container mx-auto px-4">
         <Timeline experiences={marcelExperiences} />
       </div>

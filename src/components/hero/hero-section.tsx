@@ -35,10 +35,10 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center bg-accent-50 dark:bg-accent-500 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center bg-accent-50 dark:bg-neutral-900 relative overflow-hidden"
     >
       {/* Background geometric patterns */}
-      <div className="absolute inset-0 opacity-10 dark:opacity-5">
+      <div className="absolute inset-0 opacity-10 dark:opacity-5 hidden sm:block">
         <div className="absolute top-20 left-10 w-32 h-32 border border-primary-300 dark:border-primary-600 rounded-2xl rotate-12 animate-pulse" />
         <div
           className="absolute top-40 right-20 w-24 h-24 border border-secondary-300 dark:border-secondary-600 rounded-full animate-pulse"
@@ -59,19 +59,19 @@ export function HeroSection() {
           {/* Left side - Text content */}
           <div className="text-center lg:text-left order-2 lg:order-1">
             <div className="mb-6">
-              <div className="inline-flex items-center px-4 py-2 bg-yellow-100 dark:bg-yellow-200 rounded-full text-sm font-medium text-yellow-800 dark:text-yellow-900 mb-4">
+              <div className="inline-flex items-center px-4 py-2 bg-yellow-100 dark:bg-yellow-200 rounded-full text-sm font-semibold text-yellow-900 dark:text-yellow-900 mb-4">
                 <div className="w-2 h-2 bg-yellow-600 rounded-full mr-2 animate-pulse" />
                 Open to new opportunities
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-bold text-text-900 dark:text-text-900 mb-4 leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold text-text-900 dark:text-white mb-4 leading-tight">
                 Marcel
-                <span className="block text-primary-700 dark:text-primary-600">
+                <span className="block text-primary-700 dark:text-primary-300">
                   Scognamiglio
                 </span>
               </h1>
 
-              <p className="text-xl text-text-700 dark:text-text-700 mb-8 max-w-2xl">
+              <p className="text-xl text-text-800 dark:text-text-50 mb-8 max-w-2xl">
                 System Architect and Software Engineer with 5+ years of
                 experience helping companies deliver impactful digital products
                 through automation, AI, and scalable architecture. I build
@@ -85,7 +85,7 @@ export function HeroSection() {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-text-50 font-semibold rounded-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-accent-500"
+                className="inline-flex items-center justify-center px-8 py-4 bg-neutral-100 hover:bg-neutral-200 text-text-900 font-semibold rounded-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:bg-primary-700 dark:hover:bg-primary-800 dark:text-white dark:focus:ring-offset-neutral-900"
               >
                 Download Resume
                 <svg
@@ -117,16 +117,16 @@ export function HeroSection() {
                 CORE TECHNOLOGIES
               </h3>
               <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                <span className="px-3 py-1 bg-secondary-200 dark:bg-secondary-300 text-secondary-800 dark:text-secondary-900 rounded-full text-sm font-medium">
+                <span className="px-3 py-1 bg-secondary-200 dark:bg-secondary-800 text-secondary-800 dark:text-white rounded-full text-sm font-semibold">
                   JavaScript/TypeScript
                 </span>
-                <span className="px-3 py-1 bg-primary-200 dark:bg-primary-300 text-primary-800 dark:text-primary-900 rounded-full text-sm font-medium">
+                <span className="px-3 py-1 bg-primary-200 dark:bg-primary-800 text-primary-800 dark:text-white rounded-full text-sm font-semibold">
                   React/Next.js/Vue
                 </span>
-                <span className="px-3 py-1 bg-neutral-200 dark:bg-neutral-300 text-text-800 dark:text-text-900 rounded-full text-sm font-medium">
+                <span className="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 text-text-900 dark:text-white rounded-full text-sm font-semibold">
                   AI & Automation
                 </span>
-                <span className="px-3 py-1 bg-neutral-300 dark:bg-neutral-400 text-text-800 dark:text-text-900 rounded-full text-sm font-medium">
+                <span className="px-3 py-1 bg-neutral-300 dark:bg-neutral-800 text-text-900 dark:text-white rounded-full text-sm font-semibold">
                   AWS/PostgreSQL
                 </span>
               </div>
@@ -135,7 +135,7 @@ export function HeroSection() {
             {/* Quick stats */}
             <div className="grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0">
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-primary-700 dark:text-primary-600">
+                <div className="text-2xl font-extrabold text-primary-700 dark:text-primary-300">
                   5+
                 </div>
                 <div className="text-sm text-text-600 dark:text-text-600">
@@ -143,7 +143,7 @@ export function HeroSection() {
                 </div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-secondary-700 dark:text-secondary-600">
+                <div className="text-2xl font-extrabold text-secondary-700 dark:text-secondary-400">
                   30+
                 </div>
                 <div className="text-sm text-text-600 dark:text-text-600">
@@ -151,7 +151,7 @@ export function HeroSection() {
                 </div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-bold text-neutral-700 dark:text-neutral-600">
+                <div className="text-2xl font-extrabold text-neutral-700 dark:text-neutral-200">
                   20+
                 </div>
                 <div className="text-sm text-text-600 dark:text-text-600">
@@ -173,18 +173,18 @@ export function HeroSection() {
               </div>
 
               {/* Floating elements around card */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-secondary-500 rounded-lg opacity-80 animate-float" />
-              <div className="absolute -top-2 -right-6 w-6 h-6 bg-primary-500 rounded-full opacity-60 animate-float-delayed" />
-              <div className="absolute -bottom-6 -left-2 w-10 h-10 bg-accent-600 rounded-xl opacity-70 animate-float" />
-              <div className="absolute -bottom-4 -right-4 w-7 h-7 bg-text-400 rounded-lg opacity-50 animate-float-delayed" />
+              <div className="absolute -top-4 -left-4 w-8 h-8 bg-secondary-500 rounded-lg opacity-80 animate-float hidden sm:block" />
+              <div className="absolute -top-2 -right-6 w-6 h-6 bg-primary-500 rounded-full opacity-60 animate-float-delayed hidden sm:block" />
+              <div className="absolute -bottom-6 -left-2 w-10 h-10 bg-accent-600 rounded-xl opacity-70 animate-float hidden sm:block" />
+              <div className="absolute -bottom-4 -right-4 w-7 h-7 bg-text-400 rounded-lg opacity-50 animate-float-delayed hidden sm:block" />
             </div>
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="flex flex-col items-center text-text-600 dark:text-text-600">
-            <span className="text-sm mb-2">Scroll to explore</span>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
+          <div className="flex flex-col items-center text-text-800 dark:text-white">
+            <span className="text-sm font-semibold mb-2 dark:text-white">Scroll to explore</span>
             <svg
               className="w-6 h-6"
               fill="none"

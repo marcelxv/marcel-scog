@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useIsMobile } from '@/hooks/use-is-mobile';
 import type { IDCardData } from '@/lib/types';
 
 interface IDCardProps {
@@ -10,6 +11,7 @@ interface IDCardProps {
 }
 
 export function IDCard({ data, interactive = true }: IDCardProps) {
+  const isMobile = useIsMobile();
   const [isFlipped, setIsFlipped] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -78,7 +80,7 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
         }
       >
         {/* Card content */}
-        <div className="w-full bg-white dark:bg-neutral-800 rounded-2xl shadow-lg border border-neutral-100 dark:border-neutral-700 p-8 flex flex-col">
+        <div className="w-full bg-white dark:bg-neutral-900 rounded-2xl shadow-lg border border-neutral-100 dark:border-neutral-700 p-8 flex flex-col">
           {/* Contact Information */}
           {/* Profile section */}
           <div className="flex items-center space-x-4 mb-6">
@@ -109,13 +111,13 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
             </div>
 
             <div className="flex-1">
-              <h2 className="text-lg font-bold text-text-900 dark:text-text-900 mb-1">
+              <h2 className="text-lg font-bold text-text-900 dark:text-white mb-1">
                 {data.personal.name}
               </h2>
-              <p className="text-sm text-primary-700 dark:text-primary-600 font-medium mb-1">
+              <p className="text-sm font-semibold text-primary-700 dark:text-primary-200 mb-1">
                 {data.personal.title}
               </p>
-              <div className="flex items-center text-xs text-text-700 dark:text-text-700 mb-1">
+              <div className="flex items-center text-xs text-text-800 dark:text-white mb-1">
                 <svg
                   className="w-3 h-3 mr-1"
                   fill="currentColor"
@@ -178,21 +180,21 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
 
           {/* Specializations */}
           <div className="mb-4">
-            <h4 className="text-xs font-semibold text-text-700 dark:text-text-700 mb-2">
+            <h4 className="text-xs font-bold text-text-900 dark:text-white mb-2">
               SPECIALIZATIONS
             </h4>
-            <div className="flex flex-wrap gap-2">
-              {data.badges.slice(0, 4).map((badge, index) => (
+            <div className={isMobile ? 'flex flex-col gap-1' : 'flex flex-wrap gap-2'}>
+              {(isMobile ? data.badges.slice(0, 2) : data.badges.slice(0, 4)).map((badge, index) => (
                 <div
                   key={index}
-                  className={`px-2 py-1 rounded-lg text-xs font-medium transition-all duration-300 hover:scale-105 ${
+                  className={`px-2 py-0.5 rounded-lg ${isMobile ? 'text-[10px] font-normal' : 'text-xs font-medium'} transition-all duration-300 ${!isMobile ? 'hover:scale-105' : ''} ${
                     badge.level === 'expert'
-                      ? 'bg-secondary-600 text-text-50'
+                      ? 'bg-secondary-700 text-white dark:bg-secondary-500 dark:text-white'
                       : badge.level === 'advanced'
-                        ? 'bg-primary-600 text-text-50'
+                        ? 'bg-primary-700 text-white dark:bg-primary-500 dark:text-white'
                         : badge.level === 'intermediate'
-                          ? 'bg-neutral-600 text-text-50'
-                          : 'bg-text-600 text-text-50'
+                          ? 'bg-neutral-700 text-white dark:bg-neutral-500 dark:text-white'
+                          : 'bg-text-700 text-white dark:bg-text-400 dark:text-white'
                   }`}
                 >
                   {badge.name}

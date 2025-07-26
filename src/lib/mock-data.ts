@@ -6,7 +6,7 @@ const getPlaceholderImage = (
   height: number = 600,
   seed: string
 ) => {
-  return ``;
+  return `https://picsum.photos/seed/${seed}/${width}/${height}`;
 };
 
 export const mockProjects: Project[] = [

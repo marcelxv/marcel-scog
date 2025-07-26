@@ -275,85 +275,23 @@ export default function HomePage() {
       {/* Skills Section */}
       <SkillsSection skillCategories={marcelSkillCategories} />
 
-      {/* Skills Section */}
-      <section
-        id="skills"
-        className="min-h-screen flex items-center justify-center bg-primary-100 dark:bg-primary-800"
-      >
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-primary-700 dark:text-primary-300 mb-8">
-              Skills & Expertise
-            </h2>
-            <div className="card max-w-3xl mx-auto p-8">
-              <p className="text-lg text-text-800 dark:text-text-200 mb-6">
-                This section will showcase Marcel&apos;s technical skills with
-                interactive visualizations and proficiency indicators.
-              </p>
-              <p className="text-sm text-text-600 dark:text-text-400">
-                The scroll progress indicator at the top shows your current
-                position on the page.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Portfolio Section */}
       <PortfolioSection projects={mockProjects} />
 
-      {/* Blog Section */}
-      <section
-        id="blog"
-        className="min-h-screen flex items-center justify-center bg-secondary-200 dark:bg-secondary-700"
-      >
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-secondary-800 dark:text-secondary-200 mb-8">
-              Blog & Writing
-            </h2>
-            <div className="card max-w-3xl mx-auto p-8">
-              <p className="text-lg text-text-800 dark:text-text-200 mb-6">
-                This section will feature Marcel&apos;s technical writing, blog
-                posts, and thought leadership content.
-              </p>
-              <p className="text-sm text-text-600 dark:text-text-400">
-                The mobile menu provides a full-screen navigation experience on
-                smaller devices.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
-      <section
-        id="contact"
-        className="min-h-screen flex items-center justify-center bg-primary-200 dark:bg-primary-700"
-      >
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-primary-800 dark:text-primary-200 mb-8">
+      <section id="contact" className="py-20 sm:py-32">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto lg:max-w-4xl">
+            <h2 className="text-4xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 sm:text-5xl">
               Get In Touch
             </h2>
-            {/* Contact Section */}
-            <section
-              id="contact"
-              className="min-h-screen flex items-center justify-center bg-accent-50 dark:bg-accent-900"
-            >
-              <div className="container mx-auto px-4 py-16">
-                <div className="max-w-2xl mx-auto">
-                  <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-primary-800 dark:text-primary-200">
-                    Contact Marcel
-                  </h2>
-                  <p className="text-center text-lg text-neutral-600 dark:text-neutral-400 mb-8">
-                    Fill out the form below to get in touch. I usually respond
-                    within 1-2 business days.
-                  </p>
-                  <ContactForm />
-                </div>
-              </div>
-            </section>
+            <p className="mt-4 text-lg leading-8 text-neutral-600 dark:text-neutral-400">
+              Have a project in mind or just want to say hello? I&apos;d love to
+              hear from you. Fill out the form and I&apos;ll get back to you.
+            </p>
+            <div className="mt-12">
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>

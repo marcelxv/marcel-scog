@@ -31,7 +31,7 @@ export function AppLayout({ children }: AppLayoutProps) {
   });
 
   return (
-    <div className="min-h-screen bg-accent-50 dark:bg-accent-500 transition-colors duration-300">
+    <div className="min-h-screen bg-accent-50 dark:bg-neutral-950 transition-colors duration-300">
       {/* Skip to main content link for accessibility */}
       <a
         href="#main-content"

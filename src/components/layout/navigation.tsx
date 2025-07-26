@@ -112,8 +112,8 @@ export function Navigation({ items, currentSection }: NavigationProps) {
       <header
         className={`fixed top-1 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-text-50/80 dark:bg-neutral-100/80 backdrop-blur-md shadow-lg'
-            : 'bg-transparent'
+            ? 'bg-text-50/80 dark:bg-neutral-950/90 backdrop-blur-md shadow-lg'
+            : 'bg-white dark:bg-neutral-950'
         }`}
       >
         <nav
@@ -127,7 +127,7 @@ export function Navigation({ items, currentSection }: NavigationProps) {
               <button
                 onClick={() => handleNavClick('#hero')}
                 onKeyDown={e => handleKeyDown(e, '#hero')}
-                className="text-xl font-bold text-text-900 dark:text-text-900 hover:text-primary-700 dark:hover:text-primary-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-100 rounded-md px-2 py-1"
+                className="text-xl font-bold text-text-900 dark:text-white hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-950 rounded-md px-2 py-1"
                 aria-label="Go to top of page"
               >
                 Marcel Scognamiglio
@@ -141,10 +141,10 @@ export function Navigation({ items, currentSection }: NavigationProps) {
                   key={item.href}
                   onClick={() => handleNavClick(item.href, item.external)}
                   onKeyDown={e => handleKeyDown(e, item.href, item.external)}
-                  className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-text-900 ${
+                  className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-950 ${
                     currentSection === item.href.replace('#', '')
-                      ? 'text-primary-600 dark:text-primary-400'
-                      : 'text-text-700 dark:text-text-300 hover:text-primary-600 dark:hover:text-primary-400'
+                      ? 'text-primary-600 dark:text-primary-300'
+                      : 'text-text-700 dark:text-text-50 hover:text-primary-600 dark:hover:text-primary-300'
                   }`}
                   aria-current={
                     currentSection === item.href.replace('#', '')
@@ -233,7 +233,7 @@ export function Navigation({ items, currentSection }: NavigationProps) {
       {/* Mobile menu */}
       <div
         id="mobile-menu"
-        className={`fixed top-0 right-0 z-40 h-full w-80 max-w-[80vw] bg-accent-100 dark:bg-text-900 shadow-xl transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 right-0 z-40 h-full w-80 max-w-[80vw] bg-accent-100 dark:bg-neutral-950 shadow-xl transform transition-transform duration-300 ease-in-out md:hidden ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         role="dialog"
@@ -242,7 +242,7 @@ export function Navigation({ items, currentSection }: NavigationProps) {
       >
         <div className="flex flex-col h-full">
           {/* Mobile menu header */}
-          <div className="flex items-center justify-between p-6 border-b border-accent-300 dark:border-text-700">
+          <div className="flex items-center justify-between p-6 border-b border-accent-300 dark:border-neutral-800">
             <h2
               id="mobile-menu-title"
               className="text-lg font-semibold text-text-900 dark:text-accent-500"
