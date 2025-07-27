@@ -104,6 +104,7 @@ export interface IDCardData {
     email: string;
     linkedin: string;
     github: string;
+    resume: string;
   };
   stats: {
     experience: string;

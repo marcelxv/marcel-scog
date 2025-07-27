@@ -92,14 +92,6 @@ export function ContactForm() {
 
   return (
     <div className="relative flex flex-col md:flex-row items-center justify-center min-h-[500px] w-full max-w-4xl mx-auto py-10 px-4 gap-8">
-      {/* Illustration */}
-      <div className="hidden md:flex w-1/2 items-center justify-center p-8 bg-neutral-100 dark:bg-neutral-900 rounded-3xl">
-        <img
-          src="/images/marcel-scog-bg.jpeg"
-          alt="Contact Illustration"
-          className="object-contain w-full h-full max-h-[400px] rounded-2xl"
-        />
-      </div>
       {/* Form Card */}
       <div className="w-full md:w-1/2 bg-white dark:bg-neutral-950 rounded-3xl shadow-lg p-8 flex flex-col items-center border border-neutral-200 dark:border-neutral-800">
         <form
@@ -242,12 +234,12 @@ export function ContactForm() {
           )}
         </form>
       </div>
-      {/* Mobile illustration */}
-      <div className="block md:hidden w-full mt-8 p-6 bg-neutral-100 dark:bg-neutral-900 rounded-2xl">
+            {/* Illustration */}
+            <div className="hidden md:flex items-center justify-center bg-neutral-100 dark:bg-neutral-900 rounded-3xl">
         <img
-          src="/images/marcel-scog-alpha.jpeg"
+          src="/images/marcel-scog-bg.jpeg"
           alt="Contact Illustration"
-          className="object-contain w-full h-40 rounded-lg"
+          className="object-contain w-full h-full max-h-[520px] rounded-2xl"
         />
       </div>
     </div>

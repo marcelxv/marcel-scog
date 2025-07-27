@@ -1,9 +1,10 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-import { useTheme } from '@/providers/theme-provider';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import type { NavigationItem } from '@/lib/types';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 interface NavigationProps {
   items: NavigationItem[];
@@ -14,7 +15,6 @@ export function Navigation({ items, currentSection }: NavigationProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const { resolvedTheme } = useTheme();
 
   // Handle scroll effects
   const handleScroll = useCallback(() => {
@@ -110,11 +110,10 @@ export function Navigation({ items, currentSection }: NavigationProps) {
 
       {/* Main navigation header */}
       <header
-        className={`fixed top-1 left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled
+        className={`fixed top-1 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
             ? 'bg-text-50/80 dark:bg-neutral-950/90 backdrop-blur-md shadow-lg'
             : 'bg-white dark:bg-neutral-950'
-        }`}
+          }`}
       >
         <nav
           className="container mx-auto px-4 py-4"
@@ -130,7 +129,18 @@ export function Navigation({ items, currentSection }: NavigationProps) {
                 className="text-xl font-bold text-text-900 dark:text-white hover:text-primary-700 dark:hover:text-primary-300 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-950 rounded-md px-2 py-1"
                 aria-label="Go to top of page"
               >
-                Marcel Scognamiglio
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                >  <Image
+                    src="/images/marcel-scog-headshot.png"
+                    alt="Marcel Scognamiglio"
+                    width={50}
+                    height={50}
+                    className="rounded-full"
+                  />
+                </motion.div>
               </button>
             </div>
 
@@ -141,11 +151,10 @@ export function Navigation({ items, currentSection }: NavigationProps) {
                   key={item.href}
                   onClick={() => handleNavClick(item.href, item.external)}
                   onKeyDown={e => handleKeyDown(e, item.href, item.external)}
-                  className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-950 ${
-                    currentSection === item.href.replace('#', '')
+                  className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-950 ${currentSection === item.href.replace('#', '')
                       ? 'text-primary-600 dark:text-primary-300'
                       : 'text-text-700 dark:text-text-50 hover:text-primary-600 dark:hover:text-primary-300'
-                  }`}
+                    }`}
                   aria-current={
                     currentSection === item.href.replace('#', '')
                       ? 'page'
@@ -191,9 +200,8 @@ export function Navigation({ items, currentSection }: NavigationProps) {
                 aria-label="Toggle navigation menu"
               >
                 <svg
-                  className={`w-6 h-6 transition-transform duration-300 ${
-                    isMobileMenuOpen ? 'rotate-90' : ''
-                  }`}
+                  className={`w-6 h-6 transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-90' : ''
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -233,9 +241,8 @@ export function Navigation({ items, currentSection }: NavigationProps) {
       {/* Mobile menu */}
       <div
         id="mobile-menu"
-        className={`fixed top-0 right-0 z-40 h-full w-80 max-w-[80vw] bg-accent-100 dark:bg-neutral-950 shadow-xl transform transition-transform duration-300 ease-in-out md:hidden ${
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        className={`fixed top-0 right-0 z-40 h-full w-80 max-w-[80vw] bg-accent-100 dark:bg-neutral-950 shadow-xl transform transition-transform duration-300 ease-in-out md:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
         role="dialog"
         aria-modal="true"
         aria-labelledby="mobile-menu-title"
@@ -283,11 +290,10 @@ export function Navigation({ items, currentSection }: NavigationProps) {
                   <button
                     onClick={() => handleNavClick(item.href, item.external)}
                     onKeyDown={e => handleKeyDown(e, item.href, item.external)}
-                    className={`w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 ${
-                      currentSection === item.href.replace('#', '')
+                    className={`w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 ${currentSection === item.href.replace('#', '')
                         ? 'bg-primary-100 dark:bg-primary-800/20 text-primary-700 dark:text-primary-300'
                         : 'text-text-700 dark:text-text-300 hover:bg-accent-200 dark:hover:bg-text-800 hover:text-primary-600 dark:hover:text-primary-400'
-                    }`}
+                      }`}
                     aria-current={
                       currentSection === item.href.replace('#', '')
                         ? 'page'

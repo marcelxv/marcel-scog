@@ -5,24 +5,25 @@ import type { IDCardData } from '@/lib/types';
 
 const marcelIDCardData: IDCardData = {
   personal: {
-    name: 'Marcel Scognamiglio Senra Lourenço',
+    name: 'Marcel S.',
     title:
-      'Senior Software Engineer | System Architect | AI & Automation Specialist',
+      'Senior Software Engineer',
     location: 'São José dos Campos, SP, Brazil',
     status: 'open-to-opportunities',
-    avatar: '/images/marcel-scog-alpha.jpeg',
+    avatar: '/images/marcel-headshot.png',
     qrCode: 'https://marcel-scognamiglio.com/contact',
   },
   badges: [
+    { name: 'Full Stack JavaScript Developer', level: 'expert', color: '#8aa488' },
     { name: 'AI & Automation', level: 'expert', color: '#8aa488' },
     { name: 'System Architecture', level: 'expert', color: '#40617f' },
-    { name: 'Full-Stack', level: 'expert', color: '#8aa488' },
     { name: 'DevOps', level: 'advanced', color: '#40617f' },
   ],
   contact: {
     email: 'marcelx@protonmail.com',
     linkedin: 'https://linkedin.com/in/marcel-scognamiglio',
     github: 'https://github.com/marcel-scognamiglio',
+    resume: '/resume.pdf',
   },
   stats: {
     experience: '5+',
@@ -65,10 +66,7 @@ export function HeroSection() {
               </div>
 
               <h1 className="text-4xl md:text-6xl font-bold text-text-900 dark:text-white mb-4 leading-tight">
-                Marcel
-                <span className="block text-primary-700 dark:text-primary-300">
-                  Scognamiglio
-                </span>
+                Hello, I'm Marcel 👋
               </h1>
 
               <p className="text-xl text-text-800 dark:text-text-50 mb-8 max-w-2xl">

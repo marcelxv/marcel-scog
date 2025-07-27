@@ -21,7 +21,7 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
 
   if (!mounted) {
     return (
-      <div className="w-full max-w-md mx-auto h-96 bg-neutral-200 dark:bg-neutral-300 rounded-2xl animate-pulse" />
+      <div className="w-full max-w-sm mx-auto h-80 bg-neutral-200 dark:bg-[#23272f] rounded-2xl animate-pulse" />
     );
   }
 
@@ -64,7 +64,7 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto">
+    <div className="w-full max-w-sm mx-auto">
       <div
         className={`relative w-full transition-all duration-300 ${
           interactive ? 'hover:scale-105 cursor-pointer' : ''
@@ -75,17 +75,18 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
         role={interactive ? 'button' : 'img'}
         aria-label={
           interactive
-            ? 'ID card for Marcel Scognamiglio'
-            : 'Marcel Scognamiglio ID card'
+            ? `ID card for ${data.personal.name}`
+            : `${data.personal.name} ID card`
         }
       >
+        {/* Accent bar */}
+        <div className="absolute left-0 top-0 h-full w-2 rounded-l-2xl bg-primary-600 dark:bg-primary-500" />
         {/* Card content */}
-        <div className="w-full bg-white dark:bg-neutral-900 rounded-2xl shadow-lg border border-neutral-100 dark:border-neutral-700 p-8 flex flex-col">
-          {/* Contact Information */}
+        <div className="w-full bg-white dark:bg-[#23272f] rounded-2xl shadow-xl border border-neutral-200 dark:border-neutral-700 p-6 flex flex-col relative z-10" style={{ minHeight: '370px' }}>
           {/* Profile section */}
-          <div className="flex items-center space-x-4 mb-6">
+          <div className="flex items-center gap-4 mb-4">
             <div className="relative">
-              <div className="w-28 h-28 rounded-2xl overflow-hidden border-2 border-neutral-300 dark:border-neutral-400">
+              <div className="w-20 h-20 rounded-xl overflow-hidden border-2 border-neutral-300 dark:border-neutral-500 shadow-md">
                 <Image
                   src={data.personal.avatar}
                   alt={`${data.personal.name} profile photo`}
@@ -95,9 +96,9 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
                   priority
                 />
               </div>
-              <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-secondary-600 rounded-full border-2 border-text-50 dark:border-neutral-100 flex items-center justify-center">
+              <div className="absolute -bottom-2 -right-2 w-7 h-7 bg-secondary-600 rounded-full border-2 border-white dark:border-neutral-700 flex items-center justify-center shadow">
                 <svg
-                  className="w-3 h-3 text-text-50"
+                  className="w-4 h-4 text-white"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -109,17 +110,16 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
                 </svg>
               </div>
             </div>
-
             <div className="flex-1">
-              <h2 className="text-lg font-bold text-text-900 dark:text-white mb-1">
+              <h2 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 mb-0.5">
                 {data.personal.name}
               </h2>
-              <p className="text-sm font-semibold text-primary-700 dark:text-primary-200 mb-1">
+              <p className="text-sm font-medium text-primary-700 dark:text-primary-300 mb-0.5">
                 {data.personal.title}
               </p>
-              <div className="flex items-center text-xs text-text-800 dark:text-white mb-1">
+              <div className="flex items-center text-xs text-neutral-700 dark:text-neutral-300">
                 <svg
-                  className="w-3 h-3 mr-1"
+                  className="w-4 h-4 mr-1 text-neutral-500 dark:text-neutral-400"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -131,99 +131,59 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
                 </svg>
                 {data.personal.location}
               </div>
-              <div className="text-xs text-secondary-700 dark:text-secondary-600 font-medium">
-                💼 Immediate Start Available
-              </div>
             </div>
           </div>
-
-          {/* Quick Contact Actions */}
-          <div className="grid grid-cols-2 gap-3 mb-6">
-            <a
-              href={`mailto:${data.contact.email}`}
-              className="flex items-center justify-center p-3 bg-primary-200 dark:bg-primary-300 hover:bg-primary-300 dark:hover:bg-primary-400 rounded-lg transition-colors duration-300 group"
-            >
-              <svg
-                className="w-4 h-4 text-primary-800 dark:text-primary-900 mr-2"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-              </svg>
-              <span className="text-sm font-medium text-primary-800 dark:text-primary-900">
-                Email
-              </span>
-            </a>
-            <a
-              href={data.contact.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center p-3 bg-secondary-200 dark:bg-secondary-300 hover:bg-secondary-300 dark:hover:bg-secondary-400 rounded-lg transition-colors duration-300 group"
-            >
-              <svg
-                className="w-4 h-4 text-secondary-800 dark:text-secondary-900 mr-2"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="text-sm font-medium text-secondary-800 dark:text-secondary-900">
-                LinkedIn
-              </span>
-            </a>
-          </div>
-
           {/* Specializations */}
           <div className="mb-4">
-            <h4 className="text-xs font-bold text-text-900 dark:text-white mb-2">
-              SPECIALIZATIONS
+            <h4 className="text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1 tracking-wide">
+              Specializations
             </h4>
-            <div
-              className={
-                isMobile ? 'flex flex-col gap-1' : 'flex flex-wrap gap-2'
-              }
-            >
-              {(isMobile
-                ? data.badges.slice(0, 2)
-                : data.badges.slice(0, 4)
-              ).map((badge, index) => (
-                <div
+            <div className={isMobile ? 'flex flex-col gap-1' : 'flex flex-wrap gap-2'}>
+              {(isMobile ? data.badges.slice(0, 3) : data.badges.slice(0, 4)).map((badge, index) => (
+                <span
                   key={index}
-                  className={`px-2 py-0.5 rounded-lg ${isMobile ? 'text-[10px] font-normal' : 'text-xs font-medium'} transition-all duration-300 ${!isMobile ? 'hover:scale-105' : ''} ${
-                    badge.level === 'expert'
-                      ? 'bg-secondary-700 text-white dark:bg-secondary-500 dark:text-white'
-                      : badge.level === 'advanced'
-                        ? 'bg-primary-700 text-white dark:bg-primary-500 dark:text-white'
-                        : badge.level === 'intermediate'
-                          ? 'bg-neutral-700 text-white dark:bg-neutral-500 dark:text-white'
-                          : 'bg-text-700 text-white dark:bg-text-400 dark:text-white'
-                  }`}
+                  className="bg-primary-50 dark:bg-primary-900 text-primary-700 dark:text-primary-200 px-2 py-0.5 rounded-md text-xs font-medium shadow-sm border border-primary-100 dark:border-primary-800"
                 >
                   {badge.name}
-                </div>
+                </span>
               ))}
             </div>
           </div>
-
-          {/* Footer */}
-          <div className="mt-auto">
-            <div className="flex justify-between items-center mb-2">
-              <div className="text-xs text-text-600 dark:text-text-600">
-                ID: MS-{new Date().getFullYear()}
-              </div>
-              <div className="text-xs text-secondary-700 dark:text-secondary-600 font-medium">
-                ✓ Background Verified
-              </div>
+          {/* Mobile-only contact links */}
+          {isMobile && (
+            <div className="mt-2 pt-3 border-t border-neutral-200 dark:border-neutral-700 flex flex-row gap-2">
+              <a href={data.contact.resume} target="_blank" rel="noopener noreferrer" className="p-2 text-xs font-medium text-primary-700 dark:text-primary-300 hover:underline">
+                Download Resume
+              </a>
+              <a href={data.contact.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 text-xs font-medium text-primary-700 dark:text-primary-300 hover:underline">
+                View LinkedIn
+              </a>
             </div>
-            <div className="text-center">
-              <div className="text-xs text-text-600 dark:text-text-600">
-                💡 TL;DR: Experienced • Available • Ready to contribute
-              </div>
+          )}
+          {/* Footer: ID and barcode/QR */}
+          <div className="mt-auto pt-3 flex items-end justify-between">
+            <div className="text-xs text-neutral-500 dark:text-neutral-400 font-mono tracking-tight">
+              ID: MS-{new Date().getFullYear()}
+            </div>
+            {/* Barcode/QR placeholder */}
+            <div className="w-16 h-8 flex items-center justify-center">
+              <svg className="w-14 h-6" viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="2" width="2" height="12" rx="1" fill="#888" />
+                <rect x="5" y="4" width="1" height="8" rx="0.5" fill="#888" />
+                <rect x="8" y="2" width="2" height="12" rx="1" fill="#888" />
+                <rect x="12" y="4" width="1" height="8" rx="0.5" fill="#888" />
+                <rect x="15" y="2" width="2" height="12" rx="1" fill="#888" />
+                <rect x="19" y="4" width="1" height="8" rx="0.5" fill="#888" />
+                <rect x="22" y="2" width="2" height="12" rx="1" fill="#888" />
+                <rect x="26" y="4" width="1" height="8" rx="0.5" fill="#888" />
+                <rect x="29" y="2" width="2" height="12" rx="1" fill="#888" />
+                <rect x="33" y="4" width="1" height="8" rx="0.5" fill="#888" />
+                <rect x="36" y="2" width="2" height="12" rx="1" fill="#888" />
+                <rect x="40" y="4" width="1" height="8" rx="0.5" fill="#888" />
+                <rect x="43" y="2" width="2" height="12" rx="1" fill="#888" />
+                <rect x="47" y="4" width="1" height="8" rx="0.5" fill="#888" />
+                <rect x="50" y="2" width="2" height="12" rx="1" fill="#888" />
+              </svg>
             </div>
           </div>
         </div>
