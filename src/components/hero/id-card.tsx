@@ -80,9 +80,7 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
         }
       >
         {/* Background illustration */}
-        <div
-          className="absolute inset-0 bg-primary-500/20 dark:bg-primary-400/10 rounded-3xl blur-2xl scale-110"
-        >
+        <div className="absolute inset-0 bg-primary-500/20 dark:bg-primary-400/10 rounded-3xl blur-2xl scale-110">
           <svg
             className="w-full h-full"
             viewBox="0 0 100 100"
@@ -92,7 +90,7 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
             <circle cx="50" cy="50" r="45" fill="#888" />
           </svg>
         </div>
-     {/* Card content */}
+        {/* Card content */}
         <div
           className="w-full bg-white dark:bg-[#23272f] rounded-xl shadow-xl border border-neutral-200 dark:border-neutral-700 p-6 flex flex-col relative z-10"
           style={{ minHeight: '370px' }}

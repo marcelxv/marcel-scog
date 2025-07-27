@@ -27,7 +27,7 @@ interface TechIconProps {
   className?: string;
 }
 
-export function TechIcon({ name, className = "w-6 h-6" }: TechIconProps) {
+export function TechIcon({ name, className = 'w-6 h-6' }: TechIconProps) {
   const iconMap: Record<string, JSX.Element> = {
     // Languages & Frameworks
     javascript: <Code2 className={`${className} text-yellow-500`} />,
@@ -74,7 +74,9 @@ export function TechIcon({ name, className = "w-6 h-6" }: TechIconProps) {
     figma: <Palette className={`${className} text-red-500`} />,
     git: <GitBranch className={`${className} text-orange-600`} />,
     jira: <Settings className={`${className} text-blue-600`} />,
-    notion: <FileCode className={`${className} text-gray-700 dark:text-gray-300`} />,
+    notion: (
+      <FileCode className={`${className} text-gray-700 dark:text-gray-300`} />
+    ),
     miro: <Palette className={`${className} text-yellow-500`} />,
     mermaid: <Network className={`${className} text-pink-600`} />,
   };
