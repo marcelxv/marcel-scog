@@ -6,15 +6,18 @@ import type { IDCardData } from '@/lib/types';
 const marcelIDCardData: IDCardData = {
   personal: {
     name: 'Marcel S.',
-    title:
-      'Senior Software Engineer',
+    title: 'Senior Software Engineer',
     location: 'São José dos Campos, SP, Brazil',
     status: 'open-to-opportunities',
     avatar: '/images/marcel-headshot.png',
     qrCode: 'https://marcel-scognamiglio.com/contact',
   },
   badges: [
-    { name: 'Full Stack JavaScript Developer', level: 'expert', color: '#8aa488' },
+    {
+      name: 'Full Stack JavaScript Developer',
+      level: 'expert',
+      color: '#8aa488',
+    },
     { name: 'AI & Automation', level: 'expert', color: '#8aa488' },
     { name: 'System Architecture', level: 'expert', color: '#40617f' },
     { name: 'DevOps', level: 'advanced', color: '#40617f' },
@@ -66,14 +69,14 @@ export function HeroSection() {
               </div>
 
               <h1 className="text-4xl md:text-6xl font-bold text-text-900 dark:text-white mb-4 leading-tight">
-                Hello, I'm Marcel 👋
+                Hello, I&lsquo;m Marcel 👋
               </h1>
 
               <p className="text-xl text-text-800 dark:text-text-50 mb-8 max-w-2xl">
                 System Architect and Software Engineer with 5+ years of
                 experience helping companies deliver impactful digital products
                 through automation, AI, and scalable architecture. I build
-                systems to make people&apos;s lives easier.
+                systems to make people&lsquo;s lives easier.
               </p>
             </div>
 
@@ -111,20 +114,20 @@ export function HeroSection() {
 
             {/* Key Technologies */}
             <div className="mb-8">
-              <h3 className="text-sm font-semibold text-text-600 dark:text-text-600 mb-3 text-center lg:text-left">
+              <div className="text-xs font-bold uppercase text-neutral-800 dark:text-neutral-100 mb-2 tracking-wider">
                 CORE TECHNOLOGIES
-              </h3>
-              <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
-                <span className="px-3 py-1 bg-secondary-200 dark:bg-secondary-800 text-secondary-800 dark:text-white rounded-full text-sm font-semibold">
+              </div>
+              <div className="flex flex-wrap gap-2 mb-8 justify-center lg:justify-start">
+                <span className="px-3 py-1 bg-secondary-300 dark:bg-secondary-700 text-secondary-900 dark:text-secondary-100 rounded-full text-sm font-semibold shadow-sm border border-secondary-400 dark:border-secondary-600">
                   JavaScript/TypeScript
                 </span>
-                <span className="px-3 py-1 bg-primary-200 dark:bg-primary-800 text-primary-800 dark:text-white rounded-full text-sm font-semibold">
+                <span className="px-3 py-1 bg-primary-300 dark:bg-primary-700 text-primary-900 dark:text-primary-100 rounded-full text-sm font-semibold shadow-sm border border-primary-400 dark:border-primary-600">
                   React/Next.js/Vue
                 </span>
-                <span className="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 text-text-900 dark:text-white rounded-full text-sm font-semibold">
+                <span className="px-3 py-1 bg-accent-200 dark:bg-accent-700 text-accent-900 dark:text-accent-100 rounded-full text-sm font-semibold shadow-sm border border-accent-400 dark:border-accent-600">
                   AI & Automation
                 </span>
-                <span className="px-3 py-1 bg-neutral-300 dark:bg-neutral-800 text-text-900 dark:text-white rounded-full text-sm font-semibold">
+                <span className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 rounded-full text-sm font-semibold shadow-sm border border-neutral-300 dark:border-neutral-700">
                   AWS/PostgreSQL
                 </span>
               </div>
@@ -133,26 +136,26 @@ export function HeroSection() {
             {/* Quick stats */}
             <div className="grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0">
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-extrabold text-primary-700 dark:text-primary-300">
+                <div className="text-2xl font-extrabold text-primary-700 dark:text-primary-200">
                   5+
                 </div>
-                <div className="text-sm text-text-600 dark:text-text-600">
+                <div className="text-sm text-neutral-800 dark:text-neutral-100 font-semibold">
                   Years Experience
                 </div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-extrabold text-secondary-700 dark:text-secondary-400">
+                <div className="text-2xl font-extrabold text-secondary-700 dark:text-secondary-200">
                   30+
                 </div>
-                <div className="text-sm text-text-600 dark:text-text-600">
+                <div className="text-sm text-neutral-800 dark:text-neutral-100 font-semibold">
                   Projects Delivered
                 </div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-2xl font-extrabold text-neutral-700 dark:text-neutral-200">
+                <div className="text-2xl font-extrabold text-neutral-700 dark:text-neutral-100">
                   20+
                 </div>
-                <div className="text-sm text-text-600 dark:text-text-600">
+                <div className="text-sm text-neutral-800 dark:text-neutral-100 font-semibold">
                   Technologies
                 </div>
               </div>
@@ -171,10 +174,10 @@ export function HeroSection() {
               </div>
 
               {/* Floating elements around card */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-secondary-500 rounded-lg opacity-80 animate-float hidden sm:block" />
+              {/* <div className="absolute -top-4 -left-4 w-8 h-8 bg-secondary-500 rounded-lg opacity-80 animate-float hidden sm:block" />
               <div className="absolute -top-2 -right-6 w-6 h-6 bg-primary-500 rounded-full opacity-60 animate-float-delayed hidden sm:block" />
               <div className="absolute -bottom-6 -left-2 w-10 h-10 bg-accent-600 rounded-xl opacity-70 animate-float hidden sm:block" />
-              <div className="absolute -bottom-4 -right-4 w-7 h-7 bg-text-400 rounded-lg opacity-50 animate-float-delayed hidden sm:block" />
+              <div className="absolute -bottom-4 -right-4 w-7 h-7 bg-text-400 rounded-lg opacity-50 animate-float-delayed hidden sm:block" /> */}
             </div>
           </div>
         </div>

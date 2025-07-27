@@ -234,8 +234,8 @@ export function ContactForm() {
           )}
         </form>
       </div>
-            {/* Illustration */}
-            <div className="hidden md:flex items-center justify-center bg-neutral-100 dark:bg-neutral-900 rounded-3xl">
+      {/* Illustration */}
+      <div className="hidden md:flex items-center justify-center bg-neutral-100 dark:bg-neutral-900 rounded-3xl">
         <img
           src="/images/marcel-scog-bg.jpeg"
           alt="Contact Illustration"

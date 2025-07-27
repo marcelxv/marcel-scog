@@ -79,10 +79,24 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
             : `${data.personal.name} ID card`
         }
       >
-        {/* Accent bar */}
-        <div className="absolute left-0 top-0 h-full w-2 rounded-l-2xl bg-primary-600 dark:bg-primary-500" />
-        {/* Card content */}
-        <div className="w-full bg-white dark:bg-[#23272f] rounded-2xl shadow-xl border border-neutral-200 dark:border-neutral-700 p-6 flex flex-col relative z-10" style={{ minHeight: '370px' }}>
+        {/* Background illustration */}
+        <div
+          className="absolute inset-0 bg-primary-500/20 dark:bg-primary-400/10 rounded-3xl blur-2xl scale-110"
+        >
+          <svg
+            className="w-full h-full"
+            viewBox="0 0 100 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="50" cy="50" r="45" fill="#888" />
+          </svg>
+        </div>
+     {/* Card content */}
+        <div
+          className="w-full bg-white dark:bg-[#23272f] rounded-xl shadow-xl border border-neutral-200 dark:border-neutral-700 p-6 flex flex-col relative z-10"
+          style={{ minHeight: '370px' }}
+        >
           {/* Profile section */}
           <div className="flex items-center gap-4 mb-4">
             <div className="relative">
@@ -138,8 +152,15 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
             <h4 className="text-xs font-bold text-neutral-800 dark:text-neutral-200 mb-1 tracking-wide">
               Specializations
             </h4>
-            <div className={isMobile ? 'flex flex-col gap-1' : 'flex flex-wrap gap-2'}>
-              {(isMobile ? data.badges.slice(0, 3) : data.badges.slice(0, 4)).map((badge, index) => (
+            <div
+              className={
+                isMobile ? 'flex flex-col gap-1' : 'flex flex-wrap gap-2'
+              }
+            >
+              {(isMobile
+                ? data.badges.slice(0, 3)
+                : data.badges.slice(0, 4)
+              ).map((badge, index) => (
                 <span
                   key={index}
                   className="bg-primary-50 dark:bg-primary-900 text-primary-700 dark:text-primary-200 px-2 py-0.5 rounded-md text-xs font-medium shadow-sm border border-primary-100 dark:border-primary-800"
@@ -152,10 +173,20 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
           {/* Mobile-only contact links */}
           {isMobile && (
             <div className="mt-2 pt-3 border-t border-neutral-200 dark:border-neutral-700 flex flex-row gap-2">
-              <a href={data.contact.resume} target="_blank" rel="noopener noreferrer" className="p-2 text-xs font-medium text-primary-700 dark:text-primary-300 hover:underline">
+              <a
+                href={data.contact.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 text-xs font-medium text-primary-700 dark:text-primary-300 hover:underline"
+              >
                 Download Resume
               </a>
-              <a href={data.contact.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 text-xs font-medium text-primary-700 dark:text-primary-300 hover:underline">
+              <a
+                href={data.contact.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 text-xs font-medium text-primary-700 dark:text-primary-300 hover:underline"
+              >
                 View LinkedIn
               </a>
             </div>
@@ -167,7 +198,12 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
             </div>
             {/* Barcode/QR placeholder */}
             <div className="w-16 h-8 flex items-center justify-center">
-              <svg className="w-14 h-6" viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                className="w-14 h-6"
+                viewBox="0 0 56 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <rect x="1" y="2" width="2" height="12" rx="1" fill="#888" />
                 <rect x="5" y="4" width="1" height="8" rx="0.5" fill="#888" />
                 <rect x="8" y="2" width="2" height="12" rx="1" fill="#888" />
