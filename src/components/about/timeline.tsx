@@ -83,11 +83,11 @@ function TimelineItem({
           <div className="flex items-start justify-between mb-4">
             <div className="flex items-center space-x-4">
               {/* Company logo placeholder */}
-              <div className="w-12 h-12 bg-accent-200 dark:bg-text-700 rounded-lg flex items-center justify-center">
+              {/* <div className="w-12 h-12 bg-accent-200 dark:bg-text-700 rounded-lg flex items-center justify-center">
                 <span className="text-lg font-bold text-primary-600 dark:text-primary-400">
                   {experience.company.charAt(0)}
                 </span>
-              </div>
+              </div> */}
 
               <div>
                 <h3 className="text-lg font-bold text-text-900 dark:text-white">
