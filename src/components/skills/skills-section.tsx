@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import type { SkillCategory } from '@/lib/types';
 import { useIsMobile } from '@/hooks/use-is-mobile';
+import { TechIcon } from '@/components/ui/tech-icon';
 
 interface SkillsProps {
   skillCategories: SkillCategory[];
@@ -48,11 +49,16 @@ export function SkillsSection({ skillCategories }: SkillsProps) {
             {category.skills.map(skill => (
               <div key={skill.name} className="group">
                 <div className="px-4 py-3 bg-neutral-50 dark:bg-neutral-950 rounded-lg hover:bg-accent-100 dark:hover:bg-neutral-900 transition-colors duration-200 cursor-default">
-                  <div className="text-sm font-semibold text-text-900 dark:text-white group-hover:text-accent-700 dark:group-hover:text-accent-300 transition-colors duration-200">
-                    {skill.name}
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="flex-shrink-0">
+                      <TechIcon name={skill.icon} className="w-5 h-5" />
+                    </div>
+                    <div className="text-sm font-semibold text-text-900 dark:text-white group-hover:text-accent-700 dark:group-hover:text-accent-300 transition-colors duration-200">
+                      {skill.name}
+                    </div>
                   </div>
                   {skill.description && (
-                    <div className="text-xs text-text-600 dark:text-text-200 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <div className="text-xs text-text-600 dark:text-text-200 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                       {skill.description}
                     </div>
                   )}
@@ -96,11 +102,16 @@ export function SkillsSection({ skillCategories }: SkillsProps) {
                 className="group"
               >
                 <div className="px-4 py-3 bg-neutral-50 dark:bg-neutral-950 rounded-lg hover:bg-accent-100 dark:hover:bg-neutral-900 transition-colors duration-200 cursor-default">
-                  <div className="text-sm font-semibold text-text-900 dark:text-white group-hover:text-accent-700 dark:group-hover:text-accent-300 transition-colors duration-200">
-                    {skill.name}
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="flex-shrink-0">
+                      <TechIcon name={skill.icon} className="w-5 h-5" />
+                    </div>
+                    <div className="text-sm font-semibold text-text-900 dark:text-white group-hover:text-accent-700 dark:group-hover:text-accent-300 transition-colors duration-200">
+                      {skill.name}
+                    </div>
                   </div>
                   {skill.description && (
-                    <div className="text-xs text-text-600 dark:text-text-200 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <div className="text-xs text-text-600 dark:text-text-200 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                       {skill.description}
                     </div>
                   )}

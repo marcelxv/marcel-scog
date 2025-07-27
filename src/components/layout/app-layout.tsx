@@ -53,10 +53,10 @@ export function AppLayout({ children }: AppLayoutProps) {
       </main>
 
       {/* Footer */}
-      <footer className="bg-neutral-100 dark:bg-neutral-200 border-t border-neutral-200 dark:border-neutral-300 transition-colors duration-300">
+      <footer className="bg-neutral-100 dark:bg-neutral-800 border-t border-neutral-200 dark:border-neutral-300 transition-colors duration-300">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-text-700 dark:text-text-700">
+            <div className="text-sm text-text-700 dark:text-text-200">
               © {new Date().getFullYear()} Marcel Scognamiglio. All rights
               reserved.
             </div>
@@ -64,7 +64,7 @@ export function AppLayout({ children }: AppLayoutProps) {
             <div className="flex items-center space-x-6">
               <a
                 href="mailto:marcel@example.com"
-                className="text-sm text-text-700 dark:text-text-700 hover:text-primary-700 dark:hover:text-primary-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-200 rounded-md px-2 py-1"
+                className="text-sm text-text-700 dark:text-text-200 hover:text-primary-700 dark:hover:text-primary-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-200 rounded-md px-2 py-1"
                 aria-label="Send email to Marcel"
               >
                 Email
@@ -73,7 +73,7 @@ export function AppLayout({ children }: AppLayoutProps) {
                 href="https://linkedin.com/in/marcel-scognamiglio"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-text-700 dark:text-text-700 hover:text-primary-700 dark:hover:text-primary-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-200 rounded-md px-2 py-1"
+                className="text-sm text-text-700 dark:text-text-200 hover:text-primary-700 dark:hover:text-primary-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-200 rounded-md px-2 py-1"
                 aria-label="Visit Marcel's LinkedIn profile (opens in new tab)"
               >
                 LinkedIn
@@ -82,7 +82,7 @@ export function AppLayout({ children }: AppLayoutProps) {
                 href="https://github.com/marcel-scognamiglio"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-text-700 dark:text-text-700 hover:text-primary-700 dark:hover:text-primary-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-200 rounded-md px-2 py-1"
+                className="text-sm text-text-700 dark:text-text-200 hover:text-primary-700 dark:hover:text-primary-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-200 rounded-md px-2 py-1"
                 aria-label="Visit Marcel's GitHub profile (opens in new tab)"
               >
                 GitHub

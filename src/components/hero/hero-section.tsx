@@ -69,7 +69,7 @@ export function HeroSection() {
               </div>
 
               <h1 className="text-4xl md:text-6xl font-bold text-text-900 dark:text-white mb-4 leading-tight">
-                Hello, I&lsquo;m Marcel 👋
+                Hello, I&lsquo;m Marcel 👋🏼
               </h1>
 
               <p className="text-xl text-text-800 dark:text-text-50 mb-8 max-w-2xl">

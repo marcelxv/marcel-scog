@@ -63,7 +63,7 @@ const marcelExperiences: Experience[] = [
     startDate: new Date('2022-05-01'),
     endDate: new Date('2023-11-30'),
     description:
-      'Developed frontend features for educational marketplace (Vue, Nuxt.js, React, TypeScript). Delivered SEO improvements and Core Web Vitals optimization. Integrated frontend with backend services (Node.js, Ruby on Rails, PostgreSQL).',
+      'Developed frontend features for educational marketplace (Vue.js, Nuxt.js, React, TypeScript). Delivered SEO improvements and Core Web Vitals optimization. Integrated frontend with backend services (Node.js, Ruby on Rails, PostgreSQL).',
     technologies: [
       'Vue.js',
       'Nuxt.js',
