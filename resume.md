@@ -1,7 +1,7 @@
 # Marcel Scognamiglio Senra Lourenço
 **Senior Software Engineer | System Architect | AI & Automation Specialist**
 
-� São José dos Campos, SP, Brazil | 📧 marcelx@protonmail.com
+São José dos Campos, SP, Brazil | 📧 marcelx@protonmail.com
 
 **Languages**: Portuguese – Native | English – Professional
 
@@ -159,27 +159,3 @@ Developed strong communication skills, critical thinking, and understanding of t
 ### Foundation Certifications (2022)
 - **Software Design Principles** | Codecademy | *Apr 2022*
 - **Vue.js 3** | Codecademy | *Mar 2022*
-
----
-
-## Languages
-
-- **Portuguese**: Native
-- **English**: Professional
-
----
-
-## Core Competencies
-
-- System Architecture & Design
-- AI-Driven Development
-- Event-Driven Architecture
-- Full-Stack Development
-- Team Leadership & Mentoring
-- Technical Documentation
-- Cross-Functional Collaboration
-- Performance Optimization
-
----
-
-*References available upon request*
