@@ -30,7 +30,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://marcel-scognamiglio.com',
-    title: 'Marcel Scognamiglio Senra Lourenço - Senior Software Engineer | System Architect | AI & Automation Specialist',
+    title:
+      'Marcel Scognamiglio Senra Lourenço - Senior Software Engineer | System Architect | AI & Automation Specialist',
     description:
       "Personal portfolio website showcasing Marcel Scognamiglio's expertise as a Senior Software Engineer.",
     siteName: 'Marcel Scognamiglio Portfolio',
