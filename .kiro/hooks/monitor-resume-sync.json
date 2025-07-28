@@ -1,0 +1,23 @@
+{
+  "name": "Monitor Resume Sync Status",
+  "description": "Check what changes would be made if resume sync runs, without actually making changes",
+  "trigger": {
+    "type": "manual",
+    "buttonText": "Check Resume Sync Status"
+  },
+  "actions": [
+    {
+      "type": "agent_execution",
+      "prompt": "Please check the current sync status between resume.md and the website components:\n\n1. Run `npm run resume:monitor` to analyze what changes would be made\n2. Show me a detailed report of:\n   - Current values in components vs resume data\n   - What would change if sync runs\n   - Any discrepancies that need attention\n3. If changes are needed, ask if I want to run the sync\n4. Provide recommendations for keeping things in sync\n\nThis helps me monitor the automation system and ensure everything stays synchronized.",
+      "context": {
+        "files": [
+          "resume.md",
+          "src/components/hero/hero-section.tsx",
+          "src/components/about/about-section.tsx",
+          "scripts/monitor-resume-changes.js"
+        ]
+      }
+    }
+  ],
+  "enabled": true
+}

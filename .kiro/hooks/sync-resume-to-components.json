@@ -1,0 +1,29 @@
+{
+  "name": "Sync Resume to React Components",
+  "description": "Automatically updates React components with new experience and skills data when resume.md is modified",
+  "trigger": {
+    "type": "file_save",
+    "pattern": "resume.md"
+  },
+  "actions": [
+    {
+      "type": "agent_execution",
+      "prompt": "I need to synchronize the resume.md content with all React components. Please:\n\n1. Run `node scripts/update-experience-component.js` to parse and update experience data in the about section component\n2. Run `node scripts/update-skills-component.js` to parse and update skills data in the main page component\n3. Run `node scripts/update-hero-content.js` to parse and update hero section with years of experience, project counts, and bio text\n4. Verify that all components were updated successfully\n5. Check for any TypeScript errors in the updated components and fix them\n6. Run `npm run type-check` to ensure everything compiles correctly\n7. Provide a summary of what experiences, skills, and hero content were updated\n\nThis ensures that when I update my resume, the experience timeline, skills sections, and hero content (including years of experience, project counts, and bio) automatically reflect the changes without manual component editing.",
+      "context": {
+        "files": [
+          "resume.md", 
+          "src/components/about/about-section.tsx", 
+          "src/app/page.tsx",
+          "src/components/hero/hero-section.tsx",
+          "scripts/update-experience-component.js", 
+          "scripts/update-skills-component.js",
+          "scripts/update-hero-content.js",
+          "scripts/parse-resume-data.js",
+          "scripts/parse-marcel-resume.js"
+        ]
+      }
+    }
+  ],
+  "enabled": true,
+  "autoRun": true
+}

@@ -5,8 +5,9 @@ import type { IDCardData } from '@/lib/types';
 
 const marcelIDCardData: IDCardData = {
   personal: {
-    name: 'Marcel S.',
-    title: 'Senior Software Engineer',
+    name: 'Marcel L.',
+    title:
+      'Senior Software Engineer | System Architect | AI & Automation Specialist',
     location: 'São José dos Campos, SP, Brazil',
     status: 'open-to-opportunities',
     avatar: '/images/marcel-headshot.png',
@@ -29,9 +30,9 @@ const marcelIDCardData: IDCardData = {
     resume: '/resume.pdf',
   },
   stats: {
-    experience: '6+',
-    projects: 30,
-    technologies: 20,
+    experience: '8+',
+    projects: 100,
+    technologies: 27,
   },
 };
 
@@ -73,10 +74,7 @@ export function HeroSection() {
               </h1>
 
               <p className="text-xl text-text-800 dark:text-text-50 mb-8 max-w-2xl">
-                System Architect and Software Engineer with 5+ years of
-                experience helping companies deliver impactful digital products
-                through automation, AI, and scalable architecture. I build
-                systems to make people&lsquo;s lives easier.
+                System Architect and Software Engineer with 8+ years of experience helping companies deliver impactful digital products through automation, AI, and scalable architecture — across industries such as education, food safety, retail, and online sales. I build systems to make people&lsquo;s lives easier.
               </p>
             </div>
 
@@ -137,7 +135,7 @@ export function HeroSection() {
             <div className="grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0">
               <div className="text-center lg:text-left">
                 <div className="text-2xl font-extrabold text-primary-700 dark:text-primary-200">
-                  6+
+                  8+
                 </div>
                 <div className="text-sm text-neutral-800 dark:text-neutral-100 font-semibold">
                   Years Experience
@@ -145,7 +143,7 @@ export function HeroSection() {
               </div>
               <div className="text-center lg:text-left">
                 <div className="text-2xl font-extrabold text-secondary-700 dark:text-secondary-200">
-                  30+
+                  100+
                 </div>
                 <div className="text-sm text-neutral-800 dark:text-neutral-100 font-semibold">
                   Projects Delivered
@@ -153,7 +151,7 @@ export function HeroSection() {
               </div>
               <div className="text-center lg:text-left">
                 <div className="text-2xl font-extrabold text-neutral-700 dark:text-neutral-100">
-                  20+
+                  27+
                 </div>
                 <div className="text-sm text-neutral-800 dark:text-neutral-100 font-semibold">
                   Technologies
