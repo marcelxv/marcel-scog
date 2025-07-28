@@ -11,7 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Marcel Scognamiglio - Senior Software Engineer',
+  title:
+    'Marcel Scognamiglio Senra Lourenço - Senior Software Engineer | System Architect | AI & Automation Specialist',
   description:
     "Personal portfolio website showcasing Marcel Scognamiglio's expertise as a Senior Software Engineer, featuring projects, skills, and professional journey.",
   keywords: [

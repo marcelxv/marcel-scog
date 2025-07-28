@@ -1,0 +1,19 @@
+{
+  "name": "Resume PDF Converter",
+  "description": "Automatically converts resume.md to PDF when the file is saved",
+  "trigger": {
+    "type": "file_save",
+    "pattern": "resume.md"
+  },
+  "actions": [
+    {
+      "type": "agent_execution",
+      "prompt": "I need to convert the resume.md file to a professional PDF format. Please:\n\n1. Run the command `npm run resume:build` to execute the PDF conversion script\n2. Verify that the PDF was created successfully in public/resume.pdf\n3. If there are any errors, troubleshoot and fix them\n4. Confirm the PDF looks professional and properly formatted\n\nThe conversion script uses Puppeteer to generate a clean, professional PDF suitable for a software engineer's resume.",
+      "context": {
+        "files": ["resume.md", "scripts/convert-resume-to-pdf.js"]
+      }
+    }
+  ],
+  "enabled": true,
+  "autoRun": true
+}

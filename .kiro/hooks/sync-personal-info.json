@@ -1,0 +1,24 @@
+{
+  "name": "Sync Personal Information",
+  "description": "Updates personal information (name, title, location, email) across components when resume is modified",
+  "trigger": {
+    "type": "file_save",
+    "pattern": "resume.md"
+  },
+  "actions": [
+    {
+      "type": "agent_execution",
+      "prompt": "I need to synchronize personal information from resume.md with the website components. Please:\n\n1. Run `node scripts/update-personal-info.js` to parse and update personal information (name, title, location, email)\n2. Verify that the hero section ID card and layout metadata were updated successfully\n3. Check for any TypeScript errors and fix them\n4. Run `npm run type-check` to ensure everything compiles correctly\n5. Provide a summary of what personal information was updated\n\nThis ensures that when I update my personal details in the resume, they automatically sync across the website.",
+      "context": {
+        "files": [
+          "resume.md",
+          "src/components/hero/hero-section.tsx",
+          "src/app/layout.tsx",
+          "scripts/update-personal-info.js"
+        ]
+      }
+    }
+  ],
+  "enabled": true,
+  "autoRun": false
+}

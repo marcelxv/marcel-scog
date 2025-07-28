@@ -7,7 +7,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "resume:build": "node scripts/convert-resume-to-pdf.js",
+    "resume:sync-experience": "node scripts/update-experience-component.js",
+    "resume:sync-skills": "node scripts/update-skills-component.js",
+    "resume:sync-hero": "node scripts/update-hero-content.js",
+    "resume:sync-personal": "node scripts/update-personal-info.js",
+    "resume:sync-certifications": "node scripts/update-certifications.js",
+    "resume:monitor": "node scripts/monitor-resume-changes.js",
+    "resume:dashboard": "node scripts/resume-dashboard.js",
+    "resume:sync-all": "npm run resume:sync-experience && npm run resume:sync-skills && npm run resume:sync-hero && npm run resume:sync-personal && npm run resume:build"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
@@ -48,6 +57,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "postcss": "^8.4.0",
     "prettier": "^3.0.0",
+    "puppeteer": "^24.15.0",
     "tailwindcss": "^3.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.0.0"
