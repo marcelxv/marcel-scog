@@ -52,8 +52,9 @@ function TimelineItem({
 
   return (
     <div
-      className={`relative transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}
+      className={`relative transition-all duration-700 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
       style={{ transitionDelay: `${index * 200}ms` }}
     >
       {/* Timeline line */}
