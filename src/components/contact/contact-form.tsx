@@ -126,7 +126,7 @@ export function ContactForm() {
               name="name"
               autoComplete="name"
               className={[
-                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-white text-base',
+                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-100 dark:bg-neutral-700 text-neutral-900 dark:text-white text-base',
                 errors.name
                   ? 'border-red-500'
                   : 'border-neutral-300 dark:border-neutral-700',
@@ -159,7 +159,7 @@ export function ContactForm() {
               name="email"
               autoComplete="email"
               className={[
-                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-white text-base',
+                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-100 dark:bg-neutral-700 text-neutral-900 dark:text-white text-base',
                 errors.email
                   ? 'border-red-500'
                   : 'border-neutral-300 dark:border-neutral-700',
@@ -191,7 +191,7 @@ export function ContactForm() {
               name="message"
               rows={5}
               className={[
-                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-white text-base resize-none',
+                'w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-primary-500 bg-neutral-100 dark:bg-neutral-700 text-neutral-900 dark:text-white text-base resize-none',
                 errors.message
                   ? 'border-red-500'
                   : 'border-neutral-300 dark:border-neutral-700',
@@ -235,7 +235,7 @@ export function ContactForm() {
         </form>
       </div>
       {/* Illustration */}
-      <div className="hidden md:flex items-center justify-center bg-neutral-100 dark:bg-neutral-900 rounded-3xl">
+      <div className="hidden md:flex items-center justify-center bg-neutral-100 dark:bg-neutral-700 rounded-3xl">
         <img
           src="/images/marcel-scog-bg.jpeg"
           alt="Contact Illustration"

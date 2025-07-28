@@ -113,7 +113,7 @@ export function ThemeToggle() {
       {/* Background for visual feedback */}
       <div
         className={`absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 ${
-          resolvedTheme === 'dark' ? 'bg-secondary-500' : 'bg-primary-500'
+          resolvedTheme === 'dark' ? 'bg-secondary-1000' : 'bg-primary-500'
         }`}
       />
     </button>

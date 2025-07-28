@@ -32,7 +32,7 @@ export function TechBadge({
     outline:
       'bg-transparent border border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800',
     subtle:
-      'bg-neutral-50 dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 border-0',
+      'bg-neutral-50 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-400 border-0',
   };
 
   return (

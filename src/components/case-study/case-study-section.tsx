@@ -12,7 +12,7 @@ interface CaseStudySectionProps {
 
 export function CaseStudySection({
   section,
-  backgroundColor = 'bg-white dark:bg-neutral-900',
+  backgroundColor = 'bg-white dark:bg-neutral-700',
 }: CaseStudySectionProps) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 

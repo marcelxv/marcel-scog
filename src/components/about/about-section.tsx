@@ -9,7 +9,7 @@ const marcelExperiences: Experience[] = [
     id: '1',
     company: 'FoodReady',
     position: 'Senior Software Developer / Automation & AI Engineer',
-    startDate: new Date('2024-11-01'),
+    startDate: new Date('202-11-01'),
     // endDate is omitted for current position
     description:
       'Built AI-powered automation agents for regulatory compliance in food safety SaaS. Led workflow orchestration using Orkes/Conductor and real-time notifications with Novu. Migrated from cron-based systems to event-driven architecture using AWS Lambda, EventBridge, and PostgreSQL.',
@@ -87,7 +87,7 @@ const marcelExperiences: Experience[] = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-secondary-50 dark:bg-neutral-950">
+    <section id="about" className="py-20 bg-secondary-100 dark:bg-neutral-950">
       <div className="container mx-auto px-4">
         <Timeline experiences={marcelExperiences} />
       </div>

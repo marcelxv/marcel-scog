@@ -41,7 +41,7 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'available':
-        return 'bg-secondary-500 text-accent-100';
+        return 'bg-secondary-1000 text-accent-100';
       case 'busy':
         return 'bg-primary-500 text-accent-100';
       case 'open-to-opportunities':
@@ -80,7 +80,7 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
         }
       >
         {/* Background illustration */}
-        <div className="absolute inset-0 bg-primary-500/20 dark:bg-primary-400/10 rounded-3xl blur-2xl scale-110">
+        {/* <div className="absolute inset-0 bg-primary-500/20 dark:bg-primary-400/10 rounded-3xl blur-2xl scale-110">
           <svg
             className="w-full h-full"
             viewBox="0 0 100 100"
@@ -89,7 +89,7 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
           >
             <circle cx="50" cy="50" r="45" fill="#888" />
           </svg>
-        </div>
+        </div> */}
         {/* Card content */}
         <div
           className="w-full bg-white dark:bg-[#23272f] rounded-xl shadow-xl border border-neutral-200 dark:border-neutral-700 p-6 flex flex-col relative z-10"
@@ -102,8 +102,8 @@ export function IDCard({ data, interactive = true }: IDCardProps) {
                 <Image
                   src={data.personal.avatar}
                   alt={`${data.personal.name} profile photo`}
-                  width={80}
-                  height={80}
+                  width={100}
+                  height={100}
                   className="w-full h-full object-cover"
                   priority
                 />

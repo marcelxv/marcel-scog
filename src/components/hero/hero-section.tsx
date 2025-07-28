@@ -29,7 +29,7 @@ const marcelIDCardData: IDCardData = {
     resume: '/resume.pdf',
   },
   stats: {
-    experience: '5+',
+    experience: '6+',
     projects: 30,
     technologies: 20,
   },
@@ -39,7 +39,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center bg-accent-50 dark:bg-neutral-900 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center bg-accent-50 dark:bg-neutral-700 relative overflow-hidden"
     >
       {/* Background geometric patterns */}
       <div className="absolute inset-0 opacity-10 dark:opacity-5 hidden sm:block">
@@ -137,7 +137,7 @@ export function HeroSection() {
             <div className="grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0">
               <div className="text-center lg:text-left">
                 <div className="text-2xl font-extrabold text-primary-700 dark:text-primary-200">
-                  5+
+                  6+
                 </div>
                 <div className="text-sm text-neutral-800 dark:text-neutral-100 font-semibold">
                   Years Experience
@@ -166,7 +166,7 @@ export function HeroSection() {
           <div className="order-1 lg:order-2 flex justify-center">
             <div className="relative">
               {/* Glow effect behind card */}
-              <div className="absolute inset-0 bg-primary-500/20 dark:bg-primary-400/10 rounded-3xl blur-2xl scale-110" />
+              {/* <div className="absolute inset-0 bg-primary-500/20 dark:bg-primary-400/10 rounded-3xl blur-2xl scale-110" /> */}
 
               {/* ID Card */}
               <div className="relative">
@@ -174,7 +174,7 @@ export function HeroSection() {
               </div>
 
               {/* Floating elements around card */}
-              {/* <div className="absolute -top-4 -left-4 w-8 h-8 bg-secondary-500 rounded-lg opacity-80 animate-float hidden sm:block" />
+              {/* <div className="absolute -top-4 -left-4 w-8 h-8 bg-secondary-1000 rounded-lg opacity-80 animate-float hidden sm:block" />
               <div className="absolute -top-2 -right-6 w-6 h-6 bg-primary-500 rounded-full opacity-60 animate-float-delayed hidden sm:block" />
               <div className="absolute -bottom-6 -left-2 w-10 h-10 bg-accent-600 rounded-xl opacity-70 animate-float hidden sm:block" />
               <div className="absolute -bottom-4 -right-4 w-7 h-7 bg-text-400 rounded-lg opacity-50 animate-float-delayed hidden sm:block" /> */}

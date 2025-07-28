@@ -39,9 +39,7 @@ export function PortfolioSection({ projects }: PortfolioSectionProps) {
           Featured Work
         </h2>
         <p className="text-lg md:text-xl text-text-600 dark:text-text-400 max-w-3xl mx-auto leading-relaxed">
-          A showcase of projects that demonstrate technical expertise, creative
-          problem-solving, and commitment to delivering exceptional user
-          experiences.
+          Some projects that I've write for my ideas to get back to the community
         </p>
       </div>
 
@@ -70,9 +68,7 @@ export function PortfolioSection({ projects }: PortfolioSectionProps) {
                 Featured Work
               </h2>
               <p className="text-lg md:text-xl text-text-600 dark:text-text-400 max-w-3xl mx-auto leading-relaxed">
-                A showcase of projects that demonstrate technical expertise,
-                creative problem-solving, and commitment to delivering
-                exceptional user experiences.
+                Some projects that I've write for my ideas to get back to the community
               </p>
             </motion.div>
 

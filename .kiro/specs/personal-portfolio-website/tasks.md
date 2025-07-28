@@ -57,6 +57,7 @@
   - Implement hover effects revealing additional project information
   - Add lazy loading with intersection observer for performance
   - Create filter functionality by technology stack
+  - **Updated with real projects: Mingau, Automenu, iProtein**
   - _Requirements: 3.1, 3.2_
 
 - [x] 6.2 Build project case study pages
@@ -64,6 +65,7 @@
   - Implement technology stack highlighting with icons
   - Add client testimonials and project metrics display
   - Build image galleries with optimized loading
+  - **Added GitHub and demo links for real projects**
   - _Requirements: 3.2, 3.3, 3.4_
 
 - [-] 7. Blog Integration System

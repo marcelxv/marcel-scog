@@ -43,12 +43,12 @@ export function CaseStudyPage({ project, caseStudy }: CaseStudyPageProps) {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="min-h-screen bg-white dark:bg-neutral-900"
+      className="min-h-screen bg-white dark:bg-neutral-700"
     >
       {/* Navigation */}
       <motion.nav
         variants={sectionVariants}
-        className="sticky top-0 z-50 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm border-b border-neutral-200 dark:border-neutral-700"
+        className="sticky top-0 z-50 bg-white/80 dark:bg-neutral-700/80 backdrop-blur-sm border-b border-neutral-200 dark:border-neutral-700"
       >
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -133,7 +133,7 @@ export function CaseStudyPage({ project, caseStudy }: CaseStudyPageProps) {
       <motion.div variants={sectionVariants}>
         <CaseStudySection
           section={caseStudy.problem}
-          backgroundColor="bg-white dark:bg-neutral-900"
+          backgroundColor="bg-white dark:bg-neutral-700"
         />
       </motion.div>
 
@@ -149,7 +149,7 @@ export function CaseStudyPage({ project, caseStudy }: CaseStudyPageProps) {
       <motion.div variants={sectionVariants}>
         <CaseStudySection
           section={caseStudy.results}
-          backgroundColor="bg-white dark:bg-neutral-900"
+          backgroundColor="bg-white dark:bg-neutral-700"
         />
       </motion.div>
 
@@ -203,7 +203,7 @@ export function CaseStudyPage({ project, caseStudy }: CaseStudyPageProps) {
                 <ul className="space-y-4">
                   {caseStudy.learnings.map((learning, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-secondary-500 rounded-full mt-2 flex-shrink-0" />
+                      <div className="w-2 h-2 bg-secondary-1000 rounded-full mt-2 flex-shrink-0" />
                       <p className="text-text-600 dark:text-text-400">
                         {learning}
                       </p>
@@ -220,7 +220,7 @@ export function CaseStudyPage({ project, caseStudy }: CaseStudyPageProps) {
       {caseStudy.nextSteps && caseStudy.nextSteps.length > 0 && (
         <motion.section
           variants={sectionVariants}
-          className="py-16 bg-white dark:bg-neutral-900"
+          className="py-16 bg-white dark:bg-neutral-700"
         >
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">

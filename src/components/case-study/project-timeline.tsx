@@ -33,7 +33,7 @@ export function ProjectTimeline({ timeline }: ProjectTimelineProps) {
   };
 
   return (
-    <section className="py-16 bg-white dark:bg-neutral-900">
+    <section className="py-16 bg-white dark:bg-neutral-700">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -71,7 +71,7 @@ export function ProjectTimeline({ timeline }: ProjectTimelineProps) {
                 >
                   {/* Timeline dot */}
                   <div className="relative z-10 flex-shrink-0">
-                    <div className="w-4 h-4 bg-white dark:bg-neutral-900 border-4 border-accent-500 rounded-full" />
+                    <div className="w-4 h-4 bg-white dark:bg-neutral-700 border-4 border-accent-500 rounded-full" />
                     {/* Pulse animation for active item */}
                     <div className="absolute inset-0 w-4 h-4 bg-accent-500 rounded-full animate-ping opacity-20" />
                   </div>
@@ -83,7 +83,7 @@ export function ProjectTimeline({ timeline }: ProjectTimelineProps) {
                         <h3 className="text-xl font-semibold text-text-800 dark:text-text-200">
                           {item.phase}
                         </h3>
-                        <span className="inline-flex items-center px-3 py-1 bg-accent-100 dark:bg-accent-800 text-accent-700 dark:text-accent-300 text-sm font-medium rounded-full mt-2 sm:mt-0">
+                        <span className="inline-flex items-center px-3 py-1 bg-accent-50 dark:bg-accent-800 text-accent-700 dark:text-accent-300 text-sm font-medium rounded-full mt-2 sm:mt-0">
                           <svg
                             width="16"
                             height="16"
@@ -119,7 +119,7 @@ export function ProjectTimeline({ timeline }: ProjectTimelineProps) {
               className="relative flex items-center gap-8 mt-8"
             >
               <div className="relative z-10 flex-shrink-0">
-                <div className="w-6 h-6 bg-secondary-500 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-secondary-1000 rounded-full flex items-center justify-center">
                   <svg
                     width="16"
                     height="16"

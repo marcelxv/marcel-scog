@@ -93,7 +93,7 @@ export function ProjectFilter({
                 className={`px-3 py-1 text-sm rounded-full transition-all duration-200 ${
                   isSelected
                     ? 'bg-accent-500 text-white shadow-md'
-                    : 'bg-white dark:bg-neutral-700 text-text-700 dark:text-text-300 hover:bg-accent-100 dark:hover:bg-accent-800 border border-neutral-200 dark:border-neutral-600'
+                    : 'bg-white dark:bg-neutral-700 text-text-700 dark:text-text-300 hover:bg-accent-50 dark:hover:bg-accent-800 border border-neutral-200 dark:border-neutral-600'
                 }`}
                 aria-pressed={isSelected}
               >

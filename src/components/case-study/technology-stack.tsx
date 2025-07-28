@@ -62,7 +62,7 @@ export function TechnologyStack({ technologies }: TechnologyStackProps) {
   };
 
   return (
-    <section className="py-16 bg-white dark:bg-neutral-900">
+    <section className="py-16 bg-white dark:bg-neutral-700">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div

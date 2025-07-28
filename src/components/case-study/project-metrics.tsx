@@ -137,7 +137,7 @@ export function ProjectMetrics({ metrics }: ProjectMetricsProps) {
 
                   {/* Decorative elements */}
                   <div className="absolute top-4 right-4 w-2 h-2 bg-accent-500 rounded-full opacity-60" />
-                  <div className="absolute bottom-4 left-4 w-1 h-1 bg-secondary-500 rounded-full opacity-40" />
+                  <div className="absolute bottom-4 left-4 w-1 h-1 bg-secondary-1000 rounded-full opacity-40" />
                 </div>
               </motion.div>
             ))}

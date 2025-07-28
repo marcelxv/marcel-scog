@@ -246,7 +246,7 @@ export function Navigation({ items, currentSection }: NavigationProps) {
       {/* Mobile menu */}
       <div
         id="mobile-menu"
-        className={`fixed top-0 right-0 z-40 h-full w-80 max-w-[80vw] bg-accent-100 dark:bg-neutral-950 shadow-xl transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 right-0 z-40 h-full w-80 max-w-[80vw] bg-accent-50 dark:bg-neutral-950 shadow-xl transform transition-transform duration-300 ease-in-out md:hidden ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         role="dialog"

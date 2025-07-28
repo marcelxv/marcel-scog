@@ -283,7 +283,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto lg:max-w-4xl">
             <h2 className="text-4xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 sm:text-5xl">
-              Get In Touch
+              Hit me! 📧
             </h2>
             <p className="mt-4 text-lg leading-8 text-neutral-600 dark:text-neutral-400">
               Have a project in mind or just want to say hello? I&apos;d love to

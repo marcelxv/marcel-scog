@@ -52,9 +52,8 @@ function TimelineItem({
 
   return (
     <div
-      className={`relative transition-all duration-700 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}
+      className={`relative transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
       style={{ transitionDelay: `${index * 200}ms` }}
     >
       {/* Timeline line */}
@@ -66,7 +65,7 @@ function TimelineItem({
       {/* Content */}
       <div className="ml-16 pb-12">
         <div
-          className="card p-6 bg-white dark:bg-neutral-900 cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+          className="card p-6 bg-white dark:bg-neutral-700 cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           onClick={onToggle}
           role="button"
           tabIndex={0}
@@ -171,7 +170,7 @@ function TimelineItem({
                       key={achievementIndex}
                       className="flex items-start space-x-2 text-sm text-text-700 dark:text-text-300"
                     >
-                      <div className="w-1.5 h-1.5 bg-secondary-500 rounded-full mt-2 flex-shrink-0" />
+                      <div className="w-1.5 h-1.5 bg-secondary-1000 rounded-full mt-2 flex-shrink-0" />
                       <span>{achievement}</span>
                     </li>
                   )
@@ -276,7 +275,7 @@ export function Timeline({ experiences }: TimelineProps) {
 
       {/* Timeline end */}
       <div className="flex justify-center mt-8">
-        <div className="w-4 h-4 bg-secondary-500 rounded-full border-4 border-accent-100 dark:border-text-800 shadow-lg" />
+        <div className="w-4 h-4 bg-secondary-1000 rounded-full border-4 border-accent-100 dark:border-text-800 shadow-lg" />
       </div>
     </div>
   );

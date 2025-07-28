@@ -130,7 +130,7 @@ export function CaseStudyHero({ caseStudy, project }: CaseStudyHeroProps) {
 
               {/* Floating elements for visual interest */}
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-accent-500/20 rounded-full blur-xl" />
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary-500/20 rounded-full blur-xl" />
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary-1000/20 rounded-full blur-xl" />
             </motion.div>
           </div>
         </div>
