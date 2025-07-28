@@ -16,31 +16,8 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'JavaScript',
         proficiency: 5,
         icon: 'javascript',
-        description: 'Node.js, ES6+, modern JavaScript development',
-      },
-      {
-        name: 'TypeScript',
-        proficiency: 5,
-        icon: 'typescript',
-        description: 'Type-safe development and large-scale applications',
-      },
-      {
-        name: 'React',
-        proficiency: 5,
-        icon: 'react',
-        description: 'Component architecture, hooks, state management',
-      },
-      {
-        name: 'Next.js',
-        proficiency: 5,
-        icon: 'nextjs',
-        description: 'Full-stack React framework, SSR/SSG',
-      },
-      {
-        name: 'Vue.js',
-        proficiency: 4,
-        icon: 'vue',
-        description: 'Nuxt.js, progressive web applications',
+        description:
+          'Node.js, React, Next.js, Vue, TypeScript - Expert level full-stack development',
       },
       {
         name: 'Python',
@@ -58,13 +35,60 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'PHP',
         proficiency: 3,
         icon: 'php',
-        description: 'Server-side scripting, web development',
+        description:
+          'Server-side scripting, web development, legacy system maintenance',
+      },
+      {
+        name: 'GraphQL',
+        proficiency: 3,
+        icon: 'graphql',
+        description:
+          'API design, data fetching optimization, schema development',
       },
       {
         name: 'Rust',
         proficiency: 2,
         icon: 'rust',
-        description: 'Systems programming (learning)',
+        description:
+          'Systems programming (in progress), performance-critical applications',
+      },
+    ],
+  },
+  {
+    category: 'Frontend & UX Tools',
+    skills: [
+      {
+        name: 'Figma',
+        proficiency: 3,
+        icon: 'figma',
+        description:
+          'Design systems, prototyping, collaborative design workflows',
+      },
+      {
+        name: 'Design Systems',
+        proficiency: 3,
+        icon: 'designsystems',
+        description:
+          'Component libraries, consistent UI patterns, accessibility',
+      },
+      {
+        name: 'Responsive Design',
+        proficiency: 3,
+        icon: 'responsivedesign',
+        description: 'Mobile-first development, cross-browser compatibility',
+      },
+      {
+        name: 'Markdown',
+        proficiency: 3,
+        icon: 'markdown',
+        description: 'Documentation, content management, technical writing',
+      },
+      {
+        name: 'Mermaid Diagrams',
+        proficiency: 3,
+        icon: 'mermaiddiagrams',
+        description:
+          'System architecture visualization, workflow documentation',
       },
     ],
   },
@@ -75,7 +99,8 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'PostgreSQL',
         proficiency: 5,
         icon: 'postgresql',
-        description: 'Advanced queries, performance optimization',
+        description:
+          'Advanced queries, performance optimization, data modeling',
       },
       {
         name: 'MongoDB',
@@ -93,7 +118,7 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'Firebase',
         proficiency: 3,
         icon: 'firebase',
-        description: 'Cloud database, real-time sync',
+        description: 'Cloud database, real-time sync, serverless functions',
       },
     ],
   },
@@ -104,7 +129,8 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'AWS',
         proficiency: 5,
         icon: 'aws',
-        description: 'Lambda, EventBridge, CloudWatch, CodePipeline',
+        description:
+          'Lambda, EventBridge, CloudWatch, CodePipeline - Event-driven architecture',
       },
       {
         name: 'Docker',
@@ -116,7 +142,20 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'Kubernetes',
         proficiency: 4,
         icon: 'kubernetes',
-        description: 'Container orchestration, scaling',
+        description: 'Container orchestration, scaling, service mesh',
+      },
+      {
+        name: 'Vercel',
+        proficiency: 3,
+        icon: 'vercel',
+        description:
+          'Frontend deployment, edge functions, performance optimization',
+      },
+      {
+        name: 'Netlify',
+        proficiency: 3,
+        icon: 'netlify',
+        description: 'JAMstack deployment, serverless functions, CI/CD',
       },
       {
         name: 'CI/CD',
@@ -125,16 +164,10 @@ const marcelSkillCategories: SkillCategory[] = [
         description: 'GitHub Actions, automated deployments',
       },
       {
-        name: 'Vercel',
-        proficiency: 4,
-        icon: 'vercel',
-        description: 'Frontend deployment, edge functions',
-      },
-      {
-        name: 'Netlify',
-        proficiency: 4,
-        icon: 'netlify',
-        description: 'JAMstack deployment, serverless functions',
+        name: 'GitHub',
+        proficiency: 3,
+        icon: 'github',
+        description: 'Version control, collaboration, project management',
       },
     ],
   },
@@ -172,10 +205,17 @@ const marcelSkillCategories: SkillCategory[] = [
         description: 'Background jobs, event processing',
       },
       {
-        name: 'AI Agents',
-        proficiency: 4,
-        icon: 'ai',
-        description: 'Human-AI collaboration, intelligent automation',
+        name: 'OpenAI API',
+        proficiency: 3,
+        icon: 'openaiapi',
+        description:
+          'AI integration, content generation, intelligent automation',
+      },
+      {
+        name: 'AI-based data enrichment',
+        proficiency: 3,
+        icon: 'aibaseddataenrichment',
+        description: 'Smart notification systems, automated decision making',
       },
     ],
   },
@@ -213,51 +253,10 @@ const marcelSkillCategories: SkillCategory[] = [
         description: 'Component libraries, design consistency',
       },
       {
-        name: 'UX Engineering',
-        proficiency: 5,
-        icon: 'ux',
-        description: 'User-centered development approach',
-      },
-    ],
-  },
-  {
-    category: 'Tools & Collaboration',
-    skills: [
-      {
-        name: 'Figma',
-        proficiency: 4,
-        icon: 'figma',
-        description: 'UI/UX design, prototyping, design systems',
-      },
-      {
-        name: 'Git',
-        proficiency: 5,
-        icon: 'git',
-        description: 'Version control, collaboration workflows',
-      },
-      {
-        name: 'Jira',
-        proficiency: 4,
-        icon: 'jira',
-        description: 'Project management, agile workflows',
-      },
-      {
-        name: 'Notion',
-        proficiency: 4,
-        icon: 'notion',
-        description: 'Documentation, team collaboration',
-      },
-      {
-        name: 'Miro',
-        proficiency: 4,
-        icon: 'miro',
-        description: 'Visual collaboration, system diagramming',
-      },
-      {
-        name: 'Mermaid',
-        proficiency: 4,
-        icon: 'mermaid',
-        description: 'Technical documentation, flowcharts',
+        name: 'Modular Component Patterns (MCPs)',
+        proficiency: 3,
+        icon: 'modularcomponentpatternsmcps',
+        description: 'Reusable, maintainable code architecture',
       },
     ],
   },
