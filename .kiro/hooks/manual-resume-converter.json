@@ -1,0 +1,20 @@
+{
+    "name": "Convert Resume to PDF (Manual)",
+    "description": "Manually convert resume.md to PDF format",
+    "trigger": {
+        "type": "manual",
+        "buttonText": "Convert Resume to PDF"
+    },
+    "actions": [
+        {
+            "type": "agent_execution",
+            "prompt": "Please convert the resume.md file to PDF by running `npm run resume:build` and confirm the conversion was successful. Check that the PDF is properly formatted and saved to public/resume.pdf.",
+            "context": {
+                "files": [
+                    "resume.md"
+                ]
+            }
+        }
+    ],
+    "enabled": true
+}

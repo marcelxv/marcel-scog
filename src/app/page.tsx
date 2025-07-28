@@ -16,42 +16,32 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'JavaScript',
         proficiency: 5,
         icon: 'javascript',
-        description:
-          'Node.js, React, Next.js, Vue, TypeScript - Expert level full-stack development',
+        description: 'Node.js, React, Next.js, Vue, TypeScript - Expert level full-stack development',
       },
       {
         name: 'Python',
-        proficiency: 4,
+        proficiency: 3,
         icon: 'python',
-        description: 'Backend development, AI integration',
-      },
-      {
-        name: 'GraphQL',
-        proficiency: 4,
-        icon: 'graphql',
-        description: 'API design, data fetching optimization',
+        description: 'Backend development, AI integration, automation scripts',
       },
       {
         name: 'PHP',
         proficiency: 3,
         icon: 'php',
-        description:
-          'Server-side scripting, web development, legacy system maintenance',
+        description: 'Server-side scripting, web development, legacy system maintenance',
       },
       {
         name: 'GraphQL',
         proficiency: 3,
         icon: 'graphql',
-        description:
-          'API design, data fetching optimization, schema development',
+        description: 'API design, data fetching optimization, schema development',
       },
       {
         name: 'Rust',
-        proficiency: 2,
+        proficiency: 3,
         icon: 'rust',
-        description:
-          'Systems programming (in progress), performance-critical applications',
-      },
+        description: 'Systems programming (in progress), performance-critical applications',
+      }
     ],
   },
   {
@@ -61,15 +51,13 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'Figma',
         proficiency: 3,
         icon: 'figma',
-        description:
-          'Design systems, prototyping, collaborative design workflows',
+        description: 'Design systems, prototyping, collaborative design workflows',
       },
       {
         name: 'Design Systems',
         proficiency: 3,
         icon: 'designsystems',
-        description:
-          'Component libraries, consistent UI patterns, accessibility',
+        description: 'Component libraries, consistent UI patterns, accessibility',
       },
       {
         name: 'Responsive Design',
@@ -87,9 +75,8 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'Mermaid Diagrams',
         proficiency: 3,
         icon: 'mermaiddiagrams',
-        description:
-          'System architecture visualization, workflow documentation',
-      },
+        description: 'System architecture visualization, workflow documentation',
+      }
     ],
   },
   {
@@ -99,27 +86,26 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'PostgreSQL',
         proficiency: 5,
         icon: 'postgresql',
-        description:
-          'Advanced queries, performance optimization, data modeling',
+        description: 'Advanced queries, performance optimization, data modeling',
       },
       {
         name: 'MongoDB',
-        proficiency: 4,
+        proficiency: 3,
         icon: 'mongodb',
-        description: 'Document databases, aggregation pipelines',
+        description: 'Document databases, aggregation pipelines, schema design',
       },
       {
         name: 'Supabase',
-        proficiency: 4,
+        proficiency: 3,
         icon: 'supabase',
-        description: 'Real-time databases, authentication',
+        description: 'Real-time databases, authentication, edge functions',
       },
       {
         name: 'Firebase',
         proficiency: 3,
         icon: 'firebase',
         description: 'Cloud database, real-time sync, serverless functions',
-      },
+      }
     ],
   },
   {
@@ -127,20 +113,19 @@ const marcelSkillCategories: SkillCategory[] = [
     skills: [
       {
         name: 'AWS',
-        proficiency: 5,
+        proficiency: 3,
         icon: 'aws',
-        description:
-          'Lambda, EventBridge, CloudWatch, CodePipeline - Event-driven architecture',
+        description: 'Lambda, EventBridge, CloudWatch, CodePipeline - Event-driven architecture',
       },
       {
         name: 'Docker',
-        proficiency: 4,
+        proficiency: 3,
         icon: 'docker',
-        description: 'Containerization, multi-stage builds',
+        description: 'Containerization, multi-stage builds, orchestration',
       },
       {
         name: 'Kubernetes',
-        proficiency: 4,
+        proficiency: 3,
         icon: 'kubernetes',
         description: 'Container orchestration, scaling, service mesh',
       },
@@ -148,8 +133,7 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'Vercel',
         proficiency: 3,
         icon: 'vercel',
-        description:
-          'Frontend deployment, edge functions, performance optimization',
+        description: 'Frontend deployment, edge functions, performance optimization',
       },
       {
         name: 'Netlify',
@@ -159,16 +143,16 @@ const marcelSkillCategories: SkillCategory[] = [
       },
       {
         name: 'CI/CD',
-        proficiency: 5,
+        proficiency: 3,
         icon: 'cicd',
-        description: 'GitHub Actions, automated deployments',
+        description: 'GitHub Actions, automated deployments, testing pipelines',
       },
       {
         name: 'GitHub',
         proficiency: 3,
         icon: 'github',
         description: 'Version control, collaboration, project management',
-      },
+      }
     ],
   },
   {
@@ -176,90 +160,83 @@ const marcelSkillCategories: SkillCategory[] = [
     skills: [
       {
         name: 'Orkes/Conductor',
-        proficiency: 4,
-        icon: 'conductor',
-        description: 'Workflow orchestration, business processes',
+        proficiency: 3,
+        icon: 'orkesconductor',
+        description: 'Workflow orchestration, business process automation',
       },
       {
         name: 'Novu',
-        proficiency: 4,
+        proficiency: 3,
         icon: 'novu',
-        description: 'Multi-channel notifications, real-time messaging',
-      },
-      {
-        name: 'OpenAI API',
-        proficiency: 4,
-        icon: 'openai',
-        description: 'AI integration, content generation',
+        description: 'Multi-channel notifications, real-time messaging systems',
       },
       {
         name: 'n8n',
         proficiency: 3,
         icon: 'n8n',
-        description: 'Workflow automation, API integrations',
+        description: 'Workflow automation, API integrations, data processing',
       },
       {
         name: 'Trigger.dev',
         proficiency: 3,
-        icon: 'trigger',
-        description: 'Background jobs, event processing',
+        icon: 'triggerdev',
+        description: 'Background jobs, event processing, scheduled tasks',
       },
       {
         name: 'OpenAI API',
         proficiency: 3,
         icon: 'openaiapi',
-        description:
-          'AI integration, content generation, intelligent automation',
+        description: 'AI integration, content generation, intelligent automation',
       },
       {
         name: 'AI-based data enrichment',
         proficiency: 3,
         icon: 'aibaseddataenrichment',
         description: 'Smart notification systems, automated decision making',
-      },
+      }
     ],
   },
   {
-    category: 'Architecture & Design',
+    category: 'Architecture & Product',
     skills: [
       {
-        name: 'Event-Driven Architecture',
-        proficiency: 5,
-        icon: 'events',
-        description: 'Scalable, decoupled systems',
+        name: 'Event-driven systems',
+        proficiency: 3,
+        icon: 'eventdrivensystems',
+        description: 'Scalable, decoupled architecture patterns',
       },
       {
         name: 'Microservices',
-        proficiency: 4,
+        proficiency: 3,
         icon: 'microservices',
-        description: 'Distributed system design',
+        description: 'Distributed system design, service communication',
       },
       {
-        name: 'API Design',
-        proficiency: 5,
-        icon: 'api',
-        description: 'RESTful APIs, GraphQL, API-first development',
+        name: 'API-first design',
+        proficiency: 3,
+        icon: 'apifirstdesign',
+        description: 'RESTful services, GraphQL schemas, documentation',
       },
       {
-        name: 'System Architecture',
-        proficiency: 5,
-        icon: 'architecture',
-        description: 'Scalable, maintainable system design',
+        name: 'AI-embedded agents',
+        proficiency: 3,
+        icon: 'aiembeddedagents',
+        description: 'Human-AI collaboration, intelligent automation',
       },
       {
-        name: 'Design Systems',
-        proficiency: 4,
-        icon: 'design-system',
-        description: 'Component libraries, design consistency',
+        name: 'UX-focused development',
+        proficiency: 3,
+        icon: 'uxfocuseddevelopment',
+        description: 'User-centered design, accessibility, performance',
       },
       {
         name: 'Modular Component Patterns (MCPs)',
         proficiency: 3,
         icon: 'modularcomponentpatternsmcps',
         description: 'Reusable, maintainable code architecture',
-      },
+      }
     ],
-  },
+  }
 ];
 
 export default function HomePage() {
