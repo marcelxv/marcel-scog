@@ -74,11 +74,7 @@ export function HeroSection() {
               </h1>
 
               <p className="text-xl text-text-800 dark:text-text-50 mb-8 max-w-2xl">
-                System Architect and Software Engineer with 8+ years of
-                experience helping companies deliver impactful digital products
-                through automation, AI, and scalable architecture — across
-                industries such as education, food safety, retail, and online
-                sales. I build systems to make people&lsquo;s lives easier.
+                Software Engineer with 8+ years of experience helping companies deliver impactful digital products through automation, AI, and scalable architecture — across industries such as education, food safety, retail, and online sales. I build systems to make people&lsquo;s lives easier.
               </p>
             </div>
 

@@ -9,7 +9,7 @@ São José dos Campos, SP, Brazil | 📧 marcelx@protonmail.com
 
 ## Professional Summary
 
-System Architect and Software Engineer with 8+ years of experience helping companies deliver impactful digital products through automation, AI, and scalable architecture — across industries such as education, food safety, retail, and online sales. I build systems to make people's lives easier.
+Software Engineer with 8+ years of experience helping companies deliver impactful digital products through automation, AI, and scalable architecture — across industries such as education, food safety, retail, and online sales. I build systems to make people's lives easier.
 
 I started my career in front-end engineering, which shaped my product mindset and deep respect for the user experience. Later, I transitioned into fullstack and architectural roles, designing platforms end-to-end — from backend orchestration to polished UX using modern frameworks and clean design principles.
 
@@ -70,10 +70,10 @@ I naturally take on the role of an integrator — the one who explores, writes, 
 
 ## Professional Experience
 
-### System Architect | Automation & AI Engineer | FoodReady
+### Lead Software Developer | Automation & AI Engineer | FoodReady
 *Nov 2024 – Present · Remote – Chicago, IL, USA*
 
-Architected the evolution of the platform from cron-based scheduling to a fully event-driven infrastructure using AWS Lambda, EventBridge, PostgreSQL, and MongoDB. Introduced AI-powered automation agents for food safety and regulatory workflows using OpenAI API, Orkes/Conductor, and Novu, resulting in smarter and more autonomous operations.
+Architected the evolution of the platform from cron-based scheduling to a fully event-driven infrastructure using AWS Lambda, EventBridge, Supabase, PostgreSQL, and MongoDB. Introduced AI-powered automation agents for food safety and regulatory workflows using N8N, OpenAI (Claude, Perplexity) API, Orkes/Conductor, and Novu, resulting in smarter and more autonomous operations.
 
 **Key Achievements:**
 - Streamlined backend orchestration with reusable JavaScript/TypeScript workflows, improving consistency and onboarding time across teams
@@ -90,7 +90,7 @@ Developed fullstack features for food safety and compliance tools, with React, N
 - Built scalable data processing systems handling regulatory compliance workflows
 - Implemented comprehensive testing strategies ensuring 95%+ code coverage
 
-### DevLead (Consultant) | Synthetic Systems
+### Tech Lead (Consultant) | Synthetic Systems
 *Jan 2023 – Oct 2023 · Remote – São Paulo, Brazil*
 
 Technical lead for full-stack monorepo platform (Next.js, GraphQL, MongoDB). Led backend-to-frontend integration with focus on performance and user experience.
@@ -149,6 +149,8 @@ Developed strong communication skills, critical thinking, and understanding of t
 ## Certifications
 
 ### Recent Certifications (2022-2023)
+- **Full Stack Applications** | FIAP | *Jul 2023*
+- **Java Development** | FIAP | *Jul 2023*
 - **Front-End Engineer** | Codecademy | *May 2023*
 - **TypeScript** | Codecademy | *Oct 2023*
 - **React Native** | Codecademy | *Nov 2023*

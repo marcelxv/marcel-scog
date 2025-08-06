@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Sync All Resume Data (Manual)",
+  "description": "Manually synchronize all resume data with React components and generate PDF",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "resume.md"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Please perform a complete resume synchronization:\n\n1. **Update Experience Data**: Run `node scripts/update-experience-component.js` to sync professional experience\n2. **Update Skills Data**: Run `node scripts/update-skills-component.js` to sync technical skills\n3. **Update Hero Content**: Run `node scripts/update-hero-content.js` to sync years of experience, project counts, and bio text\n4. **Generate PDF**: Run `npm run resume:build` to create updated PDF resume\n5. **Type Check**: Run `npm run type-check` to ensure all components compile correctly\n6. **Verify Changes**: Check that all components were updated successfully\n7. **Summary**: Provide a detailed summary of all changes made\n\nThis comprehensive sync ensures the website (including hero section), components, and PDF resume are all in perfect sync with the markdown source."
+  }
+}
