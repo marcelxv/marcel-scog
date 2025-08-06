@@ -261,7 +261,9 @@ export function Timeline({ experiences }: TimelineProps) {
 
       {/* Timeline items */}
       <div className="max-w-4xl mx-auto">
-        {experiences.map((experience, index) => (
+        {experiences
+          .sort((a, b) => a.id.localeCompare(b.id))
+          .map((experience, index) => (
           <div key={experience.id} data-index={index}>
             <TimelineItem
               experience={experience}
@@ -273,7 +275,7 @@ export function Timeline({ experiences }: TimelineProps) {
           </div>
         ))}
       </div>
-
+    
       {/* Timeline end */}
       <div className="flex justify-center mt-8">
         <div className="w-4 h-4 bg-secondary-1000 rounded-full border-4 border-accent-100 dark:border-text-800 shadow-lg" />
