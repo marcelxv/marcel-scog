@@ -16,7 +16,8 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'JavaScript',
         proficiency: 5,
         icon: 'javascript',
-        description: 'Node.js, React, Next.js, Vue, TypeScript - Expert level full-stack development',
+        description:
+          'Node.js, React, Next.js, Vue, TypeScript - Expert level full-stack development',
       },
       {
         name: 'Python',
@@ -28,20 +29,23 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'PHP',
         proficiency: 3,
         icon: 'php',
-        description: 'Server-side scripting, web development, legacy system maintenance',
+        description:
+          'Server-side scripting, web development, legacy system maintenance',
       },
       {
         name: 'GraphQL',
         proficiency: 3,
         icon: 'graphql',
-        description: 'API design, data fetching optimization, schema development',
+        description:
+          'API design, data fetching optimization, schema development',
       },
       {
         name: 'Rust',
         proficiency: 3,
         icon: 'rust',
-        description: 'Systems programming (in progress), performance-critical applications',
-      }
+        description:
+          'Systems programming (in progress), performance-critical applications',
+      },
     ],
   },
   {
@@ -51,13 +55,15 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'Figma',
         proficiency: 3,
         icon: 'figma',
-        description: 'Design systems, prototyping, collaborative design workflows',
+        description:
+          'Design systems, prototyping, collaborative design workflows',
       },
       {
         name: 'Design Systems',
         proficiency: 3,
         icon: 'designsystems',
-        description: 'Component libraries, consistent UI patterns, accessibility',
+        description:
+          'Component libraries, consistent UI patterns, accessibility',
       },
       {
         name: 'Responsive Design',
@@ -75,8 +81,9 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'Mermaid Diagrams',
         proficiency: 3,
         icon: 'mermaiddiagrams',
-        description: 'System architecture visualization, workflow documentation',
-      }
+        description:
+          'System architecture visualization, workflow documentation',
+      },
     ],
   },
   {
@@ -86,7 +93,8 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'PostgreSQL',
         proficiency: 5,
         icon: 'postgresql',
-        description: 'Advanced queries, performance optimization, data modeling',
+        description:
+          'Advanced queries, performance optimization, data modeling',
       },
       {
         name: 'MongoDB',
@@ -105,7 +113,7 @@ const marcelSkillCategories: SkillCategory[] = [
         proficiency: 3,
         icon: 'firebase',
         description: 'Cloud database, real-time sync, serverless functions',
-      }
+      },
     ],
   },
   {
@@ -115,7 +123,8 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'AWS',
         proficiency: 3,
         icon: 'aws',
-        description: 'Lambda, EventBridge, CloudWatch, CodePipeline - Event-driven architecture',
+        description:
+          'Lambda, EventBridge, CloudWatch, CodePipeline - Event-driven architecture',
       },
       {
         name: 'Docker',
@@ -133,7 +142,8 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'Vercel',
         proficiency: 3,
         icon: 'vercel',
-        description: 'Frontend deployment, edge functions, performance optimization',
+        description:
+          'Frontend deployment, edge functions, performance optimization',
       },
       {
         name: 'Netlify',
@@ -152,7 +162,7 @@ const marcelSkillCategories: SkillCategory[] = [
         proficiency: 3,
         icon: 'github',
         description: 'Version control, collaboration, project management',
-      }
+      },
     ],
   },
   {
@@ -186,14 +196,15 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'OpenAI API',
         proficiency: 3,
         icon: 'openaiapi',
-        description: 'AI integration, content generation, intelligent automation',
+        description:
+          'AI integration, content generation, intelligent automation',
       },
       {
         name: 'AI-based data enrichment',
         proficiency: 3,
         icon: 'aibaseddataenrichment',
         description: 'Smart notification systems, automated decision making',
-      }
+      },
     ],
   },
   {
@@ -234,9 +245,9 @@ const marcelSkillCategories: SkillCategory[] = [
         proficiency: 3,
         icon: 'modularcomponentpatternsmcps',
         description: 'Reusable, maintainable code architecture',
-      }
+      },
     ],
-  }
+  },
 ];
 
 export default function HomePage() {

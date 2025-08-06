@@ -264,18 +264,18 @@ export function Timeline({ experiences }: TimelineProps) {
         {experiences
           .sort((a, b) => a.id.localeCompare(b.id))
           .map((experience, index) => (
-          <div key={experience.id} data-index={index}>
-            <TimelineItem
-              experience={experience}
-              index={index}
-              isVisible={visibleItems.has(index)}
-              isExpanded={expandedItems.has(index)}
-              onToggle={() => toggleExpanded(index)}
-            />
-          </div>
-        ))}
+            <div key={experience.id} data-index={index}>
+              <TimelineItem
+                experience={experience}
+                index={index}
+                isVisible={visibleItems.has(index)}
+                isExpanded={expandedItems.has(index)}
+                onToggle={() => toggleExpanded(index)}
+              />
+            </div>
+          ))}
       </div>
-    
+
       {/* Timeline end */}
       <div className="flex justify-center mt-8">
         <div className="w-4 h-4 bg-secondary-1000 rounded-full border-4 border-accent-100 dark:border-text-800 shadow-lg" />
