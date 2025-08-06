@@ -129,3 +129,19 @@ export interface NavigationItem {
 
 // Theme types
 export type Theme = 'light' | 'dark' | 'system';
+
+// Video types
+export interface VideoConfig {
+  id: string;
+  url: string;
+  title: string;
+  description: string;
+  thumbnail?: string;
+  duration?: string;
+}
+
+export interface VideoState {
+  isModalOpen: boolean;
+  isLoading: boolean;
+  hasError: boolean;
+}
