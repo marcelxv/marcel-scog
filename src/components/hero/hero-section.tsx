@@ -11,7 +11,7 @@ const marcelIDCardData: IDCardData = {
       'Senior Software Engineer | System Architect | AI & Automation Specialist',
     location: 'São José dos Campos, SP, Brazil',
     status: 'open-to-opportunities',
-    avatar: '/images/marcel-headshot.png',
+    avatar: '/images/Marcel-2025.png',
     qrCode: 'https://marcel-scognamiglio.com/contact',
   },
   badges: [

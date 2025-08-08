@@ -12,9 +12,9 @@ interface AppLayoutProps {
 const navigationItems: NavigationItem[] = [
   { label: 'Home', href: '#hero' },
   { label: 'About', href: '#about' },
+  { label: 'Knowledge', href: '#knowledge' },
   { label: 'Skills', href: '#skills' },
   { label: 'Portfolio', href: '#portfolio' },
-  { label: 'Blog', href: '#blog' },
   { label: 'Contact', href: '#contact' },
 ];
 

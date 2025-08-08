@@ -235,11 +235,14 @@ export function ContactForm() {
         </form>
       </div>
       {/* Illustration */}
-      <div className="hidden md:flex items-center justify-center bg-neutral-100 dark:bg-neutral-700 rounded-3xl">
+      <div className="hidden md:flex items-center justify-center bg-neutral-100 dark:bg-neutral-700 rounded-3xl overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/marcel-scog-bg.jpeg"
           alt="Contact Illustration"
           className="object-contain w-full h-full max-h-[520px] rounded-2xl"
+          loading="lazy"
+          decoding="async"
         />
       </div>
     </div>

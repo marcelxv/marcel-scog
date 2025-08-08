@@ -6,6 +6,7 @@ import { PortfolioSection } from '@/components/portfolio/portfolio-section';
 import { ContactForm } from '@/components/contact/contact-form';
 import type { SkillCategory } from '@/lib/types';
 import { mockProjects } from '@/lib/mock-data';
+import { KnowledgeSection } from '@/components/knowledge/knowledge-section';
 
 // Marcel's actual technical skills from CV - simplified for better UX/SEO
 const marcelSkillCategories: SkillCategory[] = [
@@ -258,6 +259,9 @@ export default function HomePage() {
 
       {/* About Section with Timeline */}
       <AboutSection />
+
+      {/* Knowledge Section (Studies + Blog) */}
+      <KnowledgeSection />
 
       {/* Skills Section */}
       <SkillsSection skillCategories={marcelSkillCategories} />
