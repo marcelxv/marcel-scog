@@ -11,6 +11,7 @@ interface AppLayoutProps {
 // Navigation items configuration
 const navigationItems: NavigationItem[] = [
   { label: 'Home', href: '#hero' },
+  { label: 'Book a Call', href: '#book-call' },
   { label: 'About', href: '#about' },
   { label: 'Knowledge', href: '#knowledge' },
   { label: 'Skills', href: '#skills' },

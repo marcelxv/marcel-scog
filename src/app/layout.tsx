@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { QueryProvider } from '@/providers/query-provider';
@@ -71,6 +72,8 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
+        {/* Cal.com embed script for booking popups */}
+        <Script src="https://cal.com/embed.js" strategy="afterInteractive" />
         <ThemeProvider>
           <QueryProvider>{children}</QueryProvider>
         </ThemeProvider>

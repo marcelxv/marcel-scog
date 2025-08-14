@@ -70,7 +70,7 @@ const marcelExperiences: Experience[] = [
     endDate: new Date('2023-10-01'),
     description:
       'Technical lead for full-stack monorepo platform (Next.js, GraphQL, MongoDB). Led backend-to-frontend integration with focus on performance and user experience.',
-    technologies: ['Next.js', 'Go', 'MongoDB', 'GraphQL'],
+    technologies: ['Next.js', 'MongoDB', 'GraphQL'],
     achievements: [
       'Facilitated agile ceremonies, technical planning, and architectural decisions',
       'Mentored developers and improved team delivery speed significantly',
@@ -85,7 +85,7 @@ const marcelExperiences: Experience[] = [
     endDate: new Date('2024-10-01'),
     description:
       'Developed fullstack features for food safety and compliance tools, with React, Node.js, and TypeScript. Contributed to data pipelines and backend services, focusing on code reliability, observability, and regulatory accuracy.',
-    technologies: ['React', 'TypeScript', 'Node.js', 'Go'],
+    technologies: ['React', 'TypeScript', 'Node.js'],
     achievements: [
       'Partnered with product and design to iterate quickly on user flows, feedback loops, and internal dashboards',
       'Built scalable data processing systems handling regulatory compliance workflows',
@@ -103,8 +103,6 @@ const marcelExperiences: Experience[] = [
     technologies: [
       'TypeScript',
       'JavaScript',
-      'Java',
-      'Go',
       'PostgreSQL',
       'MongoDB',
       'AWS',
