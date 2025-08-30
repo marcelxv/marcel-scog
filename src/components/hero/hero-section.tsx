@@ -53,25 +53,25 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="container mx-auto px-6 py-16 lg:py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-16 lg:py-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
           {/* Left side - Text content */}
-          <div className="text-center lg:text-left order-2 lg:order-1 space-y-8">
-            <div className="space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-yellow-100 dark:bg-yellow-200 rounded-full text-sm font-semibold text-yellow-900 dark:text-yellow-900 shadow-sm border border-yellow-200 dark:border-yellow-300">
-                <div className="w-2.5 h-2.5 bg-yellow-500 rounded-full mr-2.5 animate-pulse" />
+          <div className="text-center lg:text-left order-2 lg:order-1 space-y-6 sm:space-y-8">
+            <div className="space-y-4 sm:space-y-6">
+              <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 bg-yellow-100 dark:bg-yellow-200 rounded-full text-xs sm:text-sm font-semibold text-yellow-900 dark:text-yellow-900 shadow-sm border border-yellow-200 dark:border-yellow-300">
+                <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 bg-yellow-500 rounded-full mr-2 sm:mr-2.5 animate-pulse" />
                 Open to new opportunities
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-6xl font-extrabold text-text-900 dark:text-white leading-tight tracking-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-text-900 dark:text-white leading-tight tracking-tight">
                 Hello, I&lsquo;m{' '}
-                <span className="text-primary-600 dark:text-primary-300">
+                <span className="text-primary-600 dark:text-primary-400">
                   Marcel
                 </span>{' '}
                 👋🏼
               </h1>
 
-              <p className="text-xl md:text-2xl text-text-600 dark:text-text-300 max-w-2xl leading-relaxed font-light">
+              <p className="text-lg sm:text-xl md:text-2xl text-text-600 dark:text-text-300 max-w-2xl leading-relaxed font-light mx-auto lg:mx-0">
                 Building scalable platforms and{' '}
                 <span className="font-semibold text-primary-600 dark:text-primary-400">
                   AI-powered automation
@@ -84,15 +84,15 @@ export function HeroSection() {
             </div>
 
             {/* Action buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <a
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 shadow-lg"
+                className="group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 shadow-lg text-sm sm:text-base"
               >
                 <svg
-                  className="mr-2 w-5 h-5 transition-transform duration-300 group-hover:scale-110"
+                  className="mr-2 w-4 sm:w-5 h-4 sm:h-5 transition-transform duration-300 group-hover:scale-110"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -109,10 +109,10 @@ export function HeroSection() {
 
               <a
                 href="#portfolio"
-                className="group inline-flex items-center justify-center px-8 py-4 bg-white dark:bg-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-700 text-text-900 dark:text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 shadow-lg border border-neutral-200 dark:border-neutral-600"
+                className="group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white dark:bg-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-700 text-text-900 dark:text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 shadow-lg border border-neutral-200 dark:border-neutral-600 text-sm sm:text-base"
               >
                 <svg
-                  className="mr-2 w-5 h-5 transition-transform duration-300 group-hover:scale-110"
+                  className="mr-2 w-4 sm:w-5 h-4 sm:h-5 transition-transform duration-300 group-hover:scale-110"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -129,28 +129,28 @@ export function HeroSection() {
             </div>
 
             {/* Quick stats */}
-            <div className="grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0">
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 max-w-sm sm:max-w-md mx-auto lg:mx-0">
               <div className="text-center lg:text-left group">
-                <div className="text-3xl font-extrabold text-primary-600 dark:text-primary-400 mb-1 transition-transform duration-300 group-hover:scale-110">
+                <div className="text-2xl sm:text-3xl font-extrabold text-primary-600 dark:text-primary-400 mb-1 transition-transform duration-300 group-hover:scale-110">
                   8+
                 </div>
-                <div className="text-sm text-neutral-600 dark:text-neutral-400 font-medium">
-                  Years Experience
+                <div className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 font-medium">
+                  Years Exp.
                 </div>
               </div>
               <div className="text-center lg:text-left group">
-                <div className="text-3xl font-extrabold text-secondary-600 dark:text-secondary-400 mb-1 transition-transform duration-300 group-hover:scale-110">
+                <div className="text-2xl sm:text-3xl font-extrabold text-secondary-600 dark:text-secondary-400 mb-1 transition-transform duration-300 group-hover:scale-110">
                   30+
                 </div>
-                <div className="text-sm text-neutral-600 dark:text-neutral-400 font-medium">
-                  Projects Delivered
+                <div className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 font-medium">
+                  Projects
                 </div>
               </div>
               <div className="text-center lg:text-left group">
-                <div className="text-3xl font-extrabold text-accent-600 dark:text-accent-400 mb-1 transition-transform duration-300 group-hover:scale-110">
+                <div className="text-2xl sm:text-3xl font-extrabold text-accent-600 dark:text-accent-400 mb-1 transition-transform duration-300 group-hover:scale-110">
                   26+
                 </div>
-                <div className="text-sm text-neutral-600 dark:text-neutral-400 font-medium">
+                <div className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 font-medium">
                   Technologies
                 </div>
               </div>
@@ -158,8 +158,23 @@ export function HeroSection() {
           </div>
 
           {/* Right side - ID Card & Video */}
-          <div className="order-1 lg:order-2 flex flex-col items-center gap-6 w-full max-w-sm mx-auto">
+          <div className="order-1 lg:order-2 flex flex-col items-center gap-4 sm:gap-6 w-full max-w-xs sm:max-w-sm mx-auto">
             <div className="relative group w-full">
+              {/* Simplified background highlight for ID card */}
+              <div className="absolute inset-0 bg-primary-100/40 dark:bg-primary-800/20 rounded-2xl blur-xl scale-110 transition-all duration-500 group-hover:scale-115" />
+              <div className="absolute inset-0 bg-white/10 dark:bg-white/5 rounded-2xl scale-105 transition-all duration-300 group-hover:scale-110" />
+
+              {/* Floating particles effect - hidden on mobile */}
+              <div className="absolute -top-2 -left-2 w-3 h-3 bg-primary-400 rounded-full opacity-60 animate-ping hidden sm:block" />
+              <div
+                className="absolute -top-1 -right-3 w-2 h-2 bg-secondary-400 rounded-full opacity-40 animate-pulse hidden sm:block"
+                style={{ animationDelay: '1s' }}
+              />
+              <div
+                className="absolute -bottom-2 -left-1 w-2.5 h-2.5 bg-accent-400 rounded-full opacity-50 animate-bounce hidden sm:block"
+                style={{ animationDelay: '2s' }}
+              />
+
               {/* ID Card */}
               <div className="relative transform transition-all duration-300 group-hover:scale-105 w-full">
                 <IDCard data={marcelIDCardData} interactive={true} />
@@ -172,7 +187,7 @@ export function HeroSection() {
                 videoId="cWhBmvPpjRg"
                 title="Watch Presentation"
                 variant="button"
-                className="w-full justify-center py-4 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-neutral-800 hover:bg-neutral-900 dark:bg-primary-600 dark:hover:bg-primary-700"
+                className="w-full justify-center py-3 sm:py-4 text-sm sm:text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-neutral-800 hover:bg-neutral-900 dark:bg-primary-600 dark:hover:bg-primary-700"
               />
             </div>
           </div>
