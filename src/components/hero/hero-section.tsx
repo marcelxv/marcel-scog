@@ -160,7 +160,6 @@ export function HeroSection() {
           {/* Right side - ID Card & Video */}
           <div className="order-1 lg:order-2 flex flex-col items-center gap-6 w-full max-w-sm mx-auto">
             <div className="relative group w-full">
-
               {/* ID Card */}
               <div className="relative transform transition-all duration-300 group-hover:scale-105 w-full">
                 <IDCard data={marcelIDCardData} interactive={true} />
