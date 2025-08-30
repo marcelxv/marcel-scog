@@ -7,22 +7,15 @@ import type { IDCardData } from '@/lib/types';
 const marcelIDCardData: IDCardData = {
   personal: {
     name: 'Marcel L.',
-    title:
-      'Senior Software Engineer | System Architect | AI & Automation Specialist',
+    title: 'Senior Software Engineer',
     location: 'São José dos Campos, SP, Brazil',
     status: 'open-to-opportunities',
-    avatar: '/images/Marcel-2025.png',
+    avatar: '/images/Marcel.jpeg',
     qrCode: 'https://marcel-scognamiglio.com/contact',
   },
   badges: [
-    {
-      name: 'Full Stack JavaScript Developer',
-      level: 'expert',
-      color: '#8aa488',
-    },
-    { name: 'AI & Automation', level: 'expert', color: '#8aa488' },
-    { name: 'System Architecture', level: 'expert', color: '#40617f' },
-    { name: 'DevOps', level: 'advanced', color: '#40617f' },
+    { name: 'Full Stack', level: 'expert', color: 'primary' },
+    { name: 'AI & Automation', level: 'expert', color: 'secondary' },
   ],
   contact: {
     email: 'marcelx@protonmail.com',
@@ -32,8 +25,8 @@ const marcelIDCardData: IDCardData = {
   },
   stats: {
     experience: '8+',
-    projects: 100,
-    technologies: 27,
+    projects: 30,
+    technologies: 26,
   },
 };
 
@@ -60,40 +53,46 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-6 py-16 lg:py-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
           {/* Left side - Text content */}
-          <div className="text-center lg:text-left order-2 lg:order-1">
-            <div className="mb-6">
-              <div className="inline-flex items-center px-4 py-2 bg-yellow-100 dark:bg-yellow-200 rounded-full text-sm font-semibold text-yellow-900 dark:text-yellow-900 mb-4">
-                <div className="w-2 h-2 bg-yellow-600 rounded-full mr-2 animate-pulse" />
+          <div className="text-center lg:text-left order-2 lg:order-1 space-y-8">
+            <div className="space-y-6">
+              <div className="inline-flex items-center px-4 py-2 bg-yellow-100 dark:bg-yellow-200 rounded-full text-sm font-semibold text-yellow-900 dark:text-yellow-900 shadow-sm border border-yellow-200 dark:border-yellow-300">
+                <div className="w-2.5 h-2.5 bg-yellow-500 rounded-full mr-2.5 animate-pulse" />
                 Open to new opportunities
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-bold text-text-900 dark:text-white mb-4 leading-tight">
-                Hello, I&lsquo;m Marcel 👋🏼
+              <h1 className="text-5xl md:text-6xl lg:text-6xl font-extrabold text-text-900 dark:text-white leading-tight tracking-tight">
+                Hello, I&lsquo;m{' '}
+                <span className="text-primary-600 dark:text-primary-300">
+                  Marcel
+                </span>{' '}
+                👋🏼
               </h1>
 
-              <p className="text-xl text-text-800 dark:text-text-50 mb-8 max-w-2xl">
-                Software Engineer with 8+ years of experience helping companies
-                deliver impactful digital products through automation, AI, and
-                scalable architecture — across industries such as education,
-                food safety, retail, and online sales. I build systems to make
-                people&lsquo;s lives easier.
+              <p className="text-xl md:text-2xl text-text-600 dark:text-text-300 max-w-2xl leading-relaxed font-light">
+                Building scalable platforms and{' '}
+                <span className="font-semibold text-primary-600 dark:text-primary-400">
+                  AI-powered automation
+                </span>{' '}
+                that help teams deliver impactful digital products. Expert in
+                full-stack development with{' '}
+                <span className="font-semibold">8+ years</span> turning complex
+                problems into elegant solutions.
               </p>
             </div>
 
             {/* Action buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-5 py-2.5 bg-neutral-100 hover:bg-neutral-200 text-text-900 font-medium rounded-lg transition-all duration-200 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:bg-primary-700 dark:hover:bg-primary-800 dark:text-white dark:focus:ring-offset-neutral-900 text-sm"
+                className="group inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 shadow-lg"
               >
-                Download Resume
                 <svg
-                  className="ml-1.5 w-4 h-4"
+                  className="mr-2 w-5 h-5 transition-transform duration-300 group-hover:scale-110"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -105,111 +104,90 @@ export function HeroSection() {
                     d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                   />
                 </svg>
+                Download Resume
               </a>
 
               <a
                 href="#portfolio"
-                className="inline-flex items-center justify-center px-5 py-2.5 bg-neutral-200 dark:bg-neutral-300 hover:bg-neutral-300 dark:hover:bg-neutral-400 text-text-900 dark:text-text-900 font-medium rounded-lg transition-all duration-200 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 dark:focus:ring-offset-accent-500 text-sm"
+                className="group inline-flex items-center justify-center px-8 py-4 bg-white dark:bg-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-700 text-text-900 dark:text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 shadow-lg border border-neutral-200 dark:border-neutral-600"
               >
+                <svg
+                  className="mr-2 w-5 h-5 transition-transform duration-300 group-hover:scale-110"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  />
+                </svg>
                 View Portfolio
               </a>
-
-              <VideoPresentation
-                videoId="kEAG_xi9glE"
-                title="Watch Presentation"
-                variant="button"
-              />
-            </div>
-
-            {/* Key Technologies */}
-            <div className="mb-8">
-              <div className="text-xs font-bold uppercase text-neutral-800 dark:text-neutral-100 mb-2 tracking-wider">
-                CORE TECHNOLOGIES
-              </div>
-              <div className="flex flex-wrap gap-2 mb-8 justify-center lg:justify-start">
-                <span className="px-3 py-1 bg-secondary-300 dark:bg-secondary-700 text-secondary-900 dark:text-secondary-100 rounded-full text-sm font-semibold shadow-sm border border-secondary-400 dark:border-secondary-600">
-                  JavaScript/TypeScript
-                </span>
-                <span className="px-3 py-1 bg-primary-300 dark:bg-primary-700 text-primary-900 dark:text-primary-100 rounded-full text-sm font-semibold shadow-sm border border-primary-400 dark:border-primary-600">
-                  React/Next.js/Vue
-                </span>
-                <span className="px-3 py-1 bg-accent-200 dark:bg-accent-700 text-accent-900 dark:text-accent-100 rounded-full text-sm font-semibold shadow-sm border border-accent-400 dark:border-accent-600">
-                  AI & Automation
-                </span>
-                <span className="px-3 py-1 bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 rounded-full text-sm font-semibold shadow-sm border border-neutral-300 dark:border-neutral-700">
-                  AWS/PostgreSQL
-                </span>
-              </div>
             </div>
 
             {/* Quick stats */}
             <div className="grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0">
-              <div className="text-center lg:text-left">
-                <div className="text-2xl font-extrabold text-primary-700 dark:text-primary-200">
+              <div className="text-center lg:text-left group">
+                <div className="text-3xl font-extrabold text-primary-600 dark:text-primary-400 mb-1 transition-transform duration-300 group-hover:scale-110">
                   8+
                 </div>
-                <div className="text-sm text-neutral-800 dark:text-neutral-100 font-semibold">
+                <div className="text-sm text-neutral-600 dark:text-neutral-400 font-medium">
                   Years Experience
                 </div>
               </div>
-              <div className="text-center lg:text-left">
-                <div className="text-2xl font-extrabold text-secondary-700 dark:text-secondary-200">
-                  100+
+              <div className="text-center lg:text-left group">
+                <div className="text-3xl font-extrabold text-secondary-600 dark:text-secondary-400 mb-1 transition-transform duration-300 group-hover:scale-110">
+                  30+
                 </div>
-                <div className="text-sm text-neutral-800 dark:text-neutral-100 font-semibold">
+                <div className="text-sm text-neutral-600 dark:text-neutral-400 font-medium">
                   Projects Delivered
                 </div>
               </div>
-              <div className="text-center lg:text-left">
-                <div className="text-2xl font-extrabold text-neutral-700 dark:text-neutral-100">
-                  27+
+              <div className="text-center lg:text-left group">
+                <div className="text-3xl font-extrabold text-accent-600 dark:text-accent-400 mb-1 transition-transform duration-300 group-hover:scale-110">
+                  26+
                 </div>
-                <div className="text-sm text-neutral-800 dark:text-neutral-100 font-semibold">
+                <div className="text-sm text-neutral-600 dark:text-neutral-400 font-medium">
                   Technologies
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right side - ID Card */}
-          <div className="order-1 lg:order-2 flex justify-center">
-            <div className="relative">
-              {/* Glow effect behind card */}
-              {/* <div className="absolute inset-0 bg-primary-500/20 dark:bg-primary-400/10 rounded-3xl blur-2xl scale-110" /> */}
+          {/* Right side - ID Card & Video */}
+          <div className="order-1 lg:order-2 flex flex-col items-center gap-6 w-full max-w-sm mx-auto">
+            <div className="relative group w-full">
 
               {/* ID Card */}
-              <div className="relative">
+              <div className="relative transform transition-all duration-300 group-hover:scale-105 w-full">
                 <IDCard data={marcelIDCardData} interactive={true} />
               </div>
+            </div>
 
-              {/* Floating elements around card */}
-              {/* <div className="absolute -top-4 -left-4 w-8 h-8 bg-secondary-1000 rounded-lg opacity-80 animate-float hidden sm:block" />
-              <div className="absolute -top-2 -right-6 w-6 h-6 bg-primary-500 rounded-full opacity-60 animate-float-delayed hidden sm:block" />
-              <div className="absolute -bottom-6 -left-2 w-10 h-10 bg-accent-600 rounded-xl opacity-70 animate-float hidden sm:block" />
-              <div className="absolute -bottom-4 -right-4 w-7 h-7 bg-text-400 rounded-lg opacity-50 animate-float-delayed hidden sm:block" /> */}
+            {/* Video Button with flat styling */}
+            <div className="w-full">
+              <VideoPresentation
+                videoId="cWhBmvPpjRg"
+                title="Watch Presentation"
+                variant="button"
+                className="w-full justify-center py-4 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-neutral-800 hover:bg-neutral-900 dark:bg-primary-600 dark:hover:bg-primary-700"
+              />
             </div>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
-          <div className="flex flex-col items-center text-text-800 dark:text-white">
-            <span className="text-sm font-semibold mb-2 dark:text-white">
+        {/* Enhanced scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden sm:block">
+          <div className="flex flex-col items-center text-text-600 dark:text-text-300 group cursor-pointer">
+            <span className="text-sm font-medium mb-3 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
               Scroll to explore
             </span>
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
+            <div className="w-6 h-10 border-2 border-text-400 dark:border-text-500 rounded-full flex justify-center relative group-hover:border-primary-500 dark:group-hover:border-primary-400 transition-colors duration-300">
+              <div className="w-1 h-3 bg-text-400 dark:bg-text-500 rounded-full mt-2 animate-bounce group-hover:bg-primary-500 dark:group-hover:bg-primary-400 transition-colors duration-300" />
+            </div>
           </div>
         </div>
       </div>

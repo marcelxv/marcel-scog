@@ -67,17 +67,8 @@ function parseHeroContentFromResume() {
       totalTechnologies = foundTech.size;
     }
     
-    // Extract bio text from Professional Summary
-    let bioText = "System Architect and Software Engineer with experience helping companies deliver impactful digital products through automation, AI, and scalable architecture. I build systems to make people's lives easier.";
-    
-    if (summaryMatch) {
-      const summary = summaryMatch[1].trim();
-      // Take the first paragraph as bio
-      const firstParagraph = summary.split('\n\n')[0];
-      if (firstParagraph && firstParagraph.length > 50) {
-        bioText = firstParagraph.trim();
-      }
-    }
+    // Create a concise bio text for hero section (not from resume)
+    let bioText = "Building scalable platforms and AI-powered automation that help teams deliver impactful digital products. Expert in full-stack development with 8+ years turning complex problems into elegant solutions.";
     
     return {
       yearsExperience,
@@ -89,10 +80,10 @@ function parseHeroContentFromResume() {
   } catch (error) {
     console.error('Error parsing hero content from resume:', error);
     return {
-      yearsExperience: '7+',
+      yearsExperience: '8+',
       totalProjects: 30,
-      totalTechnologies: 20,
-      bioText: "System Architect and Software Engineer with experience helping companies deliver impactful digital products through automation, AI, and scalable architecture."
+      totalTechnologies: 26,
+      bioText: "Building scalable platforms and AI-powered automation that help teams deliver impactful digital products. Expert in full-stack development with 8+ years turning complex problems into elegant solutions."
     };
   }
 }
@@ -118,7 +109,7 @@ async function updateHeroContent() {
     let currentContent = fs.readFileSync(heroPath, 'utf8');
     
     // Update bio text in the paragraph
-    const bioRegex = /System Architect and Software Engineer with \d+\+?\s*years of[\s\S]*?I build\s*systems to make people&lsquo;s lives easier\./;
+    const bioRegex = /Building scalable platforms and AI-powered automation[\s\S]*?turning complex problems into elegant solutions\./;
     if (bioRegex.test(currentContent)) {
       currentContent = currentContent.replace(
         bioRegex,
@@ -127,8 +118,8 @@ async function updateHeroContent() {
     } else {
       // Fallback: replace the entire paragraph content
       currentContent = currentContent.replace(
-        /<p className="text-xl text-text-800 dark:text-text-50 mb-8 max-w-2xl">\s*[\s\S]*?\s*<\/p>/,
-        `<p className="text-xl text-text-800 dark:text-text-50 mb-8 max-w-2xl">
+        /<p className="text-lg md:text-xl text-text-700 dark:text-text-200 mb-6 max-w-xl leading-relaxed">\s*[\s\S]*?\s*<\/p>/,
+        `<p className="text-lg md:text-xl text-text-700 dark:text-text-200 mb-6 max-w-xl leading-relaxed">
                 ${heroData.bioText.replace(/'/g, "&lsquo;").replace(/"/g, "&quot;")}
               </p>`
       );

@@ -9,13 +9,7 @@ São José dos Campos, SP, Brazil | 📧 marcelx@protonmail.com
 
 ## Professional Summary
 
-Software Engineer with 8+ years of experience helping companies deliver impactful digital products through automation, AI, and scalable architecture — across industries such as education, food safety, retail, and online sales. I build systems to make people's lives easier.
-
-I started my career in front-end engineering, which shaped my product mindset and deep respect for the user experience. Later, I transitioned into fullstack and architectural roles, designing platforms end-to-end — from backend orchestration to polished UX using modern frameworks and clean design principles.
-
-I've worked in both global and niche markets, delivering systems that served tens of thousands — and in some e-commerce cases, hundreds of thousands — of users in production. Most recently, I led AI-Driven development inside small, cross-functional squads focused on building secure, clean, human-integrated code alongside AI agents.
-
-I naturally take on the role of an integrator — the one who explores, writes, diagrams, and helps the team navigate complexity with confidence. With a background in journalism, I bring clarity through communication, documentation, and a strong sense of direction that helps teams align and move forward together.
+Senior Software Engineer and System Architect with over 8 years of experience in building and scaling platforms. Proven track record in developing high-impact digital products using Next.js and PostgreSQL, with deep experience in the MERN stack (MongoDB, Express.js, React, Node.js) as well. I'm an expert in designing end-to-end systems, from backend orchestration to a polished user experience, and a specialist in implementing AI-powered automation to improve efficiency and reduce operational costs. My background includes contributing to an edtech platform that served hundreds of thousands of users and building a B2B marketplace from the ground up. I naturally take on the role of an integrator—the one who helps teams navigate complexity with confidence and brings clarity through strong communication.
 
 ---
 
@@ -40,13 +34,12 @@ I naturally take on the role of an integrator — the one who explores, writes, 
 - **MongoDB**: Document databases, aggregation pipelines, schema design
 - **Supabase**: Real-time databases, authentication, edge functions
 - **Firebase**: Cloud database, real-time sync, serverless functions
+- **Redis**: In-memory data structures, caching, pub/sub messaging
 
 ### Cloud & DevOps
 - **AWS**: Lambda, EventBridge, CloudWatch, CodePipeline - Event-driven architecture
 - **Docker**: Containerization, multi-stage builds, orchestration
-- **Kubernetes**: Container orchestration, scaling, service mesh
 - **Vercel**: Frontend deployment, edge functions, performance optimization
-- **Netlify**: JAMstack deployment, serverless functions, CI/CD
 - **CI/CD**: GitHub Actions, automated deployments, testing pipelines
 - **GitHub**: Version control, collaboration, project management
 
@@ -65,6 +58,7 @@ I naturally take on the role of an integrator — the one who explores, writes, 
 - **AI-embedded agents**: Human-AI collaboration, intelligent automation
 - **UX-focused development**: User-centered design, accessibility, performance
 - **Modular Component Patterns (MCPs)**: Reusable, maintainable code architecture
+- **Linear / Notion / Jira**: Agile project management, documentation, workflow
 
 ---
 
@@ -100,7 +94,7 @@ Technical lead for full-stack monorepo platform (Next.js, GraphQL, MongoDB). Led
 - Mentored developers and improved team delivery speed significantly
 - Implemented performance optimizations resulting in 40% faster page load times
 
-### Software Developer | Quero Educação
+### Full Stack Software Developer, Frontend heavy | Quero Educação
 *May 2022 – Nov 2023 · São José dos Campos, Brazil*
 
 Developed frontend features for educational marketplace (Vue, Nuxt.js, React, TypeScript). Delivered SEO improvements and Core Web Vitals optimization.
@@ -109,26 +103,6 @@ Developed frontend features for educational marketplace (Vue, Nuxt.js, React, Ty
 - Integrated frontend with backend services (Node.js, Ruby on Rails, PostgreSQL)
 - Set up CI/CD pipelines with AWS, Docker, and Kubernetes
 - Improved Core Web Vitals scores by 60% through optimization techniques
-
-### Co-founder / Full Stack Developer | Agência NÓS
-*Mar 2019 – Sep 2023 · São José dos Campos, Brazil*
-
-Founded the agency to provide web and e-commerce solutions to local businesses. Built full stack apps using WordPress, WooCommerce, Shopify, Webflow.
-
-**Key Achievements:**
-- Led projects using Agile, from prototyping and UX to deployment and optimization
-- Delivered 50+ successful projects for local businesses
-- Built scalable e-commerce solutions serving thousands of customers
-
-### Freelance Software Developer
-*Jul 2016 – Oct 2022 · Remote*
-
-Delivered full stack systems using React, Vue, Next.js, and backend with Node.js. Migrated monoliths to monorepo, implemented SSR, and optimized cloud deployments.
-
-**Key Achievements:**
-- Strong UX sensibility using Figma and design systems
-- Successfully migrated legacy systems to modern architectures
-- Maintained 98% client satisfaction rate across 100+ projects
 
 ---
 
@@ -142,13 +116,11 @@ Focused on modern software development practices, system architecture, and emerg
 ### BA in Journalism, Philosophy & Technology
 **FAPCOM** | *2009–2013*
 
-Developed strong communication skills, critical thinking, and understanding of technology's impact on society.
-
 ---
 
 ## Certifications
 
-### Recent Certifications (2022-2023)
+### Selected certifications
 - **Full Stack Applications** | FIAP | *Jul 2023*
 - **Java Development** | FIAP | *Jul 2023*
 - **Front-End Engineer** | Codecademy | *May 2023*
@@ -157,7 +129,3 @@ Developed strong communication skills, critical thinking, and understanding of t
 - **Official ChatGPT Course** | Codecademy | *May 2023*
 - **Mobile Development** | FIAP | *Jul 2023*
 - **MTA: Software Development Fundamentals** | FIAP | *Jul 2023*
-
-### Foundation Certifications (2022)
-- **Software Design Principles** | Codecademy | *Apr 2022*
-- **Vue.js 3** | Codecademy | *Mar 2022*
