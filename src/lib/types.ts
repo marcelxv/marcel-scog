@@ -33,6 +33,31 @@ export interface Skill {
   description?: string;
 }
 
+export type ProjectTag =
+  | 'Built from scratch'
+  | 'Beta'
+  | 'Production'
+  | 'MVP'
+  | 'System improvement'
+  | 'Performance & UX'
+  | 'Event-driven'
+  | 'Compliance';
+
+export interface ProjectResult {
+  metric: string;
+  value: string;
+  improvement?: string;
+  estimated?: boolean;
+}
+
+export interface ProjectMetric {
+  label: string;
+  before?: string;
+  after: string;
+  improvement: string;
+  type: 'time' | 'percentage' | 'count' | 'cost';
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -45,6 +70,12 @@ export interface Project {
   featured: boolean;
   company?: string;
   year: number;
+  tags?: ProjectTag[];
+  problem?: string;
+  solution?: string;
+  results?: ProjectResult[];
+  metrics?: ProjectMetric[];
+  techStack?: string;
 }
 
 export interface BlogPost {

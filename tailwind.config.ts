@@ -38,18 +38,18 @@ const config: Config = {
           900: '#1a2019'   // Deep olive
         },
         
-        // Accent colors - Warm beige variations with better contrast
+        // Accent colors - Cool blue-gray variations with better contrast
         accent: {
-          50: '#fffdf a',  // Very light beige
-          100: '#fefaf4',  // Light beige
-          200: '#faf2e4',  // Soft beige
-          300: '#f4e8ce',  // Medium beige
-          400: '#ecdab2',  // Darker beige
-          500: '#fff8eb',  // Warm beige background (main)
-          600: '#e4cc96',  // Darker beige
-          700: '#c8b076',  // Very dark beige
-          800: '#ac9456',  // Almost brown beige
-          900: '#907836'   // Deep beige brown
+          50: '#f8fafc',   // Very light blue-gray
+          100: '#f1f5f9',  // Light blue-gray
+          200: '#e2e8f0',  // Soft blue-gray
+          300: '#cbd5e1',  // Medium blue-gray
+          400: '#94a3b8',  // Darker blue-gray
+          500: '#64748b',  // Blue-gray accent (main)
+          600: '#475569',  // Darker blue-gray
+          700: '#334155',  // Very dark blue-gray
+          800: '#1e293b',  // Almost black blue-gray
+          900: '#0f172a'   // Deep blue-gray
         },
         
         // Text colors - High contrast charcoal variations
@@ -68,16 +68,16 @@ const config: Config = {
         
         // Neutral colors with improved contrast
         neutral: {
-          50: '#fffdf a',  // Very light warm neutral
-          100: '#faf8f4',  // Light warm neutral
-          200: '#f5f0e8',  // Soft warm neutral
-          300: '#ebe4d8',  // Medium warm neutral
-          400: '#d4c8b4',  // Medium neutral
-          500: '#b4a488',  // Medium dark neutral
-          600: '#94805c',  // Dark neutral
-          700: '#74603c',  // Very dark neutral
-          800: '#544424',  // Almost black neutral
-          900: '#342c18'   // Deep neutral
+          50: '#fafafa',   // Very light gray
+          100: '#f5f5f5',  // Light gray
+          200: '#e5e5e5',  // Soft gray
+          300: '#d4d4d4',  // Medium gray
+          400: '#a3a3a3',  // Medium neutral
+          500: '#737373',  // Medium dark neutral
+          600: '#525252',  // Dark neutral
+          700: '#404040',  // Very dark neutral
+          800: '#262626',  // Almost black neutral
+          900: '#171717'   // Deep neutral
         },
         
         // Semantic colors with proper contrast ratios

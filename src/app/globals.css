@@ -61,7 +61,7 @@
     --color-neutral-400: 212 200 180;
     --color-neutral-500: 180 164 136;
     --color-neutral-600: 148 128 92;
-    --color-neutral-700: 116 96 60;
+    --color-neutral-700: 156 163 175;
     --color-neutral-800: 84 68 36;
     --color-neutral-900: 52 44 24;
 
@@ -180,7 +180,7 @@
     /* Neutral colors with improved contrast (inverted for dark theme) */
     --color-neutral-50: 52 44 24;
     --color-neutral-100: 84 68 36;
-    --color-neutral-200: 116 96 60;
+    --color-neutral-200: 156 163 175;
     --color-neutral-300: 148 128 92;
     --color-neutral-400: 180 164 136;
     --color-neutral-500: 212 200 180;

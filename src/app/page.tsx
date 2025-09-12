@@ -2,12 +2,12 @@ import { AppLayout } from '@/components/layout/app-layout';
 import { HeroSection } from '@/components/hero/hero-section';
 import { AboutSection } from '@/components/about/about-section';
 import { SkillsSection } from '@/components/skills/skills-section';
-import { PortfolioSection } from '@/components/portfolio/portfolio-section';
+import { PortfolioSectionEnhanced } from '@/components/portfolio/portfolio-section-enhanced';
 import { ContactForm } from '@/components/contact/contact-form';
 import { BookCallSection } from '@/components/contact/book-call-section';
 import { ContactScheduleSwitcher } from '@/components/contact/contact-schedule-switcher';
 import type { SkillCategory } from '@/lib/types';
-import { mockProjects } from '@/lib/mock-data';
+import { projectsData, topOutcomes } from '@/lib/projects-data';
 import { KnowledgeSection } from '@/components/knowledge/knowledge-section';
 
 // Marcel's actual technical skills from CV - simplified for better UX/SEO
@@ -272,7 +272,10 @@ export default function HomePage() {
       <SkillsSection skillCategories={marcelSkillCategories} />
 
       {/* Portfolio Section */}
-      <PortfolioSection projects={mockProjects} />
+      <PortfolioSectionEnhanced
+        projects={projectsData}
+        overview={topOutcomes}
+      />
 
       {/* Contact Section with toggle between form and schedule + illustration on the left */}
       <section id="contact" className="py-20 sm:py-32">
