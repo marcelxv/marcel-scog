@@ -1,4 +1,5 @@
 import { MDXComponents } from 'mdx/types';
+// @types/mdx
 import Link from 'next/link';
 import Image from 'next/image';
 

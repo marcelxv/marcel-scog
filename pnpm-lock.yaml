@@ -78,6 +78,9 @@ importers:
       '@types/marked':
         specifier: ^5.0.2
         version: 5.0.2
+      '@types/mdx':
+        specifier: ^2.0.13
+        version: 2.0.13
       '@types/node':
         specifier: ^20.0.0
         version: 20.19.14
