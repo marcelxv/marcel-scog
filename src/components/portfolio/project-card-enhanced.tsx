@@ -117,8 +117,8 @@ export function ProjectCardEnhanced({
                 {project.results
                   .slice(0, variant === 'featured' ? 4 : 2)
                   .map((result, idx) => (
-                    <div key={idx} className="flex items-start gap-2">
-                      <span className="text-green-500 mt-0.5">•</span>
+                    <div key={idx} className="flex items-center gap-2">
+                      <span className="text-green-500 mt-0.5 text-sm">✅</span>
                       <span className="text-xs text-neutral-700 dark:text-neutral-300">
                         <span className="font-medium">{result.metric}:</span>{' '}
                         {result.value}

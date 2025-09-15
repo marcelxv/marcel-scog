@@ -9,7 +9,7 @@ const getPlaceholderImage = (
 };
 
 export const topOutcomes = {
-  title: 'Marcel Scognamiglio — Recent Projects',
+  title: 'Recent Projects',
   subtitle:
     'Concise outcomes across marketplaces, SaaS, and platform work — with tech stacks for quick scanning.',
   highlights: [

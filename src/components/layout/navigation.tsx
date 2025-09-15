@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import type { NavigationItem } from '@/lib/types';
 import Image from 'next/image';
@@ -15,6 +15,9 @@ export function Navigation({ items, currentSection }: NavigationProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [showSectionHighlight, setShowSectionHighlight] = useState(false);
+  const [navigatedSection, setNavigatedSection] = useState<string | null>(null);
+  const minimizeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Handle scroll effects
   const handleScroll = useCallback(() => {
@@ -70,6 +73,48 @@ export function Navigation({ items, currentSection }: NavigationProps) {
       handleNavClick(href, external);
     }
   };
+
+  // Handle keyboard shortcuts
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      // Ignore if user is typing in an input field
+      if (
+        event.target instanceof HTMLInputElement ||
+        event.target instanceof HTMLTextAreaElement ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.altKey
+      ) {
+        return;
+      }
+
+      const key = event.key.toUpperCase();
+      const item = items.find(item => item.shortcut === key);
+
+      if (item) {
+        event.preventDefault();
+        handleNavClick(item.href, item.external);
+
+        // Show section highlight
+        setShowSectionHighlight(true);
+        setNavigatedSection(item.href.replace('#', ''));
+
+        // Clear any existing timeout
+        if (minimizeTimeoutRef.current) {
+          clearTimeout(minimizeTimeoutRef.current);
+        }
+
+        // Auto-clear highlight after 2 seconds
+        minimizeTimeoutRef.current = setTimeout(() => {
+          setShowSectionHighlight(false);
+          setNavigatedSection(null);
+        }, 2000);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyPress);
+    return () => document.removeEventListener('keydown', handleKeyPress);
+  }, [items]);
 
   // Close mobile menu on escape
   useEffect(() => {
@@ -135,7 +180,6 @@ export function Navigation({ items, currentSection }: NavigationProps) {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  {' '}
                   <Image
                     src="/images/marcel-scog-headshot.png"
                     alt="Marcel Scognamiglio"
@@ -155,8 +199,11 @@ export function Navigation({ items, currentSection }: NavigationProps) {
                   onClick={() => handleNavClick(item.href, item.external)}
                   onKeyDown={e => handleKeyDown(e, item.href, item.external)}
                   className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-950 ${
-                    currentSection === item.href.replace('#', '')
-                      ? 'text-primary-600 dark:text-primary-300'
+                    (showSectionHighlight &&
+                      navigatedSection === item.href.replace('#', '')) ||
+                    (!showSectionHighlight &&
+                      currentSection === item.href.replace('#', ''))
+                      ? 'text-primary-600 dark:text-primary-300 bg-primary-100/50 dark:bg-primary-900/20'
                       : 'text-text-700 dark:text-text-50 hover:text-primary-600 dark:hover:text-primary-300'
                   }`}
                   aria-current={
@@ -164,8 +211,27 @@ export function Navigation({ items, currentSection }: NavigationProps) {
                       ? 'page'
                       : undefined
                   }
+                  title={
+                    item.shortcut
+                      ? `${item.label} (Press ${item.shortcut})`
+                      : item.label
+                  }
                 >
-                  {item.label}
+                  <span className="flex items-center gap-2">
+                    {item.label}
+                    {item.shortcut && (
+                      <span
+                        className={`hidden lg:inline-flex items-center justify-center w-5 h-5 text-xs font-medium text-text-500 dark:text-text-400 bg-text-100 dark:bg-neutral-800 rounded border border-text-200 dark:border-neutral-700 transition-all duration-300 ${
+                          showSectionHighlight &&
+                          navigatedSection === item.href.replace('#', '')
+                            ? 'ring-2 ring-primary-400 dark:ring-primary-500 bg-primary-100 dark:bg-primary-900/50'
+                            : ''
+                        }`}
+                      >
+                        {item.shortcut}
+                      </span>
+                    )}
+                  </span>
                   {item.external && (
                     <svg
                       className="inline-block w-3 h-3 ml-1"
@@ -184,8 +250,11 @@ export function Navigation({ items, currentSection }: NavigationProps) {
                   )}
 
                   {/* Active indicator */}
-                  {currentSection === item.href.replace('#', '') && (
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary-500 rounded-full" />
+                  {((showSectionHighlight &&
+                    navigatedSection === item.href.replace('#', '')) ||
+                    (!showSectionHighlight &&
+                      currentSection === item.href.replace('#', ''))) && (
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-primary-500 rounded-full animate-pulse" />
                   )}
                 </button>
               ))}
@@ -308,7 +377,14 @@ export function Navigation({ items, currentSection }: NavigationProps) {
                     }
                   >
                     <div className="flex items-center justify-between">
-                      <span>{item.label}</span>
+                      <span className="flex items-center gap-2">
+                        {item.label}
+                        {item.shortcut && (
+                          <span className="inline-flex items-center justify-center w-5 h-5 text-xs font-medium text-text-500 dark:text-text-400 bg-text-100 dark:bg-neutral-800 rounded border border-text-200 dark:border-neutral-700">
+                            {item.shortcut}
+                          </span>
+                        )}
+                      </span>
                       {item.external && (
                         <svg
                           className="w-4 h-4"

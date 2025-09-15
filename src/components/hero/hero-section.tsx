@@ -1,8 +1,21 @@
 'use client';
 
+import { useState, useEffect, useRef } from 'react';
 import { IDCard } from './id-card';
 import { VideoPresentation } from './video-presentation';
 import type { IDCardData } from '@/lib/types';
+import { Keyboard, ChevronDown, Mouse } from 'lucide-react';
+
+// Keyboard shortcut to section mapping
+const keyToSection: Record<string, { label: string; key: string }> = {
+  H: { label: 'Home', key: 'H' },
+  B: { label: 'Book a Call', key: 'B' },
+  A: { label: 'About', key: 'A' },
+  K: { label: 'Knowledge', key: 'K' },
+  S: { label: 'Skills', key: 'S' },
+  P: { label: 'Portfolio', key: 'P' },
+  C: { label: 'Contact', key: 'C' },
+};
 
 const marcelIDCardData: IDCardData = {
   personal: {
@@ -24,13 +37,78 @@ const marcelIDCardData: IDCardData = {
     resume: '/resume.pdf',
   },
   stats: {
-    experience: '8+',
+    experience: '8',
     projects: 30,
     technologies: 26,
   },
 };
 
 export function HeroSection() {
+  const [showHints, setShowHints] = useState(false);
+  const [isHintsMinimized, setIsHintsMinimized] = useState(false);
+  const [highlightedKey, setHighlightedKey] = useState<string | null>(null);
+  const minimizeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    // Show hints after a short delay for better UX
+    const timer = setTimeout(() => {
+      setShowHints(true);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Minimize hints after scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100 && !isHintsMinimized) {
+        setIsHintsMinimized(true);
+      } else if (window.scrollY <= 100 && isHintsMinimized && !highlightedKey) {
+        setIsHintsMinimized(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isHintsMinimized, highlightedKey]);
+
+  // Listen for keyboard navigation
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (
+        event.target instanceof HTMLInputElement ||
+        event.target instanceof HTMLTextAreaElement ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.altKey
+      ) {
+        return;
+      }
+
+      const key = event.key.toUpperCase();
+      const navigationKeys = ['H', 'B', 'A', 'K', 'S', 'P', 'C'];
+
+      if (navigationKeys.includes(key)) {
+        // Expand hints and highlight the pressed key
+        setIsHintsMinimized(false);
+        setHighlightedKey(key);
+
+        // Clear existing timeout
+        if (minimizeTimeoutRef.current) {
+          clearTimeout(minimizeTimeoutRef.current);
+        }
+
+        // Auto-minimize after 2 seconds
+        minimizeTimeoutRef.current = setTimeout(() => {
+          setIsHintsMinimized(true);
+          setHighlightedKey(null);
+        }, 2000);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyPress);
+    return () => document.removeEventListener('keydown', handleKeyPress);
+  }, []);
+
   return (
     <section
       id="hero"
@@ -78,7 +156,7 @@ export function HeroSection() {
                 </span>{' '}
                 that help teams deliver impactful digital products. Expert in
                 full-stack development with{' '}
-                <span className="font-semibold">8+ years</span> turning complex
+                <span className="font-semibold">8 years</span> turning complex
                 problems into elegant solutions.
               </p>
             </div>
@@ -146,14 +224,7 @@ export function HeroSection() {
                   Projects
                 </div>
               </div>
-              <div className="text-center lg:text-left group">
-                <div className="text-2xl sm:text-3xl font-extrabold text-accent-600 dark:text-accent-400 mb-1 transition-transform duration-300 group-hover:scale-110">
-                  26+
-                </div>
-                <div className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 font-medium">
-                  Technologies
-                </div>
-              </div>
+              <div className="text-center lg:text-left group"></div>
             </div>
           </div>
 
@@ -165,15 +236,15 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-white/10 dark:bg-white/5 rounded-2xl scale-105 transition-all duration-300 group-hover:scale-110" />
 
               {/* Floating particles effect - hidden on mobile */}
-              <div className="absolute -top-2 -left-2 w-3 h-3 bg-primary-400 rounded-full opacity-60 animate-ping hidden sm:block" />
-              <div
+              {/* <div className="absolute -top-2 -left-2 w-3 h-3 bg-primary-400 rounded-full opacity-60 animate-ping hidden sm:block" /> */}
+              {/* <div
                 className="absolute -top-1 -right-3 w-2 h-2 bg-secondary-400 rounded-full opacity-40 animate-pulse hidden sm:block"
                 style={{ animationDelay: '1s' }}
-              />
-              <div
+              /> */}
+              {/* <div
                 className="absolute -bottom-2 -left-1 w-2.5 h-2.5 bg-accent-400 rounded-full opacity-50 animate-bounce hidden sm:block"
                 style={{ animationDelay: '2s' }}
-              />
+              /> */}
 
               {/* ID Card */}
               <div className="relative transform transition-all duration-300 group-hover:scale-105 w-full">
@@ -193,16 +264,146 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Enhanced scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden sm:block">
-          <div className="flex flex-col items-center text-text-600 dark:text-text-300 group cursor-pointer">
-            <span className="text-sm font-medium mb-3 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
-              Scroll to explore
-            </span>
-            <div className="w-6 h-10 border-2 border-text-400 dark:border-text-500 rounded-full flex justify-center relative group-hover:border-primary-500 dark:group-hover:border-primary-400 transition-colors duration-300">
-              <div className="w-1 h-3 bg-text-400 dark:bg-text-500 rounded-full mt-2 animate-bounce group-hover:bg-primary-500 dark:group-hover:bg-primary-400 transition-colors duration-300" />
+        {/* Enhanced navigation hints - Compact and minimal */}
+        <div
+          className={`fixed bottom-4 right-6 hidden lg:block transition-all duration-500 ease-out z-30 ${
+            showHints ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+          onMouseEnter={() => setIsHintsMinimized(false)}
+          onMouseLeave={() => {
+            if (window.scrollY > 100 && !highlightedKey) {
+              setIsHintsMinimized(true);
+            }
+          }}
+        >
+          {/* Minimized state - Super compact pill */}
+          {isHintsMinimized && !highlightedKey ? (
+            <div className="bg-primary-600/90 dark:bg-primary-500/90 backdrop-blur-md rounded-full px-3 py-2 shadow-lg border border-primary-500/20 hover:scale-105 transition-all duration-300 cursor-pointer group">
+              <div className="flex items-center gap-2">
+                <Keyboard className="w-4 h-4 text-white" />
+                <div className="flex gap-1">
+                  <kbd className="w-5 h-5 bg-white/20 text-white text-[10px] font-bold rounded flex items-center justify-center">
+                    H
+                  </kbd>
+                  <kbd className="w-5 h-5 bg-white/20 text-white text-[10px] font-bold rounded flex items-center justify-center">
+                    P
+                  </kbd>
+                  <kbd className="w-5 h-5 bg-white/20 text-white text-[10px] font-bold rounded flex items-center justify-center">
+                    S
+                  </kbd>
+                  <span className="text-white/70 text-[10px] self-center">
+                    +4
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
+          ) : (
+            /* Expanded state - Full component */
+            <div className="bg-white/95 dark:bg-neutral-900/95 backdrop-blur-xl rounded-2xl border border-primary-200/50 dark:border-primary-800/30 shadow-2xl px-6 py-4 relative overflow-hidden">
+              {/* Animated gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-500/5 via-transparent to-accent-500/5 dark:from-primary-400/10 dark:to-accent-400/10 animate-pulse" />
+
+              <div className="relative flex items-center gap-8">
+                {/* Scroll indicator - More prominent with icon */}
+                <button
+                  onClick={() =>
+                    window.scrollBy({
+                      top: window.innerHeight,
+                      behavior: 'smooth',
+                    })
+                  }
+                  className="flex items-center gap-3 text-text-700 dark:text-text-200 group cursor-pointer hover:scale-105 transition-all duration-300"
+                >
+                  <div className="relative">
+                    <Mouse className="w-7 h-7 text-primary-500 dark:text-primary-400" />
+                    <ChevronDown className="w-3 h-3 text-primary-600 dark:text-primary-300 absolute -bottom-1 left-1/2 -translate-x-1/2 animate-bounce" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-sm font-bold text-text-800 dark:text-text-100 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                      Scroll Down
+                    </span>
+                    <span className="text-xs text-text-500 dark:text-text-400">
+                      to explore more
+                    </span>
+                  </div>
+                </button>
+
+                {/* Animated divider */}
+                <div className="relative h-10 w-px">
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-text-300 to-transparent dark:via-neutral-600" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-primary-400/0 via-primary-400/50 to-primary-400/0 animate-pulse" />
+                </div>
+
+                {/* Keyboard shortcuts - More visual with better hierarchy */}
+                <div className="flex items-center gap-3 text-text-700 dark:text-text-200">
+                  <div className="relative">
+                    <Keyboard className="w-7 h-7 text-primary-500 dark:text-primary-400" />
+                    <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    <span className="text-sm font-bold text-text-800 dark:text-text-100">
+                      {highlightedKey && keyToSection[highlightedKey] ? (
+                        <span className="text-primary-600 dark:text-primary-400">
+                          Navigating to {keyToSection[highlightedKey].label}
+                        </span>
+                      ) : (
+                        'Press Keys to Navigate'
+                      )}
+                    </span>
+                    <div className="flex items-center gap-2">
+                      {/* Show specific highlighted key or default keys */}
+                      {highlightedKey ? (
+                        <div className="flex items-center gap-1">
+                          <kbd className="relative px-3 py-1.5 text-xs font-bold text-white bg-primary-600 dark:bg-primary-500 rounded shadow-lg ring-2 ring-primary-400 animate-pulse">
+                            {highlightedKey}
+                          </kbd>
+                          <span className="text-sm text-primary-600 dark:text-primary-400 font-medium">
+                            {keyToSection[highlightedKey]?.label}
+                          </span>
+                        </div>
+                      ) : (
+                        <>
+                          <div className="flex items-center gap-1">
+                            <kbd className="relative px-2.5 py-1 text-xs font-bold text-text-800 dark:text-text-100 bg-white dark:bg-neutral-800 border-b-2 border-text-300 dark:border-neutral-600 rounded shadow-md hover:translate-y-0.5 hover:shadow-sm transition-all duration-150 cursor-pointer">
+                              B
+                            </kbd>
+                            <span className="text-[10px] text-text-500 dark:text-text-400">
+                              Book
+                            </span>
+                          </div>
+                          <span className="text-text-300 dark:text-neutral-600">
+                            ·
+                          </span>
+                          <div className="flex items-center gap-1">
+                            <kbd className="relative px-2.5 py-1 text-xs font-bold text-text-800 dark:text-text-100 bg-white dark:bg-neutral-800 border-b-2 border-text-300 dark:border-neutral-600 rounded shadow-md hover:translate-y-0.5 hover:shadow-sm transition-all duration-150 cursor-pointer">
+                              P
+                            </kbd>
+                            <span className="text-[10px] text-text-500 dark:text-text-400">
+                              Portfolio
+                            </span>
+                          </div>
+                          <span className="text-text-300 dark:text-neutral-600">
+                            ·
+                          </span>
+                          <div className="flex items-center gap-1">
+                            <kbd className="relative px-2.5 py-1 text-xs font-bold text-text-800 dark:text-text-100 bg-white dark:bg-neutral-800 border-b-2 border-text-300 dark:border-neutral-600 rounded shadow-md hover:translate-y-0.5 hover:shadow-sm transition-all duration-150 cursor-pointer">
+                              S
+                            </kbd>
+                            <span className="text-[10px] text-text-500 dark:text-text-400">
+                              Skills
+                            </span>
+                          </div>
+                          <span className="text-[10px] font-medium text-primary-500 dark:text-primary-400 ml-1">
+                            +4 more
+                          </span>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

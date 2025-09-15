@@ -88,7 +88,7 @@ export function PortfolioSectionEnhanced({
         </div>
 
         {/* Featured Projects Section */}
-        <div className="mb-16">
+        {/* <div className="mb-16">
           <h3 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-8 text-center">
             Featured Projects
           </h3>
@@ -102,13 +102,13 @@ export function PortfolioSectionEnhanced({
               />
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* All Projects Section */}
         <div>
-          <h3 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">
+          {/* <h3 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">
             All Projects
-          </h3>
+          </h3> */}
 
           {/* Tag Filter */}
           <div className="flex flex-wrap justify-center gap-2 mb-8">

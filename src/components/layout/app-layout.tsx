@@ -10,13 +10,13 @@ interface AppLayoutProps {
 
 // Navigation items configuration
 const navigationItems: NavigationItem[] = [
-  { label: 'Home', href: '#hero' },
-  { label: 'Book a Call', href: '#book-call' },
-  { label: 'About', href: '#about' },
-  { label: 'Knowledge', href: '#knowledge' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Portfolio', href: '#portfolio' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '#hero', shortcut: 'H' },
+  { label: 'Book a Call', href: '#book-call', shortcut: 'B' },
+  { label: 'About', href: '#about', shortcut: 'A' },
+  { label: 'Knowledge', href: '#knowledge', shortcut: 'K' },
+  { label: 'Skills', href: '#skills', shortcut: 'S' },
+  { label: 'Portfolio', href: '#portfolio', shortcut: 'P' },
+  { label: 'Contact', href: '#contact', shortcut: 'C' },
 ];
 
 // Section IDs for intersection observer

@@ -156,6 +156,7 @@ export interface NavigationItem {
   href: string;
   icon?: React.ComponentType;
   external?: boolean;
+  shortcut?: string;
 }
 
 // Theme types

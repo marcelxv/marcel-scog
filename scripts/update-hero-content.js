@@ -80,7 +80,7 @@ function parseHeroContentFromResume() {
   } catch (error) {
     console.error('Error parsing hero content from resume:', error);
     return {
-      yearsExperience: '8+',
+      yearsExperience: '8',
       totalProjects: 30,
       totalTechnologies: 26,
       bioText: "Building scalable platforms and AI-powered automation that help teams deliver impactful digital products. Expert in full-stack development with 8+ years turning complex problems into elegant solutions."

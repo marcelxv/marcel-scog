@@ -153,7 +153,7 @@ export function SkillsSection({ skillCategories }: SkillsProps) {
         </div>
 
         {/* Summary Stats */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div className="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm">
               <div className="text-2xl font-bold text-primary-600 dark:text-primary-300 mb-2">
@@ -180,7 +180,7 @@ export function SkillsSection({ skillCategories }: SkillsProps) {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
