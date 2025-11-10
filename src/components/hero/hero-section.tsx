@@ -9,7 +9,6 @@ import { Keyboard, ChevronDown, Mouse } from 'lucide-react';
 // Keyboard shortcut to section mapping
 const keyToSection: Record<string, { label: string; key: string }> = {
   H: { label: 'Home', key: 'H' },
-  B: { label: 'Book a Call', key: 'B' },
   A: { label: 'About', key: 'A' },
   K: { label: 'Knowledge', key: 'K' },
   S: { label: 'Skills', key: 'S' },
@@ -37,7 +36,7 @@ const marcelIDCardData: IDCardData = {
     resume: '/resume.pdf',
   },
   stats: {
-    experience: '8',
+    experience: '8+',
     projects: 30,
     technologies: 26,
   },

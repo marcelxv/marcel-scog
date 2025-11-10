@@ -11,7 +11,6 @@ interface AppLayoutProps {
 // Navigation items configuration
 const navigationItems: NavigationItem[] = [
   { label: 'Home', href: '#hero', shortcut: 'H' },
-  { label: 'Book a Call', href: '#book-call', shortcut: 'B' },
   { label: 'About', href: '#about', shortcut: 'A' },
   { label: 'Knowledge', href: '#knowledge', shortcut: 'K' },
   { label: 'Skills', href: '#skills', shortcut: 'S' },
