@@ -79,7 +79,7 @@ Engineering intelligent document processing systems that combine LLM capabilitie
 
 **Key Achievements:**
 
-- Architected hybrid AI systems combining GPT-4/Claude with rule-based validation for 99%+ accuracy in document processing
+- Architected hybrid AI systems combining GPT/Claude with rule-based validation for 99%+ accuracy in document processing
 - Developed automated workflows reducing manual document review time by 70%
 - Implemented robust error handling and fallback mechanisms for mission-critical healthcare data processing
 

@@ -251,17 +251,20 @@ export default function HomePage() {
       {/* About Section with Timeline */}
       <AboutSection />
 
-      {/* Knowledge Section (Studies + Blog) */}
+      {/* Knowledge Section (Studies + Blog) - Prioritized to show authority */}
       <KnowledgeSection />
 
-      {/* Skills Section */}
-      <SkillsSection skillCategories={marcelSkillCategories} />
+      {/* Book a Call Section - Simple solid background */}
+      <BookCallSection />
 
       {/* Portfolio Section */}
       <PortfolioSectionEnhanced
         projects={projectsData}
         overview={topOutcomes}
       />
+
+      {/* Skills Section */}
+      <SkillsSection skillCategories={marcelSkillCategories} />
 
       {/* Contact Section with toggle between form and schedule + illustration on the left */}
       <section id="contact" className="py-20 sm:py-32">

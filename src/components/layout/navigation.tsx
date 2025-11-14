@@ -141,7 +141,7 @@ export function Navigation({ items, currentSection }: NavigationProps) {
   return (
     <>
       {/* Progress indicator */}
-      <div className="fixed top-0 left-0 right-0 z-50 h-1 bg-neutral-200 dark:bg-neutral-300">
+      <div className="fixed top-[7.5rem] left-0 right-0 z-40 h-1 bg-neutral-200 dark:bg-neutral-300">
         <div
           className="h-full bg-primary-500 transition-all duration-300 ease-out"
           style={{ width: `${scrollProgress}%` }}
@@ -155,7 +155,7 @@ export function Navigation({ items, currentSection }: NavigationProps) {
 
       {/* Main navigation header */}
       <header
-        className={`fixed top-1 left-0 right-0 z-40 transition-all duration-300 ${
+        className={`fixed top-12 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
             ? 'bg-text-50/80 dark:bg-neutral-950/90 backdrop-blur-md shadow-lg'
             : 'bg-white dark:bg-neutral-950'
