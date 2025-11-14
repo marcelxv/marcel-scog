@@ -22,7 +22,7 @@ export function ArticleTicker({ articles }: ArticleTickerProps) {
     const interval = setInterval(() => {
       setIsAnimating(true);
       setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % articles.length);
+        setCurrentIndex(prev => (prev + 1) % articles.length);
         setIsAnimating(false);
       }, 300);
     }, 6000);
@@ -36,7 +36,7 @@ export function ArticleTicker({ articles }: ArticleTickerProps) {
 
   return (
     <a
-      href={currentArticle.url}
+      href={currentArticle?.url}
       target="_blank"
       rel="noopener noreferrer"
       className="group hidden lg:flex items-center gap-2 px-4 py-2 bg-primary-50 dark:bg-primary-950/50 hover:bg-primary-100 dark:hover:bg-primary-900/50 rounded-full border border-primary-200 dark:border-primary-800 transition-all duration-300 max-w-md"
@@ -49,7 +49,7 @@ export function ArticleTicker({ articles }: ArticleTickerProps) {
         }`}
       >
         <p className="text-sm font-medium text-primary-900 dark:text-primary-100 truncate group-hover:text-primary-700 dark:group-hover:text-primary-300">
-          {currentArticle.title}
+          {currentArticle?.title}
         </p>
       </div>
       <svg

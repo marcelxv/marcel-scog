@@ -26,7 +26,7 @@ export function FeaturedArticlesCarousel({
     const interval = setInterval(() => {
       setIsAnimating(true);
       setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % articles.length);
+        setCurrentIndex(prev => (prev + 1) % articles.length);
         setIsAnimating(false);
       }, 300);
     }, 5000);
@@ -93,17 +93,19 @@ export function FeaturedArticlesCarousel({
         {/* Article content with animation */}
         <div
           className={`transition-all duration-300 ${
-            isAnimating ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'
+            isAnimating
+              ? 'opacity-0 translate-y-2'
+              : 'opacity-100 translate-y-0'
           }`}
         >
           <a
-            href={currentArticle.url}
+            href={currentArticle?.url}
             target="_blank"
             rel="noopener noreferrer"
             className="group block"
           >
             <h3 className="text-lg font-bold text-neutral-900 dark:text-neutral-100 mb-2 line-clamp-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-              {currentArticle.title}
+              {currentArticle?.title}
             </h3>
 
             <div className="flex items-center justify-between">
@@ -121,7 +123,7 @@ export function FeaturedArticlesCarousel({
                     d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                {currentArticle.reading}
+                {currentArticle?.reading}
               </span>
 
               <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary-600 dark:text-primary-400 group-hover:gap-2 transition-all">
