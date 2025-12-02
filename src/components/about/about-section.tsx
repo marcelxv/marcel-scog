@@ -9,7 +9,8 @@ const marcelExperiences: Experience[] = [
     id: '6',
     company: 'Quero Educação',
     position: 'Full Stack Software Developer, Frontend heavy',
-    startDate: new Date(),
+    startDate: new Date('2022-05-01'),
+    endDate: new Date('2023-11-01'),
     summary: '📚 Boosted Core Web Vitals by 60%—Google finally smiled at us',
     technologies: [
       'React',
@@ -34,7 +35,8 @@ const marcelExperiences: Experience[] = [
     id: '5',
     company: 'Synthetic Systems',
     position: 'Tech Lead (Consultant)',
-    startDate: new Date(),
+    startDate: new Date('2023-01-01'),
+    endDate: new Date('2023-10-01'),
     summary:
       '⚡ Led the squad, mentored devs, made pages load 40% faster (they noticed)',
     technologies: ['Next.js', 'Go', 'MongoDB', 'GraphQL'],
@@ -48,7 +50,8 @@ const marcelExperiences: Experience[] = [
     id: '4',
     company: 'FoodReady',
     position: 'Senior Software Developer',
-    startDate: new Date(),
+    startDate: new Date('2023-11-01'),
+    endDate: new Date('2024-11-01'),
     summary:
       '🍔 Made food safety compliance less painful with 95%+ test coverage',
     technologies: ['React', 'TypeScript', 'Node.js', 'Go'],
@@ -62,7 +65,8 @@ const marcelExperiences: Experience[] = [
     id: '3',
     company: 'FoodReady',
     position: 'Lead Software Developer | Automation & AI Engineer',
-    startDate: new Date(),
+    startDate: new Date('2024-11-01'),
+    endDate: new Date('2025-07-01'),
     summary:
       '🚀 Turned cron jobs into event-driven magic with AWS Lambda & AI agents',
     technologies: [
@@ -92,7 +96,8 @@ const marcelExperiences: Experience[] = [
     id: '2',
     company: 'Verios.ai',
     position: 'Founding Engineer',
-    startDate: new Date(),
+    startDate: new Date('2025-07-01'),
+    endDate: new Date('2025-10-01'),
     summary:
       '⚖️ Built "Cursor for lawyers" from scratch—shipped MVP in 3 months flat',
     technologies: ['Next.js', 'PostgreSQL', 'AI'],
@@ -106,7 +111,7 @@ const marcelExperiences: Experience[] = [
     id: '1',
     company: 'Clipboard Health',
     position: 'AI Software Engineer',
-    startDate: new Date(),
+    startDate: new Date('2025-10-01'),
     summary:
       '🤖 Teaching robots to read doctor handwriting (99% success rate, surprisingly)',
     technologies: ['TypeScript', 'PostgreSQL', 'AWS', 'EventBridge', 'AI'],
