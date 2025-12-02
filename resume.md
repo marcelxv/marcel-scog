@@ -75,13 +75,14 @@ Senior Software Engineer and System Architect with over 8 years of experience in
 
 _Oct 2025 – Present · Remote – San Francisco, CA, USA_
 
-Engineering intelligent document processing systems that combine LLM capabilities with deterministic tooling to automate healthcare workforce operations. Building production-grade AI pipelines that handle complex document analysis, data extraction, and validation workflows at scale.
+Engineering intelligent document processing systems for healthcare workforce operations using TypeScript, NestJS, and Prisma with PostgreSQL. Building production-grade AI pipelines that combine LLM capabilities (OpenAI, Anthropic) with deterministic validation rules to automate complex medical document analysis, data extraction, and classification workflows at scale. Implementing event-driven microservices architecture on AWS (EventBridge, SQS, S3) with comprehensive observability through Datadog and OpenTelemetry.
 
 **Key Achievements:**
 
-- Architected hybrid AI systems combining GPT/Claude with rule-based validation for 99%+ accuracy in document processing
-- Developed automated workflows reducing manual document review time by 70%
-- Implemented robust error handling and fallback mechanisms for mission-critical healthcare data processing
+- Architected hybrid AI systems combining GPT-4/Claude with rule-based validation engines, achieving 99%+ accuracy in medical document processing and classification
+- Developed automated document analysis workflows with confidence scoring and fallback mechanisms, reducing manual review time by 70% while maintaining HIPAA compliance
+- Implemented layered architecture with strict type safety, dependency injection patterns, and 100% test coverage for mission-critical healthcare data processing
+- Built scalable microservices handling high-volume document ingestion with async job processing, distributed tracing, and comprehensive error handling
 
 ### Founding Engineer | Verios.ai
 

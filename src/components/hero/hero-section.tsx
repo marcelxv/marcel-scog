@@ -135,17 +135,17 @@ export function HeroSection() {
           {/* Left side - Text content */}
           <div className="text-center lg:text-left order-2 lg:order-1 space-y-6 sm:space-y-8">
             <div className="space-y-4 sm:space-y-6">
-              <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 bg-yellow-100 dark:bg-yellow-200 rounded-full text-xs sm:text-sm font-semibold text-yellow-900 dark:text-yellow-900 shadow-sm border border-yellow-200 dark:border-yellow-300">
+              {/* <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 bg-yellow-100 dark:bg-yellow-200 rounded-full text-xs sm:text-sm font-semibold text-yellow-900 dark:text-yellow-900 shadow-sm border border-yellow-200 dark:border-yellow-300">
                 <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 bg-yellow-500 rounded-full mr-2 sm:mr-2.5 animate-pulse" />
                 Open to new opportunities
-              </div>
+              </div> */}
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-text-900 dark:text-white leading-tight tracking-tight">
                 Hello, I&lsquo;m{' '}
                 <span className="text-primary-600 dark:text-primary-400">
                   Marcel
-                </span>{' '}
-                👋🏼
+                </span>
+                <span className="inline-block w-1 h-8 sm:h-10 md:h-12 lg:h-14 bg-primary-600 dark:bg-primary-400 animate-cursor-blink ml-1 align-middle"></span>
               </h1>
 
               <p className="text-lg sm:text-xl md:text-2xl text-text-600 dark:text-text-300 max-w-2xl leading-relaxed font-light mx-auto lg:mx-0">

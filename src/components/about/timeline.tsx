@@ -134,10 +134,14 @@ function TimelineItem({
             </div>
           </div>
 
-          {/* Description */}
-          <p className="text-text-700 dark:text-text-300 mb-4 leading-relaxed">
-            {experience.description}
-          </p>
+          {/* Summary - always visible, styled as a quote */}
+          {(experience as any).summary && (
+            <blockquote className="mb-4 pl-4 border-l-2 border-primary-400 dark:border-primary-500">
+              <p className="text-text-700 dark:text-text-300 text-base leading-relaxed">
+                {(experience as any).summary}
+              </p>
+            </blockquote>
+          )}
 
           {/* Technologies */}
           <div className="flex flex-wrap gap-2 mb-4">
@@ -164,14 +168,24 @@ function TimelineItem({
               <h4 className="text-sm font-semibold text-text-800 dark:text-text-200 mb-3">
                 Key Achievements
               </h4>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {experience.achievements.map(
                   (achievement, achievementIndex) => (
                     <li
                       key={achievementIndex}
-                      className="flex items-start space-x-2 text-sm text-text-700 dark:text-text-300"
+                      className="flex items-start space-x-3 text-sm text-text-700 dark:text-text-300 leading-relaxed"
                     >
-                      <div className="w-1.5 h-1.5 bg-secondary-1000 rounded-full mt-2 flex-shrink-0" />
+                      <svg
+                        className="w-5 h-5 text-primary-600 dark:text-primary-400 flex-shrink-0 mt-0.5"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
                       <span>{achievement}</span>
                     </li>
                   )
