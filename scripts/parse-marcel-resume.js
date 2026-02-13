@@ -52,56 +52,88 @@ function parseMarcelResume() {
         company = 'Unknown';
       }
       
-      // Extract date range
-      const dateMatch = block.match(/\*(.+?)\*/);
-      const dateString = dateMatch ? dateMatch[1].trim() : '';
+      // Extract date range - check both underscores and asterisks
+      const dateMatch = block.match(/[_*](.+?)[_*]/);
+      const dateString = dateMatch ? dateMatch[1].split(' · ')[0].trim() : '';
       
       let startDate, endDate;
       if (dateString.includes('–') || dateString.includes('-')) {
         const separator = dateString.includes('–') ? '–' : '-';
-        const [start, end] = dateString.split(separator).map(s => s.trim());
-        startDate = parseMarcelDate(start);
-        endDate = end.toLowerCase().includes('present') ? null : parseMarcelDate(end);
+        const dateParts = dateString.split(separator).map(s => s.trim());
+        startDate = parseMarcelDate(dateParts[0]);
+        endDate = dateParts[1].toLowerCase().includes('present') ? null : parseMarcelDate(dateParts[1]);
       } else {
         startDate = parseMarcelDate(dateString);
         endDate = null;
       }
       
-      // Extract description (first paragraph after the date)
-      const descMatch = block.match(/\*.*?\*.*?\n\n(.*?)(?=\n\n\*\*Key Achievements|$)/s);
-      let description = descMatch ? descMatch[1].trim() : '';
+      // Extract summary (first paragraph after the date)
+      const lines = block.split('\n').map(l => l.trim()).filter(l => l);
+      let summary = '';
+      let foundDate = false;
+      let summaryLines = [];
       
-      // Clean up description
-      description = description.replace(/\n/g, ' ').trim();
-      
-      // Extract achievements
-      const achievements = [];
-      const achievementsMatch = block.match(/\*\*Key Achievements:\*\*\s*([\s\S]*?)(?=### |$)/);
-      if (achievementsMatch) {
-        const achievementsList = achievementsMatch[1];
-        const achievementItems = achievementsList.match(/- (.+)/g);
-        if (achievementItems) {
-          achievements.push(...achievementItems.map(item => item.replace(/^- /, '').trim()));
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].match(/^### /)) continue;
+        if (lines[i].match(/^[_*].+?[_*]/)) {
+          foundDate = true;
+          continue;
+        }
+        if (foundDate && !lines[i].match(/^\*\*|^- /)) {
+          summaryLines.push(lines[i]);
+        } else if (foundDate && (lines[i].match(/^\*\*/) || lines[i].match(/^- /))) {
+          break;
         }
       }
+      summary = summaryLines.join(' ').trim();
       
-      // Extract technologies from the description and achievements
+      // Extract achievements - preserve headers by including them in the list or description
+      const achievements = [];
+      const bodyLines = block.split('\n').filter(line => line.trim());
+      let inAchievements = false;
+      
+      bodyLines.forEach(line => {
+        const trimmed = line.trim();
+        // Start collecting after the date line
+        if (trimmed.match(/^[_*].+?[_*]/)) {
+          inAchievements = true;
+          return;
+        }
+        
+        if (inAchievements) {
+          if (trimmed.startsWith('- ')) {
+            achievements.push(trimmed.replace(/^- /, ''));
+          } else if (trimmed.startsWith('**') && trimmed.endsWith('**')) {
+            // Keep headers but format them slightly for the list
+            achievements.push(trimmed);
+          }
+        }
+      });
+      
+      // Extract technologies from the entire block
       const technologies = extractTechnologies(block);
       
       experiences.push({
-        id: (experiences.length + 1).toString(),
-        company,
+        id: (index + 1).toString(),
         position,
+        company,
         startDate,
         endDate,
-        description,
+        summary,
+        description: summary, // Use summary as description for now
+        achievements,
         technologies,
-        achievements
       });
     });
-    
+
+    // Ensure reverse chronological order (newest first)
+    // The markdown is already newest first, but let's be explicit
     return {
-      experiences: experiences.reverse() // Most recent first
+      experiences: experiences.sort((a, b) => {
+        const dateA = a.startDate ? a.startDate.getTime() : 0;
+        const dateB = b.startDate ? b.startDate.getTime() : 0;
+        return dateB - dateA;
+      })
     };
     
   } catch (error) {
@@ -188,9 +220,11 @@ function generateMarcelExperienceCode(experiences) {
     company: '${exp.company}',
     position: '${exp.position}',
     startDate: ${startDate},${endDate ? `\n    endDate: ${endDate},` : '\n    // endDate is omitted for current position'}
-    description: '${exp.description.replace(/'/g, "\\'").replace(/\n/g, ' ')}',
+    summary: '${(exp.summary || '').replace(/'/g, "\\'").replace(/\n/g, ' ')}',
+    description: '${(exp.description || '').replace(/'/g, "\\'").replace(/\n/g, ' ')}',
     technologies: [${exp.technologies.map(tech => `'${tech}'`).join(', ')}],
-    achievements: [${exp.achievements.map(ach => `'${ach.replace(/'/g, "\\'").replace(/\n/g, ' ')}'`).join(',\n      ')}],
+    achievements: [${exp.achievements.map(ach => `\n      '${ach.replace(/'/g, "\\'").replace(/\n/g, ' ')}'`).join(',')}
+    ],
   }`;
   }).join(',\n');
   

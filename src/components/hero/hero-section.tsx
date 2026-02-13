@@ -36,9 +36,9 @@ const marcelIDCardData: IDCardData = {
     resume: '/resume.pdf',
   },
   stats: {
-    experience: '8+',
+    experience: '7+',
     projects: 30,
-    technologies: 26,
+    technologies: 21,
   },
 };
 

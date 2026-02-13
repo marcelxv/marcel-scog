@@ -135,10 +135,10 @@ function TimelineItem({
           </div>
 
           {/* Summary - always visible, styled as a quote */}
-          {(experience as any).summary && (
+          {experience.summary && (
             <blockquote className="mb-4 pl-4 border-l-2 border-primary-400 dark:border-primary-500">
               <p className="text-text-700 dark:text-text-300 text-base leading-relaxed">
-                {(experience as any).summary}
+                {experience.summary}
               </p>
             </blockquote>
           )}
@@ -186,7 +186,15 @@ function TimelineItem({
                           clipRule="evenodd"
                         />
                       </svg>
-                      <span>{achievement}</span>
+                      <span>
+                        {achievement.startsWith('**') && achievement.endsWith('**') ? (
+                          <span className="font-bold text-text-900 dark:text-white block mt-2 first:mt-0">
+                            {achievement.replace(/\*\*/g, '')}
+                          </span>
+                        ) : (
+                          achievement
+                        )}
+                      </span>
                     </li>
                   )
                 )}
@@ -221,7 +229,7 @@ function TimelineItem({
 
 export function Timeline({ experiences }: TimelineProps) {
   const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set());
-  const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set());
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const timelineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -248,13 +256,13 @@ export function Timeline({ experiences }: TimelineProps) {
     return () => observer.disconnect();
   }, []);
 
-  const toggleExpanded = (index: number) => {
+  const toggleExpanded = (id: string) => {
     setExpandedItems(prev => {
       const newSet = new Set(prev);
-      if (newSet.has(index)) {
-        newSet.delete(index);
+      if (newSet.has(id)) {
+        newSet.delete(id);
       } else {
-        newSet.add(index);
+        newSet.add(id);
       }
       return newSet;
     });
@@ -276,15 +284,15 @@ export function Timeline({ experiences }: TimelineProps) {
       {/* Timeline items */}
       <div className="max-w-4xl mx-auto">
         {experiences
-          .sort((a, b) => a.id.localeCompare(b.id))
+          .sort((a, b) => b.startDate.getTime() - a.startDate.getTime())
           .map((experience, index) => (
             <div key={experience.id} data-index={index}>
               <TimelineItem
                 experience={experience}
                 index={index}
                 isVisible={visibleItems.has(index)}
-                isExpanded={expandedItems.has(index)}
-                onToggle={() => toggleExpanded(index)}
+                isExpanded={expandedItems.has(experience.id)}
+                onToggle={() => toggleExpanded(experience.id)}
               />
             </div>
           ))}

@@ -1,8 +1,8 @@
-# Marcel Scognamiglio Senra Lourenço
+# Marcel Scognamiglio
 
-**Senior Software Engineer | System Architect | AI & Automation Specialist**
+**AI Systems Architect | Deterministic AI Engineering | Event-Driven Platforms**
 
-São José dos Campos, SP, Brazil | 📧 marcelx@protonmail.com
+Brazil (Open to EU / US relocation) | 📧 marcelx@protonmail.com
 
 **Languages**: Portuguese – Native | English – Professional
 
@@ -10,7 +10,17 @@ São José dos Campos, SP, Brazil | 📧 marcelx@protonmail.com
 
 ## Professional Summary
 
-Senior Software Engineer and System Architect with over 8 years of experience in building and scaling platforms. Proven track record in developing high-impact digital products using Next.js and PostgreSQL, with deep experience in the MERN stack (MongoDB, Express.js, React, Node.js) as well. I'm an expert in designing end-to-end systems, from backend orchestration to a polished user experience, and a specialist in implementing AI-powered automation to improve efficiency and reduce operational costs. My background includes contributing to an edtech platform that served hundreds of thousands of users and building a B2B marketplace from the ground up. I naturally take on the role of an integrator—the one who helps teams navigate complexity with confidence and brings clarity through strong communication.
+AI Systems Architect with 8+ years designing event-driven platforms and deterministic AI pipelines. Focused on transforming operational workflows through deterministic AI systems that scale without increasing organizational complexity. Architecture Owner of a production document validation system processing ~1000 documents/day with statistical evaluation harness and regression controls.
+
+---
+
+## Core Expertise
+
+- **Operational Transformation**: Redefining manual workflows into deterministic AI-driven systems
+- **Deterministic AI Systems**: Multi-LLM orchestration, evaluation harness, regression control
+- **Event-Driven Distributed Architecture**: AWS, idempotent consumers, transactional jobs
+- **Organizational Scalability**: Designing systems for horizontal expansion without increasing headcount
+- **Technical Roadmapping & Domain Ownership**
 
 ---
 
@@ -18,157 +28,88 @@ Senior Software Engineer and System Architect with over 8 years of experience in
 
 ### Languages & Frameworks
 
-- **JavaScript**: Node.js, React, Next.js, Vue, TypeScript - Expert level full-stack development
+- **TypeScript/JavaScript**: Node.js, NestJS, Next.js, React, TypeScript (Strict Mode)
+- **Database & ORM**: PostgreSQL, Prisma (TypedSQL), MongoDB, Supabase, Redis
+- **API & Contracts**: ts-rest, Zod, GraphQL, REST (JSON:API), OpenAPI/Swagger
 - **Python**: Backend development, AI integration, automation scripts
-- **PHP**: Server-side scripting, web development, legacy system maintenance
-- **GraphQL**: API design, data fetching optimization, schema development
-- **Rust**: Systems programming (in progress), performance-critical applications
-
-### Frontend & UX Tools
-
-- **Figma**: Design systems, prototyping, collaborative design workflows
-- **Design Systems**: Component libraries, consistent UI patterns, accessibility
-- **Responsive Design**: Mobile-first development, cross-browser compatibility
-- **Markdown**: Documentation, content management, technical writing
-- **Mermaid Diagrams**: System architecture visualization, workflow documentation
-
-### Databases
-
-- **PostgreSQL**: Advanced queries, performance optimization, data modeling
-- **MongoDB**: Document databases, aggregation pipelines, schema design
-- **Supabase**: Real-time databases, authentication, edge functions
-- **Firebase**: Cloud database, real-time sync, serverless functions
-- **Redis**: In-memory data structures, caching, pub/sub messaging
-
-### Cloud & DevOps
-
-- **AWS**: Lambda, EventBridge, CloudWatch, CodePipeline - Event-driven architecture
-- **Docker**: Containerization, multi-stage builds, orchestration
-- **Vercel**: Frontend deployment, edge functions, performance optimization
-- **CI/CD**: GitHub Actions, automated deployments, testing pipelines
-- **GitHub**: Version control, collaboration, project management
 
 ### AI & Automation
 
-- **Orkes/Conductor**: Workflow orchestration, business process automation
-- **Novu**: Multi-channel notifications, real-time messaging systems
-- **n8n**: Workflow automation, API integrations, data processing
-- **Trigger.dev**: Background jobs, event processing, scheduled tasks
-- **OpenAI API**: AI integration, content generation, intelligent automation
-- **AI-based data enrichment**: Smart notification systems, automated decision making
+- **LLM Orchestration**: RAG, Prompt chaining, Deterministic LLM, GPT, Anthropic, Mistral
+- **Document Processing**: OCR (Vision-based), Field Extraction, Rules Engines
+- **Automation Tools**: Orkes/Conductor, Novu, n8n, Trigger.dev
+- **Evaluation**: AI-based data enrichment, Backtesting and LLM evaluation scripts
 
-### Architecture & Product
+### Cloud, DevOps & Observability
 
-- **Event-driven systems**: Scalable, decoupled architecture patterns
-- **Microservices**: Distributed system design, service communication
-- **API-first design**: RESTful services, GraphQL schemas, documentation
-- **AI-embedded agents**: Human-AI collaboration, intelligent automation
-- **UX-focused development**: User-centered design, accessibility, performance
-- **Modular Component Patterns (MCPs)**: Reusable, maintainable code architecture
-- **Linear / Notion / Jira**: Agile project management, documentation, workflow
+- **AWS**: EventBridge, SQS, S3, RDS, SSM, Lambda - Event-driven architecture
+- **Infrastructure as Code**: Terraform, LocalStack (AWS emulation)
+- **Observability**: Datadog (Tracing, Metrics, Monitors)
+- **Tooling**: Docker, GitHub Actions, LaunchDarkly (Feature Flags)
+
+### Architecture & Practices
+
+- **System Design**: Three-tier architecture, Repository pattern, Domain Objects (DOs)
+- **Async Systems**: Background jobs, idempotent consumers, cross-service messaging
+- **Quality**: Jest, TDD, strict type safety, 100% logic coverage targets
+- **UX & Design**: Figma, Design Systems, Responsive Design, Accessibility
 
 ---
 
 ## Professional Experience
 
-### AI Software Engineer | Clipboard Health
+### Staff AI Engineer (IC – Architecture Owner) | Clipboard Health
 
-_Oct 2025 – Present · Remote – San Francisco, CA, USA_
+_Oct 2025 – Present · Remote (US)_
 
-Engineering intelligent document processing systems for healthcare workforce operations using TypeScript, NestJS, and Prisma with PostgreSQL. Building production-grade AI pipelines that combine LLM capabilities (OpenAI, Anthropic) with deterministic validation rules to automate complex medical document analysis, data extraction, and classification workflows at scale. Implementing event-driven microservices architecture on AWS (EventBridge, SQS, S3) with comprehensive observability through Datadog and OpenTelemetry.
+Architecture Owner for AI-driven document validation platform transforming manual SOP-based healthcare workflows. System processes ~1000 documents/day, achieving 70%+ automated approval rate with ~1% false-positive rate. Reshaped operational capacity by reducing manual dependency by 66%, enabling the organization to scale document throughput without linear headcount growth.
 
-**Key Achievements:**
+**Organizational & Architectural Impact**
 
-- Architected hybrid AI systems combining GPT-4/Claude with rule-based validation engines, achieving 99%+ accuracy in medical document processing and classification
-- Developed automated document analysis workflows with confidence scoring and fallback mechanisms, reducing manual review time by 70% while maintaining HIPAA compliance
-- Implemented layered architecture with strict type safety, dependency injection patterns, and 100% test coverage for mission-critical healthcare data processing
-- Built scalable microservices handling high-volume document ingestion with async job processing, distributed tracing, and comprehensive error handling
+- Defined long-term technical direction for AI validation workflows, aligning model performance thresholds with operational risk tolerance.
+- Replaced manual review dependency with deterministic multi-LLM orchestration and rule-based fallback layers.
+- Structured system for horizontal expansion across new document types without increasing operational headcount.
+- Introduced evaluation gates and regression controls to ensure continuous deployment without degrading operational trust.
 
-### Founding Engineer | Verios.ai
+**Engineering Foundations**
 
-_Jul 2025 – Oct 2025 · Remote – São Paulo, Brazil_
+- Established three-layer domain architecture with strict dependency isolation.
+- Implemented idempotent event consumers and transactional background jobs for resilience at scale.
+- Designed type-safe contracts ensuring cross-service integrity.
 
-Led technical foundation and rapid development of an AI-powered legal research platform—a "Cursor for Legal Companies." Made critical architecture decisions and implemented full-stack infrastructure from ground zero using Claude Code and modern AI-assisted development workflows, achieving exceptional velocity without compromising code quality.
+### Lead Software Developer | FoodReady
 
-**Key Achievements:**
+_Nov 2024 – Jul 2025 · Remote (US)_
 
-- Delivered production-ready MVP with multi-tenancy architecture in 3 months, enabling simultaneous onboarding of multiple law firms
-- Designed scalable system architecture supporting AI-powered legal document analysis and competitive intelligence features
-- Established engineering practices, tech stack decisions (Next.js, PostgreSQL, AI APIs), and development workflows for future team growth
+Redefined backend execution model from time-based scheduling to event-driven architecture, enabling asynchronous scalability and reducing cross-team coordination overhead.
 
-### Lead Software Developer | Automation & AI Engineer | FoodReady
-
-_Nov 2024 – Jul 2025 · Remote – Chicago, IL, USA_
-
-Architected the evolution of the platform from cron-based scheduling to a fully event-driven infrastructure using AWS Lambda, EventBridge, Supabase, PostgreSQL, and MongoDB. Introduced AI-powered automation agents for food safety and regulatory workflows using N8N, OpenAI (Claude, Perplexity) API, Orkes/Conductor, and Novu, resulting in smarter and more autonomous operations.
-
-**Key Achievements:**
-
-- Streamlined backend orchestration with reusable JavaScript/TypeScript workflows, improving consistency and onboarding time across teams
-- Led the migration from third-party authentication to a secure, custom-built identity layer with MFA and centralized access control
-- Defined architecture principles, versioning strategies, and documentation standards for high-velocity engineering squads
+- Designed AWS-based event architecture (Lambda, EventBridge, SQS).
+- Introduced AI-assisted automation agents integrated with workflow engines.
+- Defined technical roadmap and architecture principles adopted by engineering team.
 
 ### Senior Software Developer | FoodReady
 
-_Nov 2023 – Nov 2024 · Remote – Chicago, IL, USA_
+_Nov 2023 – Nov 2024 · Remote (US)_
 
-Developed fullstack features for food safety and compliance tools, with React, Node.js, and TypeScript. Contributed to data pipelines and backend services, focusing on code reliability, observability, and regulatory accuracy.
+Fullstack development for compliance and regulatory systems.
 
-**Key Achievements:**
-
-- Partnered with product and design to iterate quickly on user flows, feedback loops, and internal dashboards
-- Built scalable data processing systems handling regulatory compliance workflows
-- Implemented comprehensive testing strategies ensuring 95%+ code coverage
-
-### Tech Lead (Consultant) | Synthetic Systems
-
-_Jan 2023 – Oct 2023 · Remote – São Paulo, Brazil_
-
-Technical lead for full-stack monorepo platform (Next.js, GraphQL, MongoDB). Led backend-to-frontend integration with focus on performance and user experience.
-
-**Key Achievements:**
-
-- Facilitated agile ceremonies, technical planning, and architectural decisions
-- Mentored developers and improved team delivery speed significantly
-- Implemented performance optimizations resulting in 40% faster page load times
-
-### Full Stack Software Developer, Frontend heavy | Quero Educação
-
-_May 2022 – Nov 2023 · São José dos Campos, Brazil_
-
-Developed frontend features for educational marketplace (Vue, Nuxt.js, React, TypeScript). Delivered SEO improvements and Core Web Vitals optimization.
-
-**Key Achievements:**
-
-- Integrated frontend with backend services (Node.js, Ruby on Rails, PostgreSQL)
-- Set up CI/CD pipelines with AWS, Docker, and Kubernetes
-- Improved Core Web Vitals scores by 60% through optimization techniques
+- Built scalable data processing workflows.
+- Implemented observability improvements and reliability enhancements.
 
 ---
 
 ## Education
 
-### Systems Technology (Associate Degree)
-
-**FIAP** | _2021–2023_
-
-Focused on modern software development practices, system architecture, and emerging technologies.
-
-### BA in Journalism, Philosophy & Technology
-
-**FAPCOM** | _2009–2013_
+- **Systems Technology** | FIAP | _2021–2023_
+- **BA in Journalism, Philosophy & Technology** | FAPCOM | _2009–2013_
 
 ---
 
 ## Certifications
 
-### Selected certifications
-
+- **Statistical Learning with Python** | StanfordOnline | _Feb 2026_
+- **Retrieval Augmented Generation (RAG)** | DeepLearning.AI | _Jan 2026_
 - **Full Stack Applications** | FIAP | _Jul 2023_
 - **Java Development** | FIAP | _Jul 2023_
-- **Front-End Engineer** | Codecademy | _May 2023_
 - **TypeScript** | Codecademy | _Oct 2023_
-- **React Native** | Codecademy | _Nov 2023_
 - **Official ChatGPT Course** | Codecademy | _May 2023_
-- **Mobile Development** | FIAP | _Jul 2023_
-- **MTA: Software Development Fundamentals** | FIAP | _Jul 2023_

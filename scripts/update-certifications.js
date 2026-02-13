@@ -22,11 +22,11 @@ function parseCertificationsFromResume() {
       certBlocks.forEach(block => {
         if (!block.trim()) return;
         
-        // Look for certification entries like "- **Name** | Organization | *Date*"
-        const certItems = block.match(/- \*\*(.+?)\*\* \| (.+?) \| \*(.+?)\*/g);
+        // Look for certification entries like "- **Name** | Organization | _Date_" or "- **Name** | Organization | *Date*"
+        const certItems = block.match(/- \*\*(.+?)\*\* \| (.+?) \| [_*](.+?)[_*]/g);
         if (certItems) {
           certItems.forEach(item => {
-            const match = item.match(/- \*\*(.+?)\*\* \| (.+?) \| \*(.+?)\*/);
+            const match = item.match(/- \*\*(.+?)\*\* \| (.+?) \| [_*](.+?)[_*]/);
             if (match) {
               certifications.push({
                 name: match[1].trim(),
@@ -46,23 +46,20 @@ function parseCertificationsFromResume() {
     if (educationMatch) {
       const eduSection = educationMatch[1];
       
-      // Parse education entries
-      const eduBlocks = eduSection.split(/(?=### .+?\n)/);
-      
-      eduBlocks.forEach(block => {
-        if (!block.trim()) return;
-        
-        const titleMatch = block.match(/### (.+?)\n/);
-        const institutionMatch = block.match(/\*\*(.+?)\*\* \| \*(.+?)\*/);
-        
-        if (titleMatch && institutionMatch) {
-          education.push({
-            degree: titleMatch[1].trim(),
-            institution: institutionMatch[1].trim(),
-            year: institutionMatch[2].trim()
-          });
-        }
-      });
+      // Parse individual education entries
+      const eduItems = eduSection.match(/- \*\*(.+?)\*\* \| (.+?) \| [_*](.+?)[_*]/g);
+      if (eduItems) {
+        eduItems.forEach(item => {
+          const match = item.match(/- \*\*(.+?)\*\* \| (.+?) \| [_*](.+?)[_*]/);
+          if (match) {
+            education.push({
+              degree: match[1].trim(),
+              institution: match[2].trim(),
+              year: match[3].trim()
+            });
+          }
+        });
+      }
     }
     
     return {
