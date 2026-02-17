@@ -11,8 +11,10 @@ const marcelExperiences: Experience[] = [
     position: 'Staff AI Engineer (IC – Architecture Owner)',
     startDate: new Date('2025-10-01'),
     // endDate is omitted for current position
-    summary: 'Architecture Owner for AI-driven document validation platform transforming manual SOP-based healthcare workflows. System processes ~1000 documents/day, achieving 70%+ automated approval rate with ~1% false-positive rate. Reshaped operational capacity by reducing manual dependency by 66%, enabling the organization to scale document throughput without linear headcount growth.',
-    description: 'Architecture Owner for AI-driven document validation platform transforming manual SOP-based healthcare workflows. System processes ~1000 documents/day, achieving 70%+ automated approval rate with ~1% false-positive rate. Reshaped operational capacity by reducing manual dependency by 66%, enabling the organization to scale document throughput without linear headcount growth.',
+    summary:
+      'Architecture Owner for AI-driven document validation platform transforming manual SOP-based healthcare workflows. System processes ~1000 documents/day, achieving 70%+ automated approval rate with ~1% false-positive rate. Reshaped operational capacity by reducing manual dependency by 66%, enabling the organization to scale document throughput without linear headcount growth.',
+    description:
+      'Architecture Owner for AI-driven document validation platform transforming manual SOP-based healthcare workflows. System processes ~1000 documents/day, achieving 70%+ automated approval rate with ~1% false-positive rate. Reshaped operational capacity by reducing manual dependency by 66%, enabling the organization to scale document throughput without linear headcount growth.',
     technologies: ['Rust', 'AI'],
     achievements: [
       'Defined long-term technical direction for AI validation workflows, aligning model performance thresholds with operational risk tolerance.',
@@ -21,7 +23,7 @@ const marcelExperiences: Experience[] = [
       'Introduced evaluation gates and regression controls to ensure continuous deployment without degrading operational trust.',
       'Established three-layer domain architecture with strict dependency isolation.',
       'Implemented idempotent event consumers and transactional background jobs for resilience at scale.',
-      'Designed type-safe contracts ensuring cross-service integrity.'
+      'Designed type-safe contracts ensuring cross-service integrity.',
     ],
   },
   {
@@ -30,13 +32,15 @@ const marcelExperiences: Experience[] = [
     position: 'Lead Software Developer',
     startDate: new Date('2024-11-01'),
     endDate: new Date('2025-07-01'),
-    summary: 'Redefined backend execution model from time-based scheduling to event-driven architecture, enabling asynchronous scalability and reducing cross-team coordination overhead.',
-    description: 'Redefined backend execution model from time-based scheduling to event-driven architecture, enabling asynchronous scalability and reducing cross-team coordination overhead.',
+    summary:
+      'Redefined backend execution model from time-based scheduling to event-driven architecture, enabling asynchronous scalability and reducing cross-team coordination overhead.',
+    description:
+      'Redefined backend execution model from time-based scheduling to event-driven architecture, enabling asynchronous scalability and reducing cross-team coordination overhead.',
     technologies: ['AWS', 'EventBridge', 'Lambda', 'AI', 'Automation'],
     achievements: [
       'Designed AWS-based event architecture (Lambda, EventBridge, SQS).',
       'Introduced AI-assisted automation agents integrated with workflow engines.',
-      'Defined technical roadmap and architecture principles adopted by engineering team.'
+      'Defined technical roadmap and architecture principles adopted by engineering team.',
     ],
   },
   {
@@ -50,9 +54,9 @@ const marcelExperiences: Experience[] = [
     technologies: [],
     achievements: [
       'Built scalable data processing workflows.',
-      'Implemented observability improvements and reliability enhancements.'
+      'Implemented observability improvements and reliability enhancements.',
     ],
-  }
+  },
 ];
 
 export function AboutSection() {

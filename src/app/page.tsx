@@ -19,7 +19,8 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'TypeScript/JavaScript',
         proficiency: 3,
         icon: 'typescriptjavascript',
-        description: 'Node.js, NestJS, Next.js, React, TypeScript (Strict Mode)',
+        description:
+          'Node.js, NestJS, Next.js, React, TypeScript (Strict Mode)',
       },
       {
         name: 'Database & ORM',
@@ -38,7 +39,7 @@ const marcelSkillCategories: SkillCategory[] = [
         proficiency: 3,
         icon: 'python',
         description: 'Backend development, AI integration, automation scripts',
-      }
+      },
     ],
   },
   {
@@ -48,7 +49,8 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'LLM Orchestration',
         proficiency: 3,
         icon: 'llmorchestration',
-        description: 'RAG, Prompt chaining, Deterministic LLM, GPT, Anthropic, Mistral',
+        description:
+          'RAG, Prompt chaining, Deterministic LLM, GPT, Anthropic, Mistral',
       },
       {
         name: 'Document Processing',
@@ -66,8 +68,9 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'Evaluation',
         proficiency: 3,
         icon: 'evaluation',
-        description: 'AI-based data enrichment, Backtesting and LLM evaluation scripts',
-      }
+        description:
+          'AI-based data enrichment, Backtesting and LLM evaluation scripts',
+      },
     ],
   },
   {
@@ -77,7 +80,8 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'AWS',
         proficiency: 3,
         icon: 'aws',
-        description: 'EventBridge, SQS, S3, RDS, SSM, Lambda - Event-driven architecture',
+        description:
+          'EventBridge, SQS, S3, RDS, SSM, Lambda - Event-driven architecture',
       },
       {
         name: 'Infrastructure as Code',
@@ -96,7 +100,7 @@ const marcelSkillCategories: SkillCategory[] = [
         proficiency: 3,
         icon: 'tooling',
         description: 'Docker, GitHub Actions, LaunchDarkly (Feature Flags)',
-      }
+      },
     ],
   },
   {
@@ -106,28 +110,31 @@ const marcelSkillCategories: SkillCategory[] = [
         name: 'System Design',
         proficiency: 3,
         icon: 'systemdesign',
-        description: 'Three-tier architecture, Repository pattern, Domain Objects (DOs)',
+        description:
+          'Three-tier architecture, Repository pattern, Domain Objects (DOs)',
       },
       {
         name: 'Async Systems',
         proficiency: 3,
         icon: 'asyncsystems',
-        description: 'Background jobs, idempotent consumers, cross-service messaging',
+        description:
+          'Background jobs, idempotent consumers, cross-service messaging',
       },
       {
         name: 'Quality',
         proficiency: 3,
         icon: 'quality',
-        description: 'Jest, TDD, strict type safety, 100% logic coverage targets',
+        description:
+          'Jest, TDD, strict type safety, 100% logic coverage targets',
       },
       {
         name: 'UX & Design',
         proficiency: 3,
         icon: 'uxdesign',
         description: 'Figma, Design Systems, Responsive Design, Accessibility',
-      }
+      },
     ],
-  }
+  },
 ];
 
 export default function HomePage() {

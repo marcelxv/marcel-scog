@@ -187,7 +187,8 @@ function TimelineItem({
                         />
                       </svg>
                       <span>
-                        {achievement.startsWith('**') && achievement.endsWith('**') ? (
+                        {achievement.startsWith('**') &&
+                        achievement.endsWith('**') ? (
                           <span className="font-bold text-text-900 dark:text-white block mt-2 first:mt-0">
                             {achievement.replace(/\*\*/g, '')}
                           </span>
