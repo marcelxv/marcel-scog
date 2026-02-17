@@ -28,7 +28,7 @@ interface TechIconProps {
 }
 
 export function TechIcon({ name, className = 'w-6 h-6' }: TechIconProps) {
-  const iconMap: Record<string, JSX.Element> = {
+  const iconMap: Record<string, React.JSX.Element> = {
     // Languages & Frameworks
     javascript: <Code2 className={`${className} text-yellow-500`} />,
     typescript: <Code2 className={`${className} text-blue-600`} />,

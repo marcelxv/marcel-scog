@@ -1,20 +1,17 @@
 const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [require('remark-gfm')],
-    rehypePlugins: [
-      require('rehype-slug'),
-      require('rehype-autolink-headings'),
-      require('rehype-highlight'),
-    ],
+    // remarkPlugins: [require('remark-gfm')],
+    // rehypePlugins: [
+    //   require('rehype-slug'),
+    //   require('rehype-autolink-headings'),
+    //   require('rehype-highlight'),
+    // ],
   },
 });
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    typedRoutes: true,
-  },
+  typedRoutes: true,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   images: {
     formats: ['image/webp', 'image/avif'],

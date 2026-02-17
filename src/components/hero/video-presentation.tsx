@@ -52,7 +52,7 @@ export function VideoPresentation({
 
   const componentRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const retryTimeoutRef = useRef<NodeJS.Timeout>();
+  const retryTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Network connectivity check
   const checkNetworkConnectivity = useCallback(async (): Promise<boolean> => {
