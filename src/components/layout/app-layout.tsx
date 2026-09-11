@@ -11,8 +11,6 @@ const navigationItems: NavigationItem[] = [
   { label: 'Home', href: '#hero', shortcut: 'H' },
   { label: 'About', href: '#about', shortcut: 'A' },
   { label: 'Knowledge', href: '#knowledge', shortcut: 'K' },
-  { label: 'Skills', href: '#skills', shortcut: 'S' },
-  { label: 'Portfolio', href: '#portfolio', shortcut: 'P' },
   { label: 'Contact', href: '#contact', shortcut: 'C' },
 ];
 

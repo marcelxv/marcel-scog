@@ -11,15 +11,14 @@ const keyToSection: Record<string, { label: string; key: string }> = {
   H: { label: 'Home', key: 'H' },
   A: { label: 'About', key: 'A' },
   K: { label: 'Knowledge', key: 'K' },
-  S: { label: 'Skills', key: 'S' },
-  P: { label: 'Portfolio', key: 'P' },
+  B: { label: 'Book a Call', key: 'B' },
   C: { label: 'Contact', key: 'C' },
 };
 
 const marcelIDCardData: IDCardData = {
   personal: {
-    name: 'Marcel L.',
-    title: 'Senior Software Engineer',
+    name: 'Marcel S.',
+    title: 'AI Systems Architect | Deterministic AI Engineering | Event-Driven Platforms',
     location: 'São José dos Campos, SP, Brazil',
     status: 'open-to-opportunities',
     avatar: '/images/Marcel.jpeg',
@@ -84,7 +83,7 @@ export function HeroSection() {
       }
 
       const key = event.key.toUpperCase();
-      const navigationKeys = ['H', 'B', 'A', 'K', 'S', 'P', 'C'];
+      const navigationKeys = ['H', 'B', 'A', 'K', 'C'];
 
       if (navigationKeys.includes(key)) {
         // Expand hints and highlight the pressed key
@@ -111,8 +110,22 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center bg-accent-50 dark:bg-neutral-700 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center bg-accent-50 dark:bg-neutral-950 relative overflow-hidden"
     >
+      {/* Background pattern image */}
+      <div
+        className="absolute inset-0 opacity-40 dark:hidden"
+        style={{
+          backgroundImage: 'url(/images/hero-pattern.svg)',
+        }}
+      />
+      <div
+        className="absolute inset-0 hidden dark:block opacity-35"
+        style={{
+          backgroundImage: 'url(/images/hero-pattern-dark.svg)',
+        }}
+      />
+
       {/* Background geometric patterns */}
       <div className="absolute inset-0 opacity-10 dark:opacity-5 hidden sm:block">
         <div className="absolute top-20 left-10 w-32 h-32 border border-primary-300 dark:border-primary-600 rounded-2xl rotate-12 animate-pulse" />
@@ -185,7 +198,7 @@ export function HeroSection() {
               </a>
 
               <a
-                href="#portfolio"
+                href="#knowledge"
                 className="group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white dark:bg-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-700 text-text-900 dark:text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 shadow-lg border border-neutral-200 dark:border-neutral-600 text-sm sm:text-base"
               >
                 <svg
@@ -285,10 +298,10 @@ export function HeroSection() {
                     H
                   </kbd>
                   <kbd className="w-5 h-5 bg-white/20 text-white text-[10px] font-bold rounded flex items-center justify-center">
-                    P
+                    A
                   </kbd>
                   <kbd className="w-5 h-5 bg-white/20 text-white text-[10px] font-bold rounded flex items-center justify-center">
-                    S
+                    K
                   </kbd>
                   <span className="text-white/70 text-[10px] self-center">
                     +4
@@ -375,10 +388,10 @@ export function HeroSection() {
                           </span>
                           <div className="flex items-center gap-1">
                             <kbd className="relative px-2.5 py-1 text-xs font-bold text-text-800 dark:text-text-100 bg-white dark:bg-neutral-800 border-b-2 border-text-300 dark:border-neutral-600 rounded shadow-md hover:translate-y-0.5 hover:shadow-sm transition-all duration-150 cursor-pointer">
-                              P
+                              A
                             </kbd>
                             <span className="text-[10px] text-text-500 dark:text-text-400">
-                              Portfolio
+                              About
                             </span>
                           </div>
                           <span className="text-text-300 dark:text-neutral-600">
@@ -386,14 +399,14 @@ export function HeroSection() {
                           </span>
                           <div className="flex items-center gap-1">
                             <kbd className="relative px-2.5 py-1 text-xs font-bold text-text-800 dark:text-text-100 bg-white dark:bg-neutral-800 border-b-2 border-text-300 dark:border-neutral-600 rounded shadow-md hover:translate-y-0.5 hover:shadow-sm transition-all duration-150 cursor-pointer">
-                              S
+                              K
                             </kbd>
                             <span className="text-[10px] text-text-500 dark:text-text-400">
-                              Skills
+                              Knowledge
                             </span>
                           </div>
                           <span className="text-[10px] font-medium text-primary-500 dark:text-primary-400 ml-1">
-                            +4 more
+                            +2 more
                           </span>
                         </>
                       )}

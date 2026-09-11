@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Marcel Scognamiglio - Senior Software Engineer',
+    title: 'Marcel Scognamiglio - AI Systems Architect | Deterministic AI Engineering | Event-Driven Platforms',
     description:
       "Personal portfolio website showcasing Marcel Scognamiglio's expertise as a Senior Software Engineer.",
   },

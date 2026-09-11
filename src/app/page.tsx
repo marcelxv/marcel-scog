@@ -1,141 +1,9 @@
 import { AppLayout } from '@/components/layout/app-layout';
 import { HeroSection } from '@/components/hero/hero-section';
 import { AboutSection } from '@/components/about/about-section';
-import { SkillsSection } from '@/components/skills/skills-section';
-import { PortfolioSectionEnhanced } from '@/components/portfolio/portfolio-section-enhanced';
-import { ContactForm } from '@/components/contact/contact-form';
 import { BookCallSection } from '@/components/contact/book-call-section';
 import { ContactScheduleSwitcher } from '@/components/contact/contact-schedule-switcher';
-import type { SkillCategory } from '@/lib/types';
-import { projectsData, topOutcomes } from '@/lib/projects-data';
 import { KnowledgeSection } from '@/components/knowledge/knowledge-section';
-
-// Marcel's actual technical skills from CV - simplified for better UX/SEO
-const marcelSkillCategories: SkillCategory[] = [
-  {
-    category: 'Languages & Frameworks',
-    skills: [
-      {
-        name: 'TypeScript/JavaScript',
-        proficiency: 3,
-        icon: 'typescriptjavascript',
-        description:
-          'Node.js, NestJS, Next.js, React, TypeScript (Strict Mode)',
-      },
-      {
-        name: 'Database & ORM',
-        proficiency: 3,
-        icon: 'databaseorm',
-        description: 'PostgreSQL, Prisma (TypedSQL), MongoDB, Supabase, Redis',
-      },
-      {
-        name: 'API & Contracts',
-        proficiency: 3,
-        icon: 'apicontracts',
-        description: 'ts-rest, Zod, GraphQL, REST (JSON:API), OpenAPI/Swagger',
-      },
-      {
-        name: 'Python',
-        proficiency: 3,
-        icon: 'python',
-        description: 'Backend development, AI integration, automation scripts',
-      },
-    ],
-  },
-  {
-    category: 'AI & Automation',
-    skills: [
-      {
-        name: 'LLM Orchestration',
-        proficiency: 3,
-        icon: 'llmorchestration',
-        description:
-          'RAG, Prompt chaining, Deterministic LLM, GPT, Anthropic, Mistral',
-      },
-      {
-        name: 'Document Processing',
-        proficiency: 3,
-        icon: 'documentprocessing',
-        description: 'OCR (Vision-based), Field Extraction, Rules Engines',
-      },
-      {
-        name: 'Automation Tools',
-        proficiency: 3,
-        icon: 'automationtools',
-        description: 'Orkes/Conductor, Novu, n8n, Trigger.dev',
-      },
-      {
-        name: 'Evaluation',
-        proficiency: 3,
-        icon: 'evaluation',
-        description:
-          'AI-based data enrichment, Backtesting and LLM evaluation scripts',
-      },
-    ],
-  },
-  {
-    category: 'Cloud, DevOps & Observability',
-    skills: [
-      {
-        name: 'AWS',
-        proficiency: 3,
-        icon: 'aws',
-        description:
-          'EventBridge, SQS, S3, RDS, SSM, Lambda - Event-driven architecture',
-      },
-      {
-        name: 'Infrastructure as Code',
-        proficiency: 3,
-        icon: 'infrastructureascode',
-        description: 'Terraform, LocalStack (AWS emulation)',
-      },
-      {
-        name: 'Observability',
-        proficiency: 3,
-        icon: 'observability',
-        description: 'Datadog (Tracing, Metrics, Monitors)',
-      },
-      {
-        name: 'Tooling',
-        proficiency: 3,
-        icon: 'tooling',
-        description: 'Docker, GitHub Actions, LaunchDarkly (Feature Flags)',
-      },
-    ],
-  },
-  {
-    category: 'Architecture & Practices',
-    skills: [
-      {
-        name: 'System Design',
-        proficiency: 3,
-        icon: 'systemdesign',
-        description:
-          'Three-tier architecture, Repository pattern, Domain Objects (DOs)',
-      },
-      {
-        name: 'Async Systems',
-        proficiency: 3,
-        icon: 'asyncsystems',
-        description:
-          'Background jobs, idempotent consumers, cross-service messaging',
-      },
-      {
-        name: 'Quality',
-        proficiency: 3,
-        icon: 'quality',
-        description:
-          'Jest, TDD, strict type safety, 100% logic coverage targets',
-      },
-      {
-        name: 'UX & Design',
-        proficiency: 3,
-        icon: 'uxdesign',
-        description: 'Figma, Design Systems, Responsive Design, Accessibility',
-      },
-    ],
-  },
-];
 
 export default function HomePage() {
   return (
@@ -151,15 +19,6 @@ export default function HomePage() {
 
       {/* Book a Call Section - Simple solid background */}
       <BookCallSection />
-
-      {/* Portfolio Section */}
-      <PortfolioSectionEnhanced
-        projects={projectsData}
-        overview={topOutcomes}
-      />
-
-      {/* Skills Section */}
-      <SkillsSection skillCategories={marcelSkillCategories} />
 
       {/* Contact Section with toggle between form and schedule + illustration on the left */}
       <section id="contact" className="py-20 sm:py-32">

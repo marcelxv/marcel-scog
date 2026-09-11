@@ -10,7 +10,7 @@ Brazil (Open to EU / US relocation) | 📧 marcelx@protonmail.com
 
 ## Professional Summary
 
-AI Systems Architect with 8+ years designing event-driven platforms and deterministic AI pipelines. Focused on transforming operational workflows through deterministic AI systems that scale without increasing organizational complexity. Architecture Owner of a production document validation system processing ~1000 documents/day with statistical evaluation harness and regression controls.
+AI Engineer with 8+ years across event-driven platforms and deterministic AI systems. Currently designing the evaluation infrastructure and reliability methodology for production AI agents — building the platform and processes that turn real production behavior into reproducible tests and permanent regression suites, integrated with the agent runtime and CI.
 
 ---
 
@@ -58,9 +58,37 @@ AI Systems Architect with 8+ years designing event-driven platforms and determin
 
 ## Professional Experience
 
+### AI Engineer (Agent Reliability & Evaluations) | Confidential
+
+_Jul 2026 – Present · Remote_
+
+Owned the design and delivery of an end-to-end evaluation platform for production AI agents, taking it from an initial harness to engineering infrastructure used to find, reproduce, and prevent agent failures.
+
+**Platform & Methodology**
+
+- Architected an agent evaluation platform around immutable agent versions, a harness decoupled from the agent runtime, and structured evidence capture per run.
+- Integrated evaluations with the production agent backend so tests exercise the full system: model, system prompt, knowledge base, tools, profiles, and organization state.
+- Replaced predominantly synthetic scenarios with cases derived from real production traces and conversations, prioritizing representativeness of live failure modes.
+- Kept every evaluation case auditable by linking it to the production trace that motivated its creation.
+
+**Reliability & Regression**
+
+- Turned live agent bugs into permanent regression tests, including failures that only surface when combining model behavior with runtime constraints.
+- Designed reproducible test environments: anonymized replicas of real customer organizations and deliberately adversarial synthetic organizations.
+- Structured organization coverage around business archetypes and complexity dimensions rather than individual customers.
+- Separated universal agent behaviors from organization-specific rules to avoid contaminating expectations across tenants.
+
+**Delivery & Engineering**
+
+- Reduced full-suite run time through parallel execution across equivalent test environments.
+- Integrated tiered evaluation suites (core, per-agent, integration) into CI, moving the platform from a manual harness to a standard development gate.
+- Connected evaluation to observability so production traces feed new test generation.
+- Established an evidence-driven loop for agent changes: change → evaluation → evidence → merge/deploy decision.
+- Proposed living, auto-maintained system documentation and implemented automated AI-assisted code review for the agent backend.
+
 ### Staff AI Engineer (IC – Architecture Owner) | Clipboard Health
 
-_Oct 2025 – Present · Remote (US)_
+_Oct 2025 – Jul 2026 · Remote (US)_
 
 Architecture Owner for AI-driven document validation platform transforming manual SOP-based healthcare workflows. System processes ~1000 documents/day, achieving 70%+ automated approval rate with ~1% false-positive rate. Reshaped operational capacity by reducing manual dependency by 66%, enabling the organization to scale document throughput without linear headcount growth.
 
@@ -107,6 +135,7 @@ Fullstack development for compliance and regulatory systems.
 
 ## Certifications
 
+- **IA, Otimização e IoT para Indústrias e Negócios: Do Zero ao MLOps** | Universidade de São Paulo (ICMC) | _Sep 2026_
 - **Statistical Learning with Python** | StanfordOnline | _Feb 2026_
 - **Retrieval Augmented Generation (RAG)** | DeepLearning.AI | _Jan 2026_
 - **Full Stack Applications** | FIAP | _Jul 2023_
